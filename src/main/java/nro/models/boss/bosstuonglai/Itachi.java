@@ -61,33 +61,58 @@ public class Itachi extends Boss {
         }
     }
 
-    @Override
-    public void rewards(Player pl) {
-        int a = 0;
-        if (Util.isTrue(60, 100)) {
-            for (int k = 0; k < 10; k++) {
-                ItemMap itemMap2 = new ItemMap(this.zone, 1237, 1,
-                        this.location.x + a, this.zone.map.yPhysicInTop(this.location.x, this.location.y - 24), pl.id);
-                Service.getInstance().dropItemMap(this.zone, itemMap2);
-                a += 10;
-            }
-        } else if (Util.isTrue(20, 100)) {
-            for (int i = 0; i < 10; i++) {
-                ItemMap itemMap = new ItemMap(this.zone, 1525, 20,
-                        this.location.x + a, this.zone.map.yPhysicInTop(this.location.x, this.location.y - 24), pl.id);
-                Service.getInstance().dropItemMap(this.zone, itemMap);
-                a += 10;
-            }
-        } else {
-            int soluong = Util.nextInt(5, 10);
-            for (int j = 0; j < soluong; j++) {
-                ItemMap itemMap1 = new ItemMap(this.zone, 1535, 1,
-                        this.location.x + a, this.zone.map.yPhysicInTop(this.location.x, this.location.y - 24), pl.id);
-                Service.getInstance().dropItemMap(this.zone, itemMap1);
-                a += 10;
-            }
-        }
+  @Override
+public void rewards(Player pl) {
+
+    int tempId = 1537; // Mảnh Vĩ Thú
+    int soluong = 0;
+
+    // Tỉ lệ theo số lượng (càng nhiều càng hiếm)
+    if (Util.isTrue(70, 100)) {
+        soluong = Util.nextInt(1, 30);
+    } else if (Util.isTrue(40, 100)) {
+        soluong = Util.nextInt(31, 80);
+    } else if (Util.isTrue(15, 100)) {
+        soluong = Util.nextInt(81, 150);
+    } else if (Util.isTrue(5, 100)) {
+        soluong = Util.nextInt(151, 300);
+    } else {
+        soluong = Util.nextInt(1, 10);
     }
+
+    // =========================
+    // Chỉ rơi tối đa 3 gói
+    // =========================
+    int packages = 3;
+    int each = soluong / packages;
+    int a = 0;
+
+    for (int i = 0; i < packages; i++) {
+
+        int sl = each;
+
+        // để đảm bảo tổng đúng, gói cuối ăn phần dư
+        if (i == packages - 1) {
+            sl = soluong - (each * (packages - 1));
+        }
+
+        // nếu sl = 0 thì không tạo item
+        if (sl <= 0) continue;
+
+        ItemMap itemMap = new ItemMap(
+                this.zone,
+                tempId,
+                sl,
+                this.location.x + a,
+                this.zone.map.yPhysicInTop(this.location.x, this.location.y - 24),
+                pl.id
+        );
+
+        Service.getInstance().dropItemMap(this.zone, itemMap);
+        a += 15;
+    }
+}
+
 
     @Override
     public void idle() {

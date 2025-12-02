@@ -655,7 +655,7 @@ public class BossData {
                     {Skill.MASENKO, 1, 1000}, {Skill.MASENKO, 2, 1200}, {Skill.MASENKO, 4, 1500}, {Skill.MASENKO, 5, 1700},
                     {Skill.GALICK, 1, 1000}
             },
-            _5_PHUT
+            _1_PHUT
     );
 
     public static final BossData COOLER2 = new BossData(
@@ -1350,9 +1350,9 @@ public class BossData {
             Boss.DAME_NORMAL, //type dame
             Boss.HP_NORMAL, //type hp
             99999999, //dame
-           new long[][]{{10000000000000L}}, //hp
+           new long[][]{{2000000000L}}, //hp
             new short[]{1472, 1473, 1474}, //outfit
-            new short[]{}, //map join
+            new short[]{0,7,14}, //map join
             new int[][]{ //skill
                     {Skill.LIEN_HOAN, 5, 300},
                     {Skill.THAI_DUONG_HA_SAN, 5, 20000},
@@ -1360,7 +1360,7 @@ public class BossData {
                     {Skill.ANTOMIC, 7, 1000},
                     {Skill.GALICK, 1, 1000}
             },
-            _30_PHUT
+            _1_PHUT
     );
     
     public static final BossData ALONG = new BossData(
@@ -1601,7 +1601,7 @@ public class BossData {
 //    ); 
 //    
     public static final BossData BLACKGOKU = new BossData(
-            "Black Goku %1", //name
+            "Black Goku ", //name
             ConstPlayer.XAYDA, //gender
             Boss.DAME_NORMAL, //type dame
             Boss.HP_NORMAL, //type hp
@@ -1617,11 +1617,11 @@ public class BossData {
                     {Skill.TAI_TAO_NANG_LUONG, 1, 5000}, {Skill.TAI_TAO_NANG_LUONG, 3, 10000}, {Skill.TAI_TAO_NANG_LUONG, 5, 25000},
                     {Skill.TAI_TAO_NANG_LUONG, 6, 30000}, {Skill.TAI_TAO_NANG_LUONG, 7, 50000}
             },
-            _5_PHUT
+            _1_PHUT
     );
 
     public static final BossData SUPERBLACKGOKU = new BossData(
-            "SBlack Goku %1", //name
+            "SBlack Goku ", //name
             ConstPlayer.XAYDA, //gender
             Boss.DAME_NORMAL, //type dame
             Boss.HP_NORMAL, //type hp

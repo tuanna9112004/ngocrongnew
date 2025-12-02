@@ -4,6 +4,7 @@ import nro.consts.ConstRatio;
 import nro.models.boss.BossData;
 import nro.models.boss.BossFactory;
 import nro.models.player.Player;
+import nro.services.PetService;
 import nro.services.SkillService;
 import nro.utils.Log;
 import nro.utils.SkillUtil;
@@ -96,11 +97,11 @@ public class SuperBroly extends Broly {
 
     @Override
     public void rewards(Player pl) {
-        this.dropItemReward(568, (int) pl.id);
-        generalRewards(pl);
-//        if (pl.pet == null) {
-//            PetService.gI().createNormalPet(pl);
-//        }
+//        this.dropItemReward(568, (int) pl.id);
+//        generalRewards(pl);
+        if (pl.pet == null) {
+            PetService.gI().createNormalPet(pl);
+        }
     }
 
     @Override

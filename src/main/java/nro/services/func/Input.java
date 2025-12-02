@@ -103,67 +103,67 @@ public class Input {
                 case TAI_CLIENT: {
                     try {
                         int amount = Integer.parseInt(text[0].trim());
-                        if (amount <= 0) {
-                            Service.getInstance().sendThongBao(player, "Số tiền không hợp lệ");
-                            break;
-                        }
-                        if (amount <= 99_000) {
-                            Service.getInstance().sendThongBao(player, "Tối thiểu đặt cược là 100K");
-                            break;
-                        }
-                        if (amount > 500_000) {
-                            Service.getInstance().sendThongBao(player, "Tối đa đặt cược là 500K");
-                            break;
-                        }
-                        if (GameDuDoan.gI().nanKG) {
-                            Service.getInstance().sendThongBao(player, "Ngoài thời gian đặt cược");
-                            break;
-                        }
-                        if (player.getSession().vnd < amount) {
-                            Service.getInstance().sendThongBao(player, "Bạn không đủ Coin để chơi.");
+
+                        // Tìm item 457 trong túi
+                        Item thoiVang = InventoryService.gI().findItemBagByTemp(player, (short) GameDuDoan.ID_ITEM_CUOC);
+
+                        if (thoiVang == null || thoiVang.quantity < amount) {
+                            Service.getInstance().sendThongBao(player, "Không đủ " + GameDuDoan.NAME_ITEM_CUOC);
                             break;
                         }
 
-                        PlayerDAO.subVnd(player, amount);
+                        // Trừ thỏi vàng trong túi (bag)
+                        InventoryService.gI().subQuantityItemsBag(player, thoiVang, amount);
+                        InventoryService.gI().sendItemBags(player);
+
+                        // Cộng vào gold tài và danh sách người chơi
                         player.goldTai += amount;
                         GameDuDoan.gI().goldTai += amount;
                         GameDuDoan.gI().addPlayerTai(player);
-                        Service.getInstance().sendThongBao(player, "Bạn đã đặt " + Util.format(amount) + " " + GameDuDoan.NAME_ITEM_CUOC + " vào " + GameDuDoan.LON);
+
+                        Service.getInstance().sendThongBao(player,
+                                "Bạn đã đặt " + amount + " " + GameDuDoan.NAME_ITEM_CUOC + " vào " + GameDuDoan.LON
+                        );
+
                         GameDuDoan.gI().Send_TaiXiu(player);
-                    } catch (NumberFormatException e) {
+
+                    } catch (Exception e) {
                     }
                     break;
                 }
+
                 case XIU_CLIENT: {
                     try {
                         int amount = Integer.parseInt(text[0].trim());
-                        if (amount <= 0) {
-                            Service.getInstance().sendThongBao(player, "Số tiền không hợp lệ");
-                            break;
-                        }
-                        if (amount > 500_000) {
-                            Service.getInstance().sendThongBao(player, "Tối đa đặt cược là 500K");
-                            break;
-                        }
-                        if (GameDuDoan.gI().nanKG) {
-                            Service.getInstance().sendThongBao(player, "Ngoài thời gian đặt cược");
-                            break;
-                        }
-                        if (player.getSession().vnd < amount) {
-                            Service.getInstance().sendThongBao(player, "Bạn không đủ Coin để chơi.");
+
+                        // Tìm item 457 trong túi
+                        Item thoiVang = InventoryService.gI().findItemBagByTemp(player, (short) GameDuDoan.ID_ITEM_CUOC);
+
+                        if (thoiVang == null || thoiVang.quantity < amount) {
+                            Service.getInstance().sendThongBao(player, "Không đủ " + GameDuDoan.NAME_ITEM_CUOC);
                             break;
                         }
 
-                        PlayerDAO.subVnd(player, amount);
+                        // Trừ thỏi vàng
+                        InventoryService.gI().subQuantityItemsBag(player, thoiVang, amount);
+                        InventoryService.gI().sendItemBags(player);
+
+                        // Cộng vào gold Xỉu và danh sách
                         player.goldXiu += amount;
                         GameDuDoan.gI().goldXiu += amount;
                         GameDuDoan.gI().addPlayerXiu(player);
-                        Service.getInstance().sendThongBao(player, "Bạn đã đặt " + Util.format(amount) + " " + GameDuDoan.NAME_ITEM_CUOC + " vào " + GameDuDoan.NHO);
+
+                        Service.getInstance().sendThongBao(player,
+                                "Bạn đã đặt " + amount + " " + GameDuDoan.NAME_ITEM_CUOC + " vào " + GameDuDoan.NHO
+                        );
+
                         GameDuDoan.gI().Send_TaiXiu(player);
-                    } catch (NumberFormatException e) {
+
+                    } catch (Exception e) {
                     }
                     break;
                 }
+
                 case CHAT_TAI_XIU: {
                     String noidung = text[0];
                     try {

@@ -32,7 +32,7 @@ public class nhatvy extends Boss {
     protected boolean useSpecialSkill() {
         return false;
     }
-     
+
 //    @Override
 //    public void attack() {
 //        try {
@@ -55,30 +55,28 @@ public class nhatvy extends Boss {
 //        } catch (Exception ex) {
 //        }
 //    }
-
     @Override
     public void rewards(Player pl) {
-     int[] tempIds1 = new int[]{1539};
-   
+
+        int[] tempIds1 = new int[]{1539}; // item rơi
 
         int tempId = -1;
-        if (Util.isTrue(70, 100)) {
+        if (Util.isTrue(70, 100)) { // 70% rơi item
             tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
         }
+
         if (tempId != -1) {
+            // tạo item rơi
             ItemMap itemMap = new ItemMap(this.zone, tempId, 1,
-                    pl.location.x, this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24), pl.id);
-            if (tempId == 1539) {
-                itemMap.options.add(new ItemOption(7, Util.nextInt(100, 300)));
-                itemMap.options.add(new ItemOption(6, Util.nextInt(100, 300)));
-                itemMap.options.add(new ItemOption(0, Util.nextInt(100, 300)));
-                //itemMap.options.add(new ItemOption(117, Util.nextInt(5, 10)));
-            Util.isTrue(80, 100); 
-                 itemMap.options.add(new ItemOption(93, Util.nextInt(1, 7)));
-            }
-            RewardService.gI().initBaseOptionClothes(itemMap.itemTemplate.id, itemMap.itemTemplate.type, itemMap.options);
+                    pl.location.x,
+                    this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24),
+                    pl.id);
+
+            // ❗ XÓA PHẦN TẠO CHỈ SỐ — CHỈ RƠI VẬT PHẨM THUẦN
+            // => KHÔNG add options, KHÔNG random gì cả
             Service.getInstance().dropItemMap(this.zone, itemMap);
         }
+
         TaskService.gI().checkDoneTaskKillBoss(pl, this);
         generalRewards(pl);
     }
@@ -92,8 +90,6 @@ public class nhatvy extends Boss {
     public void checkPlayerDie(Player pl) {
 
     }
-    
-
 
     @Override
     public void initTalk() {
@@ -104,11 +100,7 @@ public class nhatvy extends Boss {
 
     @Override
     public void leaveMap() {
-       Boss nhatvy = BossFactory.createBoss(BossFactory.NHIVY);
-                       nhatvy.zone = this.zone;
-                                            nhatvy.location.x = this.location.x;
-                                            nhatvy.location.y = this.location.y;
-                                      
+     
         super.leaveMap();
         BossManager.gI().removeBoss(this);
         this.setJustRestToFuture();

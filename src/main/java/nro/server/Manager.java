@@ -117,7 +117,7 @@ public class Manager {
     public static int TILE_NCAP = 0;
     public static int EVENT_SEVER = 6;
     public static byte SUKIEN = 6;
-    public static String DOMAIN = "https://ngocrongdonal.com/";
+    public static String DOMAIN = "https://ngocronglegend.com/";
     public static String SERVER_NAME = "donal";
     public static int EVENT_COUNT_THAN_HUY_DIET = 0;
     public static int EVENT_COUNT_QUY_LAO_KAME = 0;

@@ -35,8 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author Văn Tuấn - 0337766460
- * @copyright 💖 NROLOVE 💖
- * Optimized by Claude - Thread Management
+ * @copyright 💖 NROLOVE 💖 Optimized by Claude - Thread Management
  */
 public class BossFactory {
 
@@ -167,7 +166,7 @@ public class BossFactory {
     public static final byte LINHLUA = -126;
     public static final byte LINHSET = -127;
     public static final byte LINHXANH = -128;
-    
+
     public static final byte KID_BU = -111;
     public static final byte BU_HAN = -112;
 
@@ -192,22 +191,21 @@ public class BossFactory {
     private BossFactory() {
     }
 
-  
     public static void initBoss() {
         BOSS_INIT_EXECUTOR.submit(() -> {
             try {
                 logger.info("Starting boss initialization...");
 
                 // Khởi tạo các boss chính
-                createBoss(NGO_KHONG);
+                //  createBoss(NGO_KHONG);
                 createBoss(CUMBER);
-                createBoss(BULMA);
-                createBoss(CHICHITHO);
-                createBoss(POCTHO);
+//                createBoss(BULMA);
+//                createBoss(CHICHITHO);
+//                createBoss(POCTHO);
                 createBoss(BLACKGOKU);
-                createBoss(CHILL);
+//                createBoss(CHILL);
                 createBoss(WHIS);
-                createBoss(VADOS);
+                // createBoss(VADOS);
                 createBoss(COOLER);
                 createBoss(XEN_BO_HUNG);
                 createBoss(KUKU);
@@ -222,21 +220,21 @@ public class BossFactory {
                 createBoss(XEN_MAX);
                 createBoss(SUPER_BLACK_ROSE);
                 createBoss(ZAMAS_TOI_THUONG);
-                createBoss(BONG_BANG);
+                // createBoss(BONG_BANG);
                 createBoss(SANTA_CLAUS);
                 createBoss(WHIS_DETU);
                 createBoss(RONG_DEN);
-                createBoss(ZENO);
-                createBoss(GOKU_SUPER);
+                //   createBoss(ZENO);
+                //    createBoss(GOKU_SUPER);
                 createBoss(ITACHI);
-                createBoss(KAIDO);
-                createBoss(ZORO);
-                createBoss(ROBIN);
-                createBoss(USOPP);
-                createBoss(NAMI);
-                createBoss(FRANKY);
-                createBoss(CHOPPER);
-                createBoss(BROOK);
+                //     createBoss(KAIDO);
+                //    createBoss(ZORO);
+                //   createBoss(ROBIN);
+                //   createBoss(USOPP);
+                //   createBoss(NAMI);
+                //    createBoss(FRANKY);
+                //   createBoss(CHOPPER);
+                //   createBoss(BROOK);
                 createBoss(LINHXANH);
                 createBoss(LINHSET);
                 createBoss(LINHLUA);
@@ -259,8 +257,7 @@ public class BossFactory {
     }
 
     /**
-     * Khởi tạo boss sự kiện theo map
-     * Tách riêng để code rõ ràng hơn
+     * Khởi tạo boss sự kiện theo map Tách riêng để code rõ ràng hơn
      */
     private static void initEventBosses() {
         try {
@@ -294,8 +291,8 @@ public class BossFactory {
     }
 
     /**
-     * Khởi tạo boss Mabu War 14H
-     * Tối ưu: Sử dụng cùng executor thay vì tạo thread mới
+     * Khởi tạo boss Mabu War 14H Tối ưu: Sử dụng cùng executor thay vì tạo
+     * thread mới
      */
     public static void initBossMabuWar14H() {
         BOSS_INIT_EXECUTOR.submit(() -> {
@@ -328,8 +325,8 @@ public class BossFactory {
     }
 
     /**
-     * Khởi tạo boss Mabu War
-     * Tối ưu: Sử dụng cùng executor thay vì tạo thread mới
+     * Khởi tạo boss Mabu War Tối ưu: Sử dụng cùng executor thay vì tạo thread
+     * mới
      */
     public static void initBossMabuWar() {
         BOSS_INIT_EXECUTOR.submit(() -> {
@@ -365,8 +362,7 @@ public class BossFactory {
     }
 
     /**
-     * Helper method để khởi tạo boss cho nhiều map
-     * Giảm code trùng lặp
+     * Helper method để khởi tạo boss cho nhiều map Giảm code trùng lặp
      */
     private static void initBossForMaps(short[] mapIds, BossCreator creator) {
         for (short mapId : mapIds) {
@@ -395,12 +391,12 @@ public class BossFactory {
      */
     @FunctionalInterface
     private interface BossCreator {
+
         Boss create(short mapId);
     }
 
     /**
-     * Tạo boss theo ID
-     * Method này giữ nguyên logic, chỉ cải thiện logging
+     * Tạo boss theo ID Method này giữ nguyên logic, chỉ cải thiện logging
      */
     public static Boss createBoss(byte bossId) {
         Boss boss = null;
@@ -604,6 +600,9 @@ public class BossFactory {
                 case CUUVY:
                     boss = new cuuvy();
                     break;
+                case ITACHI:
+                    boss = new Itachi();
+                    break;
                 default:
                     logger.warn("Unknown boss ID: " + bossId);
                     break;
@@ -615,8 +614,7 @@ public class BossFactory {
     }
 
     /**
-     * Shutdown executor gracefully
-     * Gọi khi server shutdown
+     * Shutdown executor gracefully Gọi khi server shutdown
      */
     public static void shutdown() {
         logger.info("Shutting down boss initialization executor...");

@@ -400,7 +400,7 @@ public abstract class Boss extends Player implements BossInterface {
         super.update();
         try {
             if (!this.effectSkill.isStun) {
-                this.BaoHpBoss();
+                //this.BaoHpBoss();
             }
             if (!this.effectSkill.isHaveEffectSkill()
                     && !this.effectSkill.isCharging) {
@@ -608,8 +608,8 @@ public abstract class Boss extends Player implements BossInterface {
                     rewards(plAtt);
                     notifyPlayeKill(plAtt);
                     FamilyService.gI().addChildExp(plAtt, 5);
-                    Service.getInstance().sendThongBao(plAtt,
-                        "papa giỏi quá papa mama đừng bỏ con như J97 nhé!");
+                    // Service.getInstance().sendThongBao(plAtt,
+                    //     "papa giỏi quá papa mama đừng bỏ con như J97 nhé!");
                 } else {
                     System.err.println("Boss " + this.name + " died but plAtt is null");
                 }

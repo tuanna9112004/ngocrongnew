@@ -721,9 +721,8 @@ public class NpcFactory {
                             if (canOpenNpc(player)) {
                                 if (!TaskService.gI().checkDoneTaskTalkNpc(player, this)) {
                                     this.createOtherMenu(player, ConstNpc.BASE_MENU,
-                                            "có thể pem chết từ nhất vỹ lên đến cửu vỹ \n (hoặc triệu hồi luôn cửu vỹ nhé )"
-                                            + "\n đặc biệt cửu vỹ và bát vỹ có chỉ số sức đánh chí mạng\n"
-                                            + "|3| cửu vỹ và bát vỹ sẽ có thêm chỉ số sức đánh chí mạng và sức đánh đẹp\n ",
+                                            "Triệu hồi Vỹ Thú từ Nhất Vỹ đến Cửu Vỹ.\n"
+                                            + "|7|Mỗi cấp cần số mảnh phong ấn tương ứng và Vỹ Thú cấp trước.\n",
                                             "triệu hồi \n nhất vỹ \n(99 mảnh phong ấn )",
                                             "triệu hồi \n nhị vỹ \n(199 mảnh phong ấn )",
                                             "triệu hồi \n tam vỹ \n(299 mảnh phong ấn )",
@@ -742,6 +741,10 @@ public class NpcFactory {
                             if (canOpenNpc(player)) {
                                 if (player.iDMark.isBaseMenu()) {
                                     switch (select) {
+
+                                        // ========================
+                                        // CASE 0 – NHẤT VỸ
+                                        // ========================
                                         case 0:
                                             Item vth = null;
                                             try {
@@ -749,7 +752,7 @@ public class NpcFactory {
                                             } catch (Exception e) {
                                             }
                                             if (vth == null || vth.quantity < 99) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn chưa đủ 99 mảnh phong ấn");
                                                 return;
                                             }
                                             Boss nhatvy = BossFactory.createBoss(BossFactory.NHATVY);
@@ -757,170 +760,203 @@ public class NpcFactory {
                                             nhatvy.location.x = player.location.x;
                                             nhatvy.location.y = player.location.y;
                                             InventoryService.gI().subQuantityItemsBag(player, vth, 99);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi nhất vỹ ");
+                                            InventoryService.gI().sendItemBags(player);
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Nhất Vỹ");
                                             break;
+
+                                        // ========================
+                                        // CASE 1 – NHỊ VỸ
+                                        // ========================
                                         case 1:
-                                            Item vth1 = null;
-                                            try {
-                                                vth1 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
+                                            Item m1 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt1 = InventoryService.gI().findItemBagByTemp(player, (short) 1539);
+                                            if (m1 == null || m1.quantity < 199) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 199 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth1 == null || vth1.quantity < 199) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt1 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Nhất Vỹ (1539)");
                                                 return;
                                             }
                                             Boss nhivy = BossFactory.createBoss(BossFactory.NHIVY);
                                             nhivy.zone = player.zone;
                                             nhivy.location.x = player.location.x;
                                             nhivy.location.y = player.location.y;
-                                            InventoryService.gI().subQuantityItemsBag(player, vth1, 199);
+                                            InventoryService.gI().subQuantityItemsBag(player, m1, 199);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt1, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi nhị vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Nhị Vỹ");
                                             break;
+
+                                        // ========================
+                                        // CASE 2 – TAM VỸ
+                                        // ========================
                                         case 2:
-                                            Item vth2 = null;
-                                            try {
-                                                vth2 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
+                                            Item m2 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt2 = InventoryService.gI().findItemBagByTemp(player, (short) 1540);
+                                            if (m2 == null || m2.quantity < 299) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 299 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth2 == null || vth2.quantity < 299) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt2 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Nhị Vỹ (1540)");
                                                 return;
                                             }
                                             Boss tamvy = BossFactory.createBoss(BossFactory.TAMVY);
                                             tamvy.zone = player.zone;
                                             tamvy.location.x = player.location.x;
                                             tamvy.location.y = player.location.y;
-                                            InventoryService.gI().subQuantityItemsBag(player, vth2, 299);
+                                            InventoryService.gI().subQuantityItemsBag(player, m2, 299);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt2, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi tam vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Tam Vỹ");
                                             break;
+
+                                        // ========================
+                                        // CASE 3 – TỨ VỸ
+                                        // ========================
                                         case 3:
-                                            Item vth3 = null;
-                                            try {
-                                                vth3 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
+                                            Item m3 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt3 = InventoryService.gI().findItemBagByTemp(player, (short) 1541);
+                                            if (m3 == null || m3.quantity < 399) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 399 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth3 == null || vth3.quantity < 399) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt3 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Tam Vỹ (1541)");
                                                 return;
                                             }
                                             Boss tuvy = BossFactory.createBoss(BossFactory.TUVY);
                                             tuvy.zone = player.zone;
                                             tuvy.location.x = player.location.x;
                                             tuvy.location.y = player.location.y;
-
-                                            InventoryService.gI().subQuantityItemsBag(player, vth3, 399);
+                                            InventoryService.gI().subQuantityItemsBag(player, m3, 399);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt3, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi tứ vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Tứ Vỹ");
                                             break;
+
+                                        // ========================
+                                        // CASE 4 – NGŨ VỸ
+                                        // ========================
                                         case 4:
-                                            Item vth4 = null;
-                                            try {
-                                                vth4 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
+                                            Item m4 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt4 = InventoryService.gI().findItemBagByTemp(player, (short) 1542);
+                                            if (m4 == null || m4.quantity < 499) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 499 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth4 == null || vth4.quantity < 499) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt4 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Tứ Vỹ (1542)");
                                                 return;
                                             }
                                             Boss ngucy = BossFactory.createBoss(BossFactory.NGUUVY);
                                             ngucy.zone = player.zone;
                                             ngucy.location.x = player.location.x;
                                             ngucy.location.y = player.location.y;
-
-                                            InventoryService.gI().subQuantityItemsBag(player, vth4, 499);
+                                            InventoryService.gI().subQuantityItemsBag(player, m4, 499);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt4, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi ngũ vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Ngũ Vỹ");
                                             break;
+
+                                        // ========================
+                                        // CASE 5 – LỤC VỸ
+                                        // ========================
                                         case 5:
-                                            Item vth5 = null;
-                                            try {
-                                                vth5 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
-                                            }
-                                            if (vth5 == null || vth5.quantity < 599) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            Item m5 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt5 = InventoryService.gI().findItemBagByTemp(player, (short) 1543);
+                                            if (m5 == null || m5.quantity < 599) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 599 mảnh phong ấn");
                                                 return;
                                             }
-
+                                            if (vt5 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Ngũ Vỹ (1543)");
+                                                return;
+                                            }
                                             Boss lucvy = BossFactory.createBoss(BossFactory.LUCVY);
                                             lucvy.zone = player.zone;
                                             lucvy.location.x = player.location.x;
                                             lucvy.location.y = player.location.y;
-
-                                            InventoryService.gI().subQuantityItemsBag(player, vth5, 599);
+                                            InventoryService.gI().subQuantityItemsBag(player, m5, 599);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt5, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi lục vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Lục Vỹ");
                                             break;
-                                        case 6:
-                                            Item vth6 = null;
-                                            try {
-                                                vth6 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
 
+                                        // ========================
+                                        // CASE 6 – THẤT VỸ
+                                        // ========================
+                                        case 6:
+                                            Item m6 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt6 = InventoryService.gI().findItemBagByTemp(player, (short) 1544);
+                                            if (m6 == null || m6.quantity < 699) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 699 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth6 == null || vth6.quantity < 699) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt6 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Lục Vỹ (1544)");
                                                 return;
                                             }
                                             Boss thatvy = BossFactory.createBoss(BossFactory.THATVY);
                                             thatvy.zone = player.zone;
                                             thatvy.location.x = player.location.x;
                                             thatvy.location.y = player.location.y;
-
-                                            InventoryService.gI().subQuantityItemsBag(player, vth6, 699);
+                                            InventoryService.gI().subQuantityItemsBag(player, m6, 699);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt6, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi thất vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Thất Vỹ");
                                             break;
-                                        case 7:
-                                            Item vth7 = null;
-                                            try {
-                                                vth7 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
 
+                                        // ========================
+                                        // CASE 7 – BÁT VỸ
+                                        // ========================
+                                        case 7:
+                                            Item m7 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt7 = InventoryService.gI().findItemBagByTemp(player, (short) 1545);
+                                            if (m7 == null || m7.quantity < 799) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 799 mảnh phong ấn");
+                                                return;
                                             }
-                                            if (vth7 == null || vth7.quantity < 799) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
+                                            if (vt7 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Thất Vỹ (1545)");
                                                 return;
                                             }
                                             Boss batvy = BossFactory.createBoss(BossFactory.BATVY);
                                             batvy.zone = player.zone;
                                             batvy.location.x = player.location.x;
                                             batvy.location.y = player.location.y;
-                                            InventoryService.gI().subQuantityItemsBag(player, vth7, 799);
+                                            InventoryService.gI().subQuantityItemsBag(player, m7, 799);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt7, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi bát  vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Bát Vỹ");
                                             break;
-                                        case 8:
-                                            Item vth8 = null;
-                                            try {
-                                                vth8 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
-                                            } catch (Exception e) {
-                                            }
-                                            if (vth8 == null || vth8.quantity < 899) {
-                                                Service.getInstance().sendThongBao(player, "|3|bạn chưa đủ vé phong ấn ");
 
+                                        // ========================
+                                        // CASE 8 – CỬU VỸ
+                                        // ========================
+                                        case 8:
+                                            Item m8 = InventoryService.gI().findItemBagByTemp(player, (short) 1537);
+                                            Item vt8 = InventoryService.gI().findItemBagByTemp(player, (short) 1546);
+                                            if (m8 == null || m8.quantity < 899) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần 899 mảnh phong ấn");
+                                                return;
+                                            }
+                                            if (vt8 == null) {
+                                                Service.getInstance().sendThongBao(player, "|3|Bạn cần Bát Vỹ (1546)");
                                                 return;
                                             }
                                             Boss cuuvy = BossFactory.createBoss(BossFactory.CUUVY);
                                             cuuvy.zone = player.zone;
                                             cuuvy.location.x = player.location.x;
                                             cuuvy.location.y = player.location.y;
-                                            InventoryService.gI().subQuantityItemsBag(player, vth8, 899);
+                                            InventoryService.gI().subQuantityItemsBag(player, m8, 899);
+                                            InventoryService.gI().subQuantityItemsBag(player, vt8, 1);
                                             InventoryService.gI().sendItemBags(player);
-                                            Service.getInstance().sendMoney(player);
-                                            Service.getInstance().sendThongBao(player, "bạn vừa triệu hồi cuw vỹ ");
+                                            Service.getInstance().sendThongBao(player, "Bạn vừa triệu hồi Cửu Vỹ");
                                             break;
-
                                     }
+
                                 }
                             }
                         }
@@ -940,8 +976,8 @@ public class NpcFactory {
                                 } else {
                                     if (!TaskService.gI().checkDoneTaskTalkNpc(player, this)) {
                                         this.createOtherMenu(player, ConstNpc.BASE_MENU, "Chào con, con muốn ta giúp gì nào?",
-                                                "Giải tán bang hội", "Lãnh địa\nbang hội", "Kho báu\ndưới biển");
-                                           
+                                                "Giải tán bang hội", "Lãnh địa\nbang hội", "Kho báu\ndưới biển", "học kĩ năng");
+
                                     }
                                 }
                             }
@@ -2438,16 +2474,20 @@ public class NpcFactory {
                                 if (this.mapId == 5 || this.mapId == 13) {
                                     this.createOtherMenu(player, ConstNpc.BASE_MENU,
                                             "Ngươi tìm ta có việc gì?",
-                                            "Ép sao\ntrang bị",
-                                            "dục lỗ khảm",
-                                            "khảm đá",
-                                            "Pha lê\nhóa\ntrang bị",
-                                            "Đột phá\ntrang bị",
-                                            "Nâng cấp\n đê",
-                                            //"Gia Hạn\nvật phẩm",
-                                            "nâng cấp skh",
+                                            // "Ép sao\ntrang bị",
+                                            // "dục lỗ khảm",
+                                            // "khảm đá",
+                                            // "Pha lê\nhóa\ntrang bị",
+                                            // "Đột phá\ntrang bị",
+                                            // "Nâng cấp\n đê",
+                                            // //"Gia Hạn\nvật phẩm",
+                                            // "nâng cấp skh",
+                                            // "Chân mệnh",
+                                            // "mở phong ấn\nvỹ thú"
+                                            "Pha Lê\nHóa",
+                                            "Nâng cấp\nSKH",
                                             "Chân mệnh",
-                                            "ghép vỹ thú"
+                                            "Thêm"
                                     );
                                 } else if (this.mapId == 121) {
                                     this.createOtherMenu(player, ConstNpc.BASE_MENU,
@@ -2471,55 +2511,100 @@ public class NpcFactory {
                             if (canOpenNpc(player)) {
                                 if (this.mapId == 5 || this.mapId == 13) {
                                     if (player.iDMark.isBaseMenu()) {
+                                        // switch (select) {
+                                        //     case 0:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.EP_SAO_TRANG_BI);
+                                        //         break;
+                                        //     case 1:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.DUC_LO_TRANG_BI);
+                                        //         break;
+                                        //     case 2:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.KHAM_DA_TRANG_BI);
+                                        //         break;
+                                        //     case 3:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHA_LE_HOA_TRANG_BI);
+                                        //         break;
+                                        //     case 4: //nâng cấp Chân mệnh
+                                        //         this.createOtherMenu(player, 8632,
+                                        //                 "|7|ĐỘT PHÁ TRANG BỊ"
+                                        //                 + "\n\n|1|Ta sẽ giúp trang bị của ngươi mạnh hơn rất nhiều. Hãy lựa chọn để biết thêm thông tin chi tiết!!!",
+                                        //                 "Tinh ấn\ntrang bị",
+                                        //                 "Pháp sư hoá\ntrang bị",
+                                        //                 "Tẩy\npháp sư");
+                                        //         break;
+                                        //     case 5:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.DE_TU_VIP);
+                                        //         break;
+                                        //     //  this.createOtherMenu(player, 12514,
+                                        //     //    "|7|NÂNG CẤP TRANG BỊ"
+                                        //     //  + "\n|0|Ta sẽ nâng cấp Trang bị của con lên cấp cao hơn:"
+                                        //     // + "\n|5|- Nâng đồ Thần linh : nâng từ đồ Thần linh thành Đồ Hủy diệt"
+                                        //     // + "\n- Nâng đồ SKH Vip : cần 3 món Đồ Hủy diệt để nâng thành Set kích hoạt Vip hơn (Tỉ lệ ra đồ Thần linh SKH)",
+                                        //     // "Nâng đồ\nThần linh", "Nâng đồ\nSKH Vip");
+                                        //     // break;
+                                        //     //   case 6:
+                                        //     //  CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.GIA_HAN_VAT_PHAM);
+                                        //     // break;
+                                        //     case 6:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_SKH);
+                                        //         break;
+                                        //     case 7: //nâng cấp Chân mệnh
+                                        //         this.createOtherMenu(player, 5701,
+                                        //                 "|8|CHÂN MỆNH"
+                                        //                 + "\nNếu đã có Chân mệnh. Ta sẽ giúp ngươi nâng cấp bậc lên với các dòng chỉ số cao hơn",
+                                        //                 "Nâng cấp Chân mệnh");
+                                        //         break;
+                                        //     case 8:
+                                        //         CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_CS_VY_THU);
+                                        //         break;
+                                        //     //     case 10:
+                                        //     // CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_SKH);
+                                        //     //  break;  
+                                        // }
                                         switch (select) {
+
+                                            // ================================
+                                            // 0. PHA LÊ HÓA (SUBMENU)
+                                            // ================================
                                             case 0:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.EP_SAO_TRANG_BI);
+                                                this.createOtherMenu(player, 20000, // id menu tự đặt
+                                                        "|7|PHA LÊ HÓA\n"
+                                                        + "Hãy chọn chức năng muốn sử dụng",
+                                                        "Ép sao\ntrang bị",
+                                                        "Pha lê hóa\ntrang bị");
                                                 break;
+
+                                            // ================================
+                                            // 1. NÂNG CẤP SKH
+                                            // ================================
                                             case 1:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.DUC_LO_TRANG_BI);
-                                                break;
-                                            case 2:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.KHAM_DA_TRANG_BI);
-                                                break;
-                                            case 3:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHA_LE_HOA_TRANG_BI);
-                                                break;
-                                            case 4: //nâng cấp Chân mệnh
-                                                this.createOtherMenu(player, 8632,
-                                                        "|7|ĐỘT PHÁ TRANG BỊ"
-                                                        + "\n\n|1|Ta sẽ giúp trang bị của ngươi mạnh hơn rất nhiều. Hãy lựa chọn để biết thêm thông tin chi tiết!!!",
-                                                        "Tinh ấn\ntrang bị",
-                                                        "Pháp sư hoá\ntrang bị",
-                                                        "Tẩy\npháp sư");
-                                                break;
-                                            case 5:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.DE_TU_VIP);
-                                                break;
-                                            //  this.createOtherMenu(player, 12514,
-                                            //    "|7|NÂNG CẤP TRANG BỊ"
-                                            //  + "\n|0|Ta sẽ nâng cấp Trang bị của con lên cấp cao hơn:"
-                                            // + "\n|5|- Nâng đồ Thần linh : nâng từ đồ Thần linh thành Đồ Hủy diệt"
-                                            // + "\n- Nâng đồ SKH Vip : cần 3 món Đồ Hủy diệt để nâng thành Set kích hoạt Vip hơn (Tỉ lệ ra đồ Thần linh SKH)",
-                                            // "Nâng đồ\nThần linh", "Nâng đồ\nSKH Vip");
-                                            // break;
-                                            //   case 6:
-                                            //  CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.GIA_HAN_VAT_PHAM);
-                                            // break;
-                                            case 6:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_SKH);
                                                 break;
-                                            case 7: //nâng cấp Chân mệnh
+
+                                            // ================================
+                                            // 2. CHÂN MỆNH
+                                            // ================================
+                                            case 2:
                                                 this.createOtherMenu(player, 5701,
-                                                        "|8|CHÂN MỆNH"
-                                                        + "\nNếu đã có Chân mệnh. Ta sẽ giúp ngươi nâng cấp bậc lên với các dòng chỉ số cao hơn",
+                                                        "|8|CHÂN MỆNH\n"
+                                                        + "Ta sẽ giúp ngươi nâng cấp bậc Chân Mệnh",
                                                         "Nâng cấp Chân mệnh");
                                                 break;
-                                            case 8:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.GHEP_VY_THU);
+
+                                            // ================================
+                                            // 3. ĐỘT PHÁ TRANG BỊ (submenu)
+                                            // ================================
+                                            case 3:
+                                                this.createOtherMenu(player, 8632,
+                                                        "|7|ĐỘT PHÁ TRANG BỊ\n"
+                                                        + "Chọn tính năng muốn sử dụng",
+                                                        "Tinh ấn\ntrang bị",
+                                                        "Pháp sư hoá\ntrang bị",
+                                                        "Tẩy pháp sư",
+                                                        "Mở chỉ số\nVỹ Thú");
+
                                                 break;
-                                            //     case 10:
-                                            // CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_SKH);
-                                            //  break;  
+
                                         }
                                     } else if (player.iDMark.getIndexMenu() == 8632) {
                                         switch (select) {
@@ -2532,7 +2617,25 @@ public class NpcFactory {
                                             case 2:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.TAY_PHAP_SU);
                                                 break;
+                                            case 3:
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_CS_VY_THU);
+                                                break;
                                         }
+                                    } else if (player.iDMark.getIndexMenu() == 20000) {
+
+                                        switch (select) {
+                                            case 0:
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.EP_SAO_TRANG_BI);
+                                                break;
+
+                                            case 1:
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHA_LE_HOA_TRANG_BI);
+                                                break;
+                                        }
+
+                                        // =====================================
+                                        // SUBMENU: ĐỘT PHÁ TRANG BỊ
+                                        // =====================================
                                     } else if (player.iDMark.getIndexMenu() == 12514) {
                                         switch (select) {
                                             case 0:
@@ -2557,7 +2660,7 @@ public class NpcFactory {
                                             case CombineServiceNew.KHAM_DA_TRANG_BI:
                                             case CombineServiceNew.NANG_CAP_SKH:
                                             case CombineServiceNew.AN_TRANG_BI:
-                                            case CombineServiceNew.GHEP_VY_THU:
+                                            case CombineServiceNew.MO_CS_VY_THU:
                                             case CombineServiceNew.PHA_LE_HOA_TRANG_BI:
                                             case CombineServiceNew.CHUYEN_HOA_TRANG_BI:
                                             case CombineServiceNew.PHAP_SU_HOA:
@@ -4275,7 +4378,7 @@ public class NpcFactory {
                                     + "Mốc sự kiện: " + Util.numberToMoney(mucTieu) + " VNĐ\n"
                                     + "Tiến độ: " + phanTram + "%\n"
                                     + "[" + bar.toString() + "]\n\n"
-                                    + "+ \"nạp tại: https://ngocrongdonal.com/ \n";
+                                    + "+ \"nạp tại: https://ngocronglegend.com/ \n";
                             int left = BerryGiftService.getAllowance(player.name);
                             if (left > 0) {
                                 text += "Bạn đang có " + left + " lượt nhận quà.\n";
@@ -4449,7 +4552,6 @@ public class NpcFactory {
 //                                        }
 //                                        break;
 //                                    }
-
                                     case 5: { // ✅ XEM QR NẠP TIỀN
                                         // Kiểm tra điều kiện trước khi mở
                                         if (RechargeHandler.gI().canOpenRechargeMenu(player)) {
@@ -6004,12 +6106,12 @@ public class NpcFactory {
                                     + "|2|KI: +" + Util.numberToMoney(totalMpGained) + "\n"
                                     + "|2|Sức đánh: +" + Util.numberToMoney(totalDamageGained) + "\n"
                                     + "\n"
-                                    + "|7|⚡ NÂN CẤP TIẾP THEO\n"
+                                    + "|7|⚡ NÂNG CẤP TIẾP THEO\n"
                                     + (currentLevel < maxLevel
-                                            ? "|5|Tỷ lệ thành công: |2|" + successRate + "%\n"
-                                            + "|5|Chi phí: |2|30 Thuốc Biến Dị\n"
-                                            + "|5|Bảo vệ: |2|10 Đá Bảo Vệ (tùy chọn)\n"
-                                            + "|5|Phần thưởng khi thành công:\n"
+                                            ? "Tỷ lệ thành công: " + successRate + "%\n"
+                                            + "Chi phí: 30 Thuốc Biến Dị\n"
+                                            + "Bảo vệ: 10 Đá Bảo Vệ (tùy chọn)\n"
+                                            + "Phần thưởng khi thành công:\n"
                                             + "|4|+" + Util.numberToMoney(nextHpBonus) + " HP gốc\n"
                                             + "|4|+" + Util.numberToMoney(nextMpBonus) + " KI gốc\n"
                                             + "|4|+" + Util.numberToMoney(nextDamageBonus) + " Sức đánh gốc"
@@ -6916,6 +7018,7 @@ public class NpcFactory {
                                     break;
                                 }
                                 break;
+
                             case 2:
                                 if (thoivang == null || thoivang.quantity < 10) {
                                     Service.getInstance().sendThongBao(player, "Cần có đủ 10 Thỏi vàng để thực hiện");
@@ -6947,6 +7050,7 @@ public class NpcFactory {
                                     InventoryService.gI().sendItemBags(player);
                                     break;
                                 }
+
                         }
                         break;
                     case ConstNpc.MENU_BOT:
@@ -7173,9 +7277,9 @@ public class NpcFactory {
                                     Service.getInstance().sendThongBao(player, "Không đủ yêu cầu");
                                     return;
                                 }
-                                player.leverPet = 0;             
+                                player.leverPet = 0;
                                 player.LVhopthe = 0;
-                                player.SDhopthe = 0;             
+                                player.SDhopthe = 0;
                                 player.HPhopthe = 0;    // reset HP hợp thể = HP gốc đệ
                                 player.KIhopthe = 0;    // reset KI hợp thể = KI gốc đệ
                                 InventoryService.gI().subQuantityItemsBag(player, item2, 1);

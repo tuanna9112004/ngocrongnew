@@ -56,32 +56,33 @@ public class tuvy extends Boss {
 //        }
 //    }
 
-    @Override
-  public void rewards(Player pl) {
-     int[] tempIds1 = new int[]{1542};
-   
+   @Override
+public void rewards(Player pl) {
 
-        int tempId = -1;
-        if (Util.isTrue(40, 100)) {
-            tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
-        }
-        if (tempId != -1) {
-            ItemMap itemMap = new ItemMap(this.zone, tempId, 1,
-                    pl.location.x, this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24), pl.id);
-            if (tempId == 1542) {
-                itemMap.options.add(new ItemOption(77, Util.nextInt(3, 5)));
-                itemMap.options.add(new ItemOption(103, Util.nextInt(3, 5)));
-                itemMap.options.add(new ItemOption(50, Util.nextInt(3, 5)));
-               // itemMap.options.add(new ItemOption(117, Util.nextInt(15, 20)));
-            Util.isTrue(80, 100); 
-                itemMap.options.add(new ItemOption(93, Util.nextInt(1, 7)));
-            }
-            RewardService.gI().initBaseOptionClothes(itemMap.itemTemplate.id, itemMap.itemTemplate.type, itemMap.options);
-           Service.getInstance().dropItemMap(zone, itemMap);
-        }
-        TaskService.gI().checkDoneTaskKillBoss(pl, this);
-        generalRewards(pl);
+    int[] tempIds1 = new int[]{1542}; // item rơi
+
+    int tempId = -1;
+    if (Util.isTrue(70, 100)) { // 70% rơi item
+        tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
     }
+
+    if (tempId != -1) {
+        // tạo item rơi
+        ItemMap itemMap = new ItemMap(this.zone, tempId, 1,
+                pl.location.x, 
+                this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24), 
+                pl.id);
+
+        // ❗ XÓA PHẦN TẠO CHỈ SỐ — CHỈ RƠI VẬT PHẨM THUẦN
+        // => KHÔNG add options, KHÔNG random gì cả
+
+        Service.getInstance().dropItemMap(this.zone, itemMap);
+    }
+
+    TaskService.gI().checkDoneTaskKillBoss(pl, this);
+    generalRewards(pl);
+}
+
     @Override
     public void idle() {
 
@@ -107,11 +108,7 @@ public class tuvy extends Boss {
 
     @Override
     public void leaveMap() {
-       Boss nhatvy = BossFactory.createBoss(BossFactory.NGUUVY);
-                       nhatvy.zone = this.zone;
-                                            nhatvy.location.x = this.location.x;
-                                            nhatvy.location.y = this.location.y;
-                                      
+       
         super.leaveMap();
         BossManager.gI().removeBoss(this);
         this.setJustRestToFuture();
