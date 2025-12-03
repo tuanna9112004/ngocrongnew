@@ -77,7 +77,7 @@ public class CombineServiceNew {
     public static final int NHAP_NGOC_RONG = 513;
     public static final int PHAN_RA_DO_THAN_LINH = 514;
     public static final int NANG_CAP_DO_TS = 515;
-    public static final int NANG_CAP_SKH_VIP = 516;
+    public static final int Nang_Cap_SKH = 516;
     public static final int AN_TRANG_BI = 517;
     public static final int PHAP_SU_HOA = 518;
     public static final int TAY_PHAP_SU = 519;
@@ -239,42 +239,110 @@ public class CombineServiceNew {
             case NANG_CAP_SKH: {
                 List<Item> items = player.combineNew.itemsCombine;
                 Item base = null;
-                int opId = -1;
-                int templateId = -1;
+                int baseId = -1;
 
                 if (items != null && !items.isEmpty()) {
                     base = items.get(0);
-                    if (base != null) {
-                        // tìm option hợp lệ trên item gốc
-                        for (ItemOption io : base.itemOptions) {
-                            if ((io.optionTemplate.id >= 136 && io.optionTemplate.id <= 144)
-                                    || (io.optionTemplate.id >= 211 && io.optionTemplate.id <= 219)
-                                    || (io.optionTemplate.id >= 220 && io.optionTemplate.id <= 228)) {
-                                opId = io.optionTemplate.id;
-                                break;
-                            }
-                        }
-                        templateId = base.template.id;
+                    if (base != null && base.template != null) {
+                        baseId = base.template.id;
                     }
                 }
 
-                // Luôn set gem cost
-                player.combineNew.gemCombine = 2000;
+                // ====== DANH SÁCH ID THEO HẠNG ======
+                int[] CAP12_IDS = {233, 237, 241, 245, 249, 253, 257, 261, 265, 269, 273, 277, 281};
 
-                // Nội dung menu
-                String npcSay = "|2|Nâng cấp Set Kích Hoạt:\n";
-                npcSay += "• Cần 5 món cùng SKH (ID: " + (opId == -1 ? "??" : opId) + ")\n";
-                npcSay += "• Cần thêm 99 đá nâng cấp \n";
-                npcSay += "• Cần thêm 20 vật phẩm tiền tệ \n";
-                npcSay += "• Có thể dùng 10 vật phẩm bảo vệ \n";
-                npcSay += "|1|Tỉ lệ thành công: 25%\n";
-                npcSay += "|7|Chi phí: " + player.combineNew.gemCombine + " Ruby";
+                int[] TL_IDS = {
+                    555, 556, 557, 558, 559, 560,
+                    561, 562, 563, 564, 565, 566, 567
+                };
 
-                // Luôn show menu cho player (kể cả thiếu)
-                this.baHatMit.createOtherMenu(player, ConstNpc.MENU_START_COMBINE, npcSay,
-                        "Nâng cấp\n(" + player.combineNew.gemCombine + " Ruby)");
+                int[] HD_IDS = {
+                    650, 651, 652, 653, 654, 655,
+                    656, 657, 658, 659, 660, 661, 662
+                };
+
+                int[] TS_IDS = {
+                    1048, 1049, 1050, 1051, 1052, 1053,
+                    1054, 1055, 1056, 1057, 1058, 1059,
+                    1060, 1061, 1062
+                };
+
+                java.util.function.IntPredicate isCap12 = id -> {
+                    for (int v : CAP12_IDS) {
+                        if (v == id) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+                java.util.function.IntPredicate isTL = id -> {
+                    for (int v : TL_IDS) {
+                        if (v == id) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+                java.util.function.IntPredicate isHD = id -> {
+                    for (int v : HD_IDS) {
+                        if (v == id) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+                java.util.function.IntPredicate isTS = id -> {
+                    for (int v : TS_IDS) {
+                        if (v == id) {
+                            return true;
+                        }
+                    }
+                    return false;
+                };
+
+                String tierName = "Không xác định";
+                String nextTierName = "bậc cao hơn";
+
+                if (baseId != -1) {
+                    if (isCap12.test(baseId)) {
+                        tierName = "Cấp 12";
+                        nextTierName = "Thần Linh";
+                    } else if (isTL.test(baseId)) {
+                        tierName = "Thần Linh";
+                        nextTierName = "Hủy Diệt";
+                    } else if (isHD.test(baseId)) {
+                        tierName = "Hủy Diệt";
+                        nextTierName = "Thiên Sứ";
+                    } else if (isTS.test(baseId)) {
+                        tierName = "Thiên Sứ";
+                        nextTierName = "Không thể nâng cấp thêm";
+                    }
+                }
+
+                // cost 500M vàng
+                player.combineNew.goldCombine = (int) 500_000_000L;
+
+                String npcSay = "|7|Nâng cấp đồ Set Kích Hoạt theo hạng\n";
+                npcSay += "|2|Điều kiện:\n";
+                npcSay += "• Cần đặt đúng 3 món trang bị\n";
+                npcSay += "• 3 món phải cùng hạng: Cấp 12 / Thần Linh / Hủy Diệt / Thiên Sứ\n";
+                npcSay += "• 3 món phải cùng hành tinh và đều có Set Kích Hoạt\n";
+                npcSay += "|1|Hạng hiện tại (theo món đầu): " + tierName + "\n";
+                npcSay += "|1|Hạng sau nâng cấp: " + nextTierName + "\n";
+                npcSay += "|1|Chi phí: " + Util.numberToMoney(player.combineNew.goldCombine) + " vàng\n";
+                npcSay += "|4|Lưu ý: Sau khi xác nhận sẽ trừ 3 món nguyên liệu và 500M vàng.";
+
+                String button = "Nâng cấp\n(500M vàng)";
+
+                this.baHatMit.createOtherMenu(
+                        player,
+                        ConstNpc.MENU_START_COMBINE,
+                        npcSay,
+                        button
+                );
             }
             break;
+
 
             case MO_CS_VY_THU: {
 
@@ -1183,7 +1251,7 @@ public class CombineServiceNew {
                     this.npcwhists.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Còn thiếu nguyên liệu để nâng cấp hãy quay lại sau", "Đóng");
                 }
                 break;
-            case NANG_CAP_SKH_VIP:
+            case Nang_Cap_SKH:
                 if (player.combineNew.itemsCombine.size() == 0) {
                     this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Hãy đưa ta 3 món Hủy diệt", "Đóng");
                     return;
@@ -1718,7 +1786,7 @@ public class CombineServiceNew {
                 khamDaTrangBi(player);
                 break;
             case NANG_CAP_SKH:
-                nangCapSKH(player);
+                NangCapSKH(player);
                 break;
             case PHA_LE_HOA_TRANG_BI_X100:
                 phaLeHoaTrangBix100(player);
@@ -1744,8 +1812,8 @@ public class CombineServiceNew {
             case NANG_CAP_DO_TS:
                 openDTS(player);
                 break;
-            case NANG_CAP_SKH_VIP:
-                openSKHVIP(player);
+            case Nang_Cap_SKH:
+                NangCapSKH(player);
                 break;
             case NANG_CAP_SKH_TS:
                 openSKHts(player);
@@ -2042,68 +2110,290 @@ public class CombineServiceNew {
         reOpenItemCombine(player);
     }
 
-    public void openSKHVIP(Player player) {
-        Item thoivang = null;
-        try {
-            thoivang = InventoryService.gI().findItemBagByTemp(player, 457);
-        } catch (Exception e) {
-        }
-        if (thoivang == null || thoivang.quantity < 30) {
-            Service.getInstance().sendThongBao(player, "Không đủ Thỏi vàng");
-            return;
-        }
+    public void NangCapSKH(Player player) {
+
+        // ==================== 1. CHECK NGUYÊN LIỆU ======================
         if (player.combineNew.itemsCombine.size() != 3) {
-            Service.getInstance().sendThongBao(player, "Thiếu nguyên liệu");
+            Service.getInstance().sendThongBao(player, "Cần đúng 3 món để nâng cấp SKH");
             return;
         }
-        if (player.combineNew.itemsCombine.stream().filter(item -> item.isNotNullItem() && item.isDHD()).count() != 3) {
-            Service.getInstance().sendThongBao(player, "Thiếu đồ hủy diệt");
+
+        List<Item> list = player.combineNew.itemsCombine;
+
+        if (InventoryService.gI().getCountEmptyBag(player) == 0) {
+            Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống");
             return;
         }
-        if (InventoryService.gI().getCountEmptyBag(player) > 0) {
-            if (player.inventory.gem < 1000) {
-                Service.getInstance().sendThongBao(player, "Con cần thêm ngoc xanh để đổi...");
+
+        // ==== chỉ tốn vàng 500tr ====
+        if (player.inventory.gold < 500_000_000) {
+            Service.getInstance().sendThongBao(player, "Không đủ 500 triệu vàng");
+            return;
+        }
+
+        // ==================== 2. CHECK HÀNH TINH ======================
+        List<Byte> genders = list.stream()
+                .filter(i -> i.template.type != 4) // rada bỏ qua
+                .map(i -> i.template.gender)
+                .distinct()
+                .collect(Collectors.toList());
+
+        if (genders.size() > 1) {
+            Service.getInstance().sendThongBao(player, "3 món phải cùng hành tinh");
+            return;
+        }
+
+        // ==================== 3. DANH SÁCH HẠNG ĐỒ (ID) ======================
+        int[] CAP12_IDS = {233, 237, 241, 245, 249, 253, 257, 261, 265, 269, 273, 277, 281};
+
+        int[] TL_IDS = {
+            555, 556, 557, 558, 559, 560,
+            561, 562, 563, 564, 565, 566, 567
+        };
+
+        int[] HD_IDS = {
+            650, 651, 652, 653, 654, 655,
+            656, 657, 658, 659, 660, 661, 662
+        };
+
+        int[] TS_IDS = {
+            1048, 1049, 1050, 1051, 1052, 1053,
+            1054, 1055, 1056, 1057, 1058, 1059,
+            1060, 1061, 1062
+        };
+
+        java.util.function.IntPredicate isCap12 = id -> {
+            for (int v : CAP12_IDS) {
+                if (v == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        java.util.function.IntPredicate isTL = id -> {
+            for (int v : TL_IDS) {
+                if (v == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        java.util.function.IntPredicate isHD = id -> {
+            for (int v : HD_IDS) {
+                if (v == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+        java.util.function.IntPredicate isTS = id -> {
+            for (int v : TS_IDS) {
+                if (v == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+
+        // ==================== 4. CHECK 3 MÓN PHẢI CÙNG HẠNG ======================
+        boolean allCap12 = true, allTL = true, allHD = true, allTS = true;
+
+        for (Item it : list) {
+            int id = it.template.id;
+            allCap12 &= isCap12.test(id);
+            allTL &= isTL.test(id);
+            allHD &= isHD.test(id);
+            allTS &= isTS.test(id);
+        }
+
+        if (!(allCap12 || allTL || allHD || allTS)) {
+            Service.getInstance().sendThongBao(player, "3 món phải cùng hạng: Cấp 12 / Thần Linh / Hủy Diệt / Thiên Sứ!");
+            return;
+        }
+
+        // ==================== 5. MAP SKH OPTIONS ======================
+        Map<Integer, Integer> SET_OPTION_PAIRS = new HashMap<Integer, Integer>() {
+            {
+                put(127, 139);
+                put(139, 127);
+                put(128, 140);
+                put(140, 128);
+                put(129, 141);
+                put(141, 129);
+                put(130, 142);
+                put(142, 130);
+                put(131, 143);
+                put(143, 131);
+                put(132, 144);
+                put(144, 132);
+                put(133, 136);
+                put(136, 133);
+                put(134, 137);
+                put(137, 134);
+                put(135, 138);
+                put(138, 135);
+                put(250, 253);
+                put(253, 250);
+                put(251, 254);
+                put(254, 251);
+                put(233, 234);
+            }
+        };
+
+        // ==================== 6. LẤY SKH CỦA 3 MÓN ======================
+        List<Integer> skhIds = new ArrayList<>();
+
+        for (Item it : list) {
+            boolean found = false;
+            if (it.itemOptions != null) {
+                for (ItemOption io : it.itemOptions) {
+                    if (io != null && io.optionTemplate != null && SET_OPTION_PAIRS.containsKey(io.optionTemplate.id)) {
+                        skhIds.add(io.optionTemplate.id);
+                        found = true;
+                        break;
+                    }
+                }
+            }
+            if (!found) {
+                Service.getInstance().sendThongBao(player, "Cả 3 món phải có ít nhất 1 dòng SKH");
                 return;
             }
-            player.inventory.gem -= 1000;
-            Item itemTS = player.combineNew.itemsCombine.stream().filter(Item::isDHD).findFirst().get();
-            List<Item> itemDHD = player.combineNew.itemsCombine.stream().filter(item -> item.isNotNullItem() && item.isDHD()).collect(Collectors.toList());
-            CombineServiceNew.gI().sendEffectOpenItem(player, itemTS.template.iconID, itemTS.template.iconID);
-            short itemId;
-            if (player.gender == 3 || itemTS.template.type == 4) {
-                itemId = Manager.radaSKHVip[Util.nextInt(0, 5)];
-                if (Util.isTrue(3, (int) 100)) {
-                    itemId = Manager.radaSKHVip[6];
-                }
-            } else {
-                itemId = Manager.doSKHVip[player.gender][itemTS.template.type][Util.nextInt(0, 5)];
-                if (Util.isTrue(3, (int) 100)) {
-                    itemId = Manager.doSKHVip[player.gender][itemTS.template.type][6];
-                }
-            }
-            int skhId = ItemService.gI().randomSKHId(player.gender);
-            Item item;
-            if (new Item(itemId).isDTL()) {
-                item = Util.ratiItemTL(itemId);
-                item.itemOptions.add(new ItemOption(skhId, 1));
-                item.itemOptions.add(new ItemOption(ItemService.gI().optionIdSKH(skhId), 1));
-                item.itemOptions.remove(item.itemOptions.stream().filter(itemOption -> itemOption.optionTemplate.id == 21).findFirst().get());
-                item.itemOptions.add(new ItemOption(21, 15));
-                item.itemOptions.add(new ItemOption(30, 1));
-            } else {
-                item = ItemService.gI().itemSKH(itemId, skhId);
-            }
-            InventoryService.gI().addItemBag(player, item, 0);
-            InventoryService.gI().subQuantityItemsBag(player, itemTS, 1);
-            itemDHD.forEach(j -> InventoryService.gI().subQuantityItemsBag(player, j, 1));
-            InventoryService.gI().subQuantityItemsBag(player, thoivang, 30);
-            InventoryService.gI().sendItemBags(player);
-            Service.getInstance().sendMoney(player);
-            player.combineNew.itemsCombine.clear();
-            reOpenItemCombine(player);
-        } else {
-            Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống hành trang");
         }
+
+        // ==================== 7. MAP TIẾN HÓA (3 BẬC) ======================
+        Map<Integer, Integer> CAP12_TO_THAN_LINH = new HashMap<Integer, Integer>() {
+            {
+                put(233, 555);
+                put(237, 557);
+                put(241, 559);
+                put(245, 556);
+                put(249, 558);
+                put(253, 560);
+                put(257, 562);
+                put(261, 564);
+                put(265, 566);
+                put(269, 563);
+                put(273, 565);
+                put(277, 567);
+                put(281, 561);
+            }
+        };
+
+        Map<Integer, Integer> THAN_LINH_TO_HUY_DIET = new HashMap<Integer, Integer>() {
+            {
+                put(555, 650);
+                put(557, 651);
+                put(559, 652);
+                put(556, 653);
+                put(558, 654);
+                put(560, 655);
+                put(562, 656);
+                put(564, 657);
+                put(566, 658);
+                put(563, 659);
+                put(565, 660);
+                put(567, 661);
+                put(561, 662);
+            }
+        };
+
+        Map<Integer, Integer> HUY_DIET_TO_THIEN_SU = new HashMap<Integer, Integer>() {
+            {
+                put(650, 750);
+                put(651, 751);
+                put(652, 752);
+                put(653, 753);
+                put(654, 754);
+                put(655, 755);
+                put(656, 756);
+                put(657, 757);
+                put(658, 758);
+                put(659, 759);
+                put(660, 760);
+                put(661, 761);
+                put(662, 762);
+            }
+        };
+
+        // ==================== 8. XÁC ĐỊNH ITEM ĐÍCH ======================
+        Item base = list.get(0);
+        int oldId = base.template.id;
+        int nextId = -1;
+
+        if (CAP12_TO_THAN_LINH.containsKey(oldId)) {
+            nextId = CAP12_TO_THAN_LINH.get(oldId);
+        } else if (THAN_LINH_TO_HUY_DIET.containsKey(oldId)) {
+            nextId = THAN_LINH_TO_HUY_DIET.get(oldId);
+        } else if (HUY_DIET_TO_THIEN_SU.containsKey(oldId)) {
+            nextId = HUY_DIET_TO_THIEN_SU.get(oldId);
+        } else {
+            Service.getInstance().sendThongBao(player, "Hạng này không thể nâng cấp tiếp!");
+            return;
+        }
+
+        // ==================== 9. TRỪ 500 TRIỆU ======================
+        player.inventory.gold -= 500_000_000;
+        Service.getInstance().sendMoney(player);
+
+        // ==================== 10. XÓA 3 MÓN CŨ ======================
+        for (Item it : list) {
+            InventoryService.gI().subQuantityItemsBag(player, it, 1);
+        }
+
+        // ==================== 11. TẠO ITEM MỚI ======================
+        Item newItem = ItemService.gI().createNewItem((short) nextId);
+
+        newItem.itemOptions.add(new ItemOption(21, 15));
+        newItem.itemOptions.add(new ItemOption(30, 1));
+
+        int dice = Util.nextInt(1, 100);
+        int percent = (dice <= 20 ? 15 : dice <= 50 ? 10 : 5);
+
+        int baseStat, finalStat;
+
+        switch (newItem.template.type) {
+            case 0:
+                baseStat = 1035;
+                finalStat = baseStat + baseStat * percent / 100;
+                newItem.itemOptions.add(new ItemOption(47, finalStat));
+                break;
+            case 1:
+                baseStat = 56;
+                finalStat = baseStat + baseStat * percent / 100;
+                newItem.itemOptions.add(new ItemOption(22, finalStat));
+                newItem.itemOptions.add(new ItemOption(27, 7043));
+                break;
+            case 2:
+                baseStat = 4300;
+                finalStat = baseStat + baseStat * percent / 100;
+                newItem.itemOptions.add(new ItemOption(0, finalStat));
+                break;
+            case 3:
+                baseStat = 56;
+                finalStat = baseStat + baseStat * percent / 100;
+                newItem.itemOptions.add(new ItemOption(23, finalStat));
+                newItem.itemOptions.add(new ItemOption(28, 7043));
+                break;
+            case 4:
+                baseStat = 16;
+                finalStat = baseStat + baseStat * percent / 100;
+                newItem.itemOptions.add(new ItemOption(14, finalStat));
+                break;
+        }
+
+        // ==================== 12. THÊM SKH RANDOM ======================
+        int chosenSKH = skhIds.get(Util.nextInt(0, skhIds.size() - 1));
+        newItem.itemOptions.add(new ItemOption(chosenSKH, 0));
+        newItem.itemOptions.add(new ItemOption(SET_OPTION_PAIRS.get(chosenSKH), 0));
+
+        // ==================== 13. TRA ITEM ======================
+        InventoryService.gI().addItemBag(player, newItem, 1);
+        InventoryService.gI().sendItemBags(player);
+
+        CombineServiceNew.gI().sendEffectOpenItem(player, base.template.iconID, newItem.template.iconID);
+
+        player.combineNew.itemsCombine.clear();
+        reOpenItemCombine(player);
     }
 
     private void openSKHts(Player player) {
@@ -3390,7 +3680,7 @@ public class CombineServiceNew {
 // public final Object combineLock = new Object();
 // public volatile boolean isCombining = false;
 
-    private void nangCapSKH(Player player) {
+    private void nangcapskh2(Player player) {
         if (player == null) {
             return;
         }
@@ -5004,7 +5294,7 @@ public class CombineServiceNew {
                 return "Ta sẽ phân rã \n  trang bị Thiên sứ của ngươi\nthành 500 mảnh thiên sứ cùng hệ!";
             case NANG_CAP_DO_TS:
                 return "Ta sẽ nâng cấp \n  trang bị của người thành\n đồ thiên sứ!";
-            case NANG_CAP_SKH_VIP:
+            case Nang_Cap_SKH:
                 return "Thiên sứ nhờ ta nâng cấp \n  trang bị của người thành\n SKH VIP!";
             case NANG_CAP_SKH_TS:
                 return "Thiên sứ nhờ ta nâng cấp \n  trang bị của người thành\n SKH VIP!";
@@ -5066,7 +5356,7 @@ public class CombineServiceNew {
                         + "Sau đó chọn 'Nâng cấp'";
             case MO_CS_VY_THU:
                 return "cho vào 1 vỹ thú và chọn nâng cấp";
-           case PHA_LE_HOA_TRANG_BI:
+            case PHA_LE_HOA_TRANG_BI:
                 return "Chọn trang bị\n"
                         + "(Áo, quần, găng, giày\n"
                         + ", rađa hoặc Cải trang)\n"
@@ -5076,9 +5366,9 @@ public class CombineServiceNew {
                 return "Vào hành trang\n"
                         + "Chọn 1 Trang bị THIÊN SỨ và 99 mảnh Ấn\n"
                         + "Sau đó chọn 'Làm phép'\n"
-                        + "-Tinh ấn (5 món +15%HP)\n"
-                        + "-Nhật ấn (5 món +15%KI\n"
-                        + "-Nguyệt ấn (5 món +10%SD)";
+                        + "-Tinh ấn (5 món +7% chỉ số)\n"
+                        + "-Nhật ấn (5 món +15%  chỉ số\n"
+                        + "-Nguyệt ấn (5 món +25% chỉ số)";
             case NHAP_NGOC_RONG:
                 return "Vào hành trang\n"
                         + "Chọn 7, 10 hoặc 20 viên ngọc cùng sao\n"
@@ -5131,7 +5421,7 @@ public class CombineServiceNew {
                         + "sẽ cho ra đồ thiên sứ từ 0-15% chỉ số\n"
                         + "(Có tỉ lệ thêm dòng chỉ số ẩn)\n"
                         + "Sau đó chọn 'Nâng Cấp'";
-            case NANG_CAP_SKH_VIP:
+            case Nang_Cap_SKH:
                 return "Vào hành trang\n"
                         + "Chọn 3 trang bị Hủy diệt bất kì\n"
                         + "Đồ SKH VIP sẽ cùng loại với đồ Hủy diệt!\n"

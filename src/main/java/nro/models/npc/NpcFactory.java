@@ -2485,7 +2485,7 @@ public class NpcFactory {
                                             // "Chân mệnh",
                                             // "mở phong ấn\nvỹ thú"
                                             "Pha Lê\nHóa",
-                                            "Nâng cấp\nSKH",
+                                            "SKH",
                                             "Chân mệnh",
                                             "Thêm"
                                     );
@@ -2570,8 +2570,8 @@ public class NpcFactory {
                                                 this.createOtherMenu(player, 20000, // id menu tự đặt
                                                         "|7|PHA LÊ HÓA\n"
                                                         + "Hãy chọn chức năng muốn sử dụng",
-                                                        "Ép sao\ntrang bị",
-                                                        "Pha lê hóa\ntrang bị");
+                                                        "Pha lê hóa\ntrang bị",
+                                                        "Ép sao\ntrang bị");
                                                 break;
 
                                             // ================================
@@ -2625,11 +2625,11 @@ public class NpcFactory {
 
                                         switch (select) {
                                             case 0:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.EP_SAO_TRANG_BI);
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHA_LE_HOA_TRANG_BI);
                                                 break;
 
                                             case 1:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHA_LE_HOA_TRANG_BI);
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.EP_SAO_TRANG_BI);
                                                 break;
                                         }
 
@@ -2642,7 +2642,7 @@ public class NpcFactory {
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_THAN_LINH);
                                                 break;
                                             case 1:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_SKH_VIP);
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.Nang_Cap_SKH);
                                                 break;
                                         }
                                     } else if (player.iDMark.getIndexMenu() == 5701) {
@@ -2669,7 +2669,7 @@ public class NpcFactory {
                                             case CombineServiceNew.NANG_CAP_CHAN_MENH:
                                             //  case CombineServiceNew.CHUYEN_HOA_DO_HUY_DIET:
                                             case CombineServiceNew.NANG_CAP_THAN_LINH:
-                                            case CombineServiceNew.NANG_CAP_SKH_VIP:
+                                            case CombineServiceNew.Nang_Cap_SKH:
                                             case CombineServiceNew.GIA_HAN_VAT_PHAM:
                                                 switch (select) {
                                                     case 0:
@@ -3015,7 +3015,7 @@ public class NpcFactory {
                                             case CombineServiceNew.LAM_PHEP_NHAP_DA:
                                             case CombineServiceNew.NHAP_NGOC_RONG:
                                             case CombineServiceNew.PHAN_RA_DO_THAN_LINH:
-                                            case CombineServiceNew.NANG_CAP_SKH_VIP:
+                                            case CombineServiceNew.Nang_Cap_SKH:
                                             case CombineServiceNew.MO_CHI_SO_BONG_TAI:
                                             //START _ SÁCH TUYỆT KỸ//
                                             case CombineServiceNew.GIAM_DINH_SACH:
