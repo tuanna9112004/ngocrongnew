@@ -391,6 +391,7 @@ public class UseItem {
                     case 574: //capsule vàng
                         openCapsuleVang(pl, item);
                         break;
+                        
                     case 381: //cuồng nộ
                     case 382: //bổ huyết
                     case 383: //bổ khí
@@ -455,6 +456,14 @@ public class UseItem {
                         InventoryService.gI().subQuantityItemsBag(pl, item, 1);
                     case 194: //capsule đặc biệt
                         openCapsuleUI(pl);
+                        break;
+                    case 1680:
+                    case 1681:
+                    case 1682:
+                    case 1683:
+                        System.out.println("hello");
+                        System.out.println(item.getId());
+                        PlayerPackService.openPack(pl, item);
                         break;
                     case 401: //đổi đệ tử
                         changePet(pl, item);

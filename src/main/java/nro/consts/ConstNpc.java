@@ -120,7 +120,7 @@ public static final String INFOR_TRAIN_OFFLINE = "Tập luyện vẫn tiếp t�
     public static final byte NPC_64 = 64;
     public static final byte YARIROBE = 65;
     public static final byte NOI_BANH = 66;
-    public static final byte MR_POPO = 67;
+    public static final byte QUAN_LY_CAU_THU = 67;
     public static final byte PANCHY = 68;
     public static final byte THO_DAI_CA = 69;
     public static final byte BARDOCK = 70;
@@ -136,6 +136,8 @@ public static final String INFOR_TRAIN_OFFLINE = "Tập luyện vẫn tiếp t�
     public static final byte CHUYEN_SINH = 87;
     public static final byte SO_MAY_MAN = 88;
     public static final byte NANG_CAP_PLAYER =89;
+
+
 public static final int DUC_LO_TRANG_BI = 12345;
 public static final int KHAM_DA_TRANG_BI = 12346;
 public static final int MENU_START_COOK_BEER = 10001;

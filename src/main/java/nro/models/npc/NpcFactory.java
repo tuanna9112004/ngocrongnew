@@ -69,7 +69,7 @@ import nro.services.func.Input.SubInput;
 import static nro.services.func.SummonDragon.*;
 
 /**
- * @author Văn Tuấn - 0337766460
+
  * @copyright 💖 GirlkuN 💖
  */
 public class NpcFactory {
@@ -475,7 +475,7 @@ public class NpcFactory {
                         }
                     };
                     break;
-                case ConstNpc.MR_POPO:
+                case ConstNpc.QUAN_LY_CAU_THU:
                     npc = new Npc(mapId, status, cx, cy, tempId, avartar) {
                         @Override
                         public void openBaseMenu(Player player) {
@@ -2601,7 +2601,9 @@ public class NpcFactory {
                                                         "Tinh ấn\ntrang bị",
                                                         "Pháp sư hoá\ntrang bị",
                                                         "Tẩy pháp sư",
-                                                        "Mở chỉ số\nVỹ Thú");
+                                                        "Mở chỉ số\nVỹ Thú",
+                                                        "Mở Khóa GD"
+                                                );
 
                                                 break;
 
@@ -2619,6 +2621,9 @@ public class NpcFactory {
                                                 break;
                                             case 3:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_CS_VY_THU);
+                                                break;
+                                            case 4:
+                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_KHOA_GD);
                                                 break;
                                         }
                                     } else if (player.iDMark.getIndexMenu() == 20000) {
@@ -2670,6 +2675,7 @@ public class NpcFactory {
                                             //  case CombineServiceNew.CHUYEN_HOA_DO_HUY_DIET:
                                             case CombineServiceNew.NANG_CAP_THAN_LINH:
                                             case CombineServiceNew.Nang_Cap_SKH:
+                                            case CombineServiceNew.MO_KHOA_GD:
                                             case CombineServiceNew.GIA_HAN_VAT_PHAM:
                                                 switch (select) {
                                                     case 0:
