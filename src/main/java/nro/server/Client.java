@@ -205,7 +205,7 @@ PlayerDAO.loadAccountCreated(player);
                 pl.playerSkill.skills.add(skill);
             }
             pl.inventory = new Inventory(pl);
-            for (int i = 0; i < 13; i++) {
+            for (int i = 0; i < 14; i++) {
                 pl.inventory.itemsBody.add(ItemService.gI().createItemNull());
             }
             pl.inventory.gold = 2000000000;

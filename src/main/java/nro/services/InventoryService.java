@@ -426,6 +426,7 @@ public class InventoryService {
             case 72:
             case 21:
             case 35:
+            case 76:
                 break;
             default:
                 Service.getInstance().sendThongBaoOK(player.isPet ? ((Pet) player).master : player, "Trang bị không phù hợp!");
@@ -481,6 +482,9 @@ public class InventoryService {
             case 74: // Foot
                 index = 11;
                 break;
+            case 76: // thẻ cầu thủ
+                index = 13;
+                break;
             case 35: // Miniature
                 index = 12;
                 break;
@@ -528,6 +532,7 @@ public class InventoryService {
             case 32: // Nhẫn
             case 72: // Áo choàng
             case 75: // Vũ khí phụ
+            case 76: //thẻ cầu thủ
             case 35: // Miniature
 
                 player.zone.load_Me_To_Another(player);

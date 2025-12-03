@@ -760,7 +760,7 @@ public class GodGK {
                     book.init();
                     player.setCollectionBook(book);
                     List<Item> itemsBody = player.inventory.itemsBody;
-                    while (itemsBody.size() < 11) {
+                    while (itemsBody.size() < 14) {
                         itemsBody.add(ItemService.gI().createItemNull());
                     }
 
@@ -1725,7 +1725,7 @@ public class GodGK {
                     book.init();
                     player.setCollectionBook(book);
                     List<Item> itemsBody = player.inventory.itemsBody;
-                    while (itemsBody.size() < 11) {
+                    while (itemsBody.size() < 14) {
                         itemsBody.add(ItemService.gI().createItemNull());
                     }
 

@@ -186,6 +186,8 @@ public class UseItem {
                                         InventoryService.gI().itemBagToBody(player, index);
                                     } else if (item.template.type == 72) {
                                         InventoryService.gI().itemBagToBody(player, index);
+                                    }else if (item.template.type == 76) {
+                                        InventoryService.gI().itemBagToBody(player, index);
                                     } else {
                                         useItem(player, item);
                                     }
