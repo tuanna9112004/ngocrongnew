@@ -353,14 +353,7 @@ public class UseItem {
                         openboxsukien(pl, item, 2);
                         break;
                     case 457:
-                        NpcService.gI().createMenuConMeo(pl, ConstNpc.DUNG_NHIEU_TV, 7710,
-                                "|7|THỎI VÀNG\n"
-                                + "|-1|Theo nguyện vọng góp ý từ các chiến binh, ta được Admin\n"
-                                + "giao cho trọng trách hỗ trợ Sử dụng Thỏi vàng số lượng nhiều\n"
-                                + "|0|Ngươi muốn Sử dụng bao nhiêu Thỏi vàng?",
-                                "X1 Thỏi\n(500 Triệu)", "X5 Thỏi\n(2,5 Tỷ)", "X10 Thỏi\n(5 Tỷ)",
-                                "X100 Thỏi\n(50 Tỷ)");
-                        return;
+                        Input.gI().createFormDoiThoiVangSangVang(pl);
                     case 211: //nho tím
                     case 212: //nho xanh
                         eatGrapes(pl, item);
@@ -458,13 +451,26 @@ public class UseItem {
                         openCapsuleUI(pl);
                         break;
                     case 1680:
-                    case 1681:
-                    case 1682:
-                    case 1683:
-                        System.out.println("hello");
-                        System.out.println(item.getId());
-                        PlayerPackService.openPack(pl, item);
-                        break;
+case 1681:
+case 1682:
+case 1683:
+case 1684:
+case 1685:
+case 1686:
+case 1687:
+case 1688:
+case 1689:
+case 1690:
+case 1691:
+case 1692:
+case 1693:
+case 1694:
+case 1695:
+case 1696:
+case 1697:
+    PlayerPackService.openPack(pl, item);
+    break;
+
                     case 401: //đổi đệ tử
                         changePet(pl, item);
                         break;

@@ -40,7 +40,7 @@ import nro.services.PlayerService;
 import nro.utils.Log;
 
 /**
-
+ *
  * @copyright 💖 GirlkuN 💖
  */
 public class CombineServiceNew {
@@ -106,6 +106,8 @@ public class CombineServiceNew {
 
     public static final int NANG_CAP_SKH = 537;
     public static final int MO_KHOA_GD = 538;
+    public static final int DAP_THE_CAU_THU = 539;
+    public static final int MO_CS_THE = 540;
     // END _ SÁCH TUYỆT KỸ //s
 
     private final Npc baHatMit;
@@ -239,6 +241,225 @@ public class CombineServiceNew {
                             "Cần 1 trang bị có lỗ sao pha lê và 1 loại đá pha lê để ép vào", "Đóng");
                 }
                 break;
+            case DAP_THE_CAU_THU: {
+                List<Item> items = player.combineNew.itemsCombine;
+                if (items.isEmpty() || items.size() > 6) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Cần từ 1 đến 6 thẻ cầu thủ (type 76)", "Đóng");
+                    return;
+                }
+
+                // check type & lấy main
+                Item main = items.get(0);
+                if (main == null || !main.isNotNullItem() || main.template.type != 76) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ đầu tiên phải là thẻ cầu thủ (type 76)", "Đóng");
+                    return;
+                }
+                // lấy Over & Level
+                int overMain = getParamOption(main, 223);
+                int level = getParamOption(main, 72);
+                if (overMain <= 0) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ cầu thủ không hợp lệ (không có Over)", "Đóng");
+                    return;
+                }
+                if (level >= 5) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ đã đạt cấp tối đa", "Đóng");
+                    return;
+                }
+
+                // ----- TỈ LỆ MAX KHI ĐỦ 5 VẠCH PHÔI -----
+                int baseRate;
+                switch (level) {
+                    case 0: // 0 -> 1
+                        baseRate = 100;
+                        break;
+                    case 1: // 1 -> 2
+                        baseRate = 80;
+                        break;
+                    case 2: // 2 -> 3
+                        baseRate = 70;
+                        break;
+                    case 3: // 3 -> 4
+                        baseRate = 60;
+                        break;
+                    case 4: // 4 -> 5
+                        baseRate = 50;
+                        break;
+                    default:
+                        baseRate = 0;
+                }
+
+                // ----- TÍNH VẠCH PHÔI THEO ROLE + PHÁT HIỆN THỪA PHÔI -----
+                double totalVachRaw = 0.0;        // tổng vạch (chưa clamp)
+                double accDetect = 0.0;          // dùng để phát hiện thừa
+                List<Integer> redundantSlots = new ArrayList<>(); // lưu index phôi thừa (trong list items)
+
+                for (int i = 1; i < items.size(); i++) {
+                    Item phoi = items.get(i);
+                    if (phoi == null || !phoi.isNotNullItem() || phoi.template.type != 76) {
+                        continue;
+                    }
+                    int overPhoi = getParamOption(phoi, 223);
+                    if (overPhoi <= 0) {
+                        continue;
+                    }
+
+                    double vach = getVachPhoi(level, overMain, overPhoi);
+
+                    // PHÁT HIỆN PHÔI THỪA:
+                    // - Nếu trước khi cộng đã >=5 vạch -> phôi này chắc chắn thừa
+                    // - Nếu trước đó <5 vạch và sau khi cộng mới >5 vạch -> phôi này là phôi "chốt" để lên full vạch, KHÔNG tính là thừa
+                    if (accDetect >= 5.0) {
+                        // Đã đủ 5 vạch rồi mà còn cộng thêm -> phôi thừa
+                        redundantSlots.add(i);
+                    } else {
+                        // accDetect < 5.0
+                        // nếu accDetect + vach > 5.0 => phôi này là phôi giúp vượt ngưỡng lên (hoặc vượt nhẹ) => vẫn giữ
+                    }
+
+                    accDetect += vach;
+                    totalVachRaw += vach;
+                }
+
+                // chuẩn hoá theo 5 vạch để tính tỉ lệ
+                double totalVachNorm = Math.min(totalVachRaw, 5.0) / 5.0;
+
+                // TỈ LỆ CUỐI: baseRate * (vạch/5)
+                double finalRateD = baseRate * totalVachNorm;
+                if (finalRateD < 0) {
+                    finalRateD = 0;
+                } else if (finalRateD > 100) {
+                    finalRateD = 100;
+                }
+                player.combineNew.ratioCombine = (int) Math.round(finalRateD);
+
+                int phoiPercent = (int) Math.round(totalVachNorm * 100);
+
+                // ----- GHÉP THÊM CÂU THÔNG BÁO THỪA PHÔI (NẾU CÓ) -----
+                String extraWarn = "";
+                if (!redundantSlots.isEmpty()) {
+                    StringBuilder sb = new StringBuilder();
+                    sb.append("\n|7|Bạn đang thừa vạch phôi, có thể bỏ bớt:\n");
+                    for (int j = 0; j < redundantSlots.size(); j++) {
+                        int idx = redundantSlots.get(j);
+                        Item phoiThua = items.get(idx);
+                        String ten = phoiThua != null && phoiThua.template != null
+                                ? phoiThua.template.name : "Cầu thủ";
+                        int displayIndex = idx + 1; // vì 0 là thẻ chính => người chơi thấy ô 1 là main, ô 2 là phôi 1...
+
+                        sb.append("- Cầu thủ ").append(ten)
+                                .append(" ở ô số ").append(displayIndex);
+                    }
+                    extraWarn = sb.toString();
+                }
+
+                String npcSay = "\n|7|ĐẬP THẺ CẦU THỦ\n"
+                        + "|1|Thẻ chính: " + main.template.name + "\n"
+                        + "|0|Over: " + overMain + "  -  Cấp: " + level + "\n"
+                        + "|0|Vạch phôi:\n"
+                        + progressBar(phoiPercent) + "\n"
+                        + "|2|Tỉ lệ thành công: " + player.combineNew.ratioCombine + "%"
+                        + extraWarn;
+
+                this.baHatMit.createOtherMenu(player, ConstNpc.MENU_START_COMBINE, npcSay,
+                        "Đập thẻ", "Từ chối");
+                break;
+            }
+
+            case MO_CS_THE: {
+                List<Item> items = player.combineNew.itemsCombine;
+                if (items.size() != 1) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Cần đúng 1 thẻ cầu thủ (type 76)", "Đóng");
+                    return;
+                }
+                Item main = items.get(0);
+                if (main == null || !main.isNotNullItem() || main.template.type != 76) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Cần đúng 1 thẻ cầu thủ (type 76)", "Đóng");
+                    return;
+                }
+                int over = getParamOption(main, 223);
+                int level = getParamOption(main, 72);
+                if (over <= 0) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ cầu thủ không có Over", "Đóng");
+                    return;
+                }
+                if (level <= 0) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ chưa được nâng cấp, không có chỉ số để mở", "Đóng");
+                    return;
+                }
+
+                int posOtp = -1;
+                String posName = "";
+                if (hasOption(main, 220)) {
+                    posOtp = 220;
+                    posName = "ST";
+                } else if (hasOption(main, 221)) {
+                    posOtp = 221;
+                    posName = "CAM";
+                } else if (hasOption(main, 222)) {
+                    posOtp = 222;
+                    posName = "CB";
+                } else {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Thẻ cầu thủ chưa có vị trí (220/221/222)", "Đóng");
+                    return;
+                }
+
+                int param = over * level;
+                if (param <= 0) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Chỉ số mới không hợp lệ", "Đóng");
+                    return;
+                }
+
+                                String statName;
+                String statUnit; // %HP, %KI, %SD
+
+                switch (posOtp) {
+                    case 220:
+                        statName = "ST";
+                        statUnit = "%SD";
+                        break;
+                    case 221:
+                        statName = "CAM";
+                        statUnit = "%HP";
+                        break;
+                    case 222:
+                        statName = "CB";
+                        statUnit = "%KI";
+                        break;
+                    default:
+                        statName = "Chỉ số";
+                        statUnit = "%";
+                }
+
+                // param = over * level
+                String reason = "|1|Cách tính: Over(" + over + ") × Cấp thẻ(" + level + ") = " + param + statUnit;
+
+                String npcSay = "|7|MỞ CHỈ SỐ CẦU THỦ\n"
+                        + "|1|Thẻ: " + main.template.name + "\n"
+                        + "|0|Vị trí: " + posName + "\n"
+                        + "|0|Over: " + over + "  -  Cấp: " + level + "\n"
+                        + "|2|" + statName + " +" + param + statUnit + "\n"
+                        + reason;
+
+
+
+                // deterministic nên set 100%
+                player.combineNew.ratioCombine = 100;
+
+                this.baHatMit.createOtherMenu(player, ConstNpc.MENU_START_COMBINE, npcSay,
+                        "Mở chỉ số", "Từ chối");
+                break;
+            }
+
             case MO_KHOA_GD: {
                 if (player.combineNew.itemsCombine.size() != 2) {
                     this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
@@ -1918,6 +2139,13 @@ public class CombineServiceNew {
             case GIA_HAN_VAT_PHAM:
                 GiaHanTrangBi(player);
                 break;
+            case DAP_THE_CAU_THU:
+                dapTheCauThu(player);
+                break;
+            case MO_CS_THE:
+                moChiSoThe(player);
+                break;
+
             case DE_TU_VIP:
                 detuvip(player);
                 break;
@@ -5512,6 +5740,10 @@ public class CombineServiceNew {
                 return "Ta sẽ phục hồi\nsách cho ngươi";
             case PHAN_RA_SACH:
                 return "Ta sẽ phân rã\nsách cho ngươi";
+            case DAP_THE_CAU_THU:
+                return "Ta sẽ giúp ngươi\nnâng cấp thẻ cầu thủ";
+            case MO_CS_THE:
+                return "Ta sẽ mở chỉ số\ntheo vị trí cầu thủ";
             // END _ SÁCH TUYỆT KỸ //
             default:
                 return "";
@@ -5530,18 +5762,7 @@ public class CombineServiceNew {
                         + "(Áo, quần, găng, giày hoặc rađa)\n"
                         + "Sau đó chọn 'Nâng cấp'";
             case NANG_CAP_SKH:
-                return "|7|NÂNG CẤP SET KÍCH HOẠT\n"
-                        + "----------------------------\n"
-                        + "• Cần đúng 3 món trang bị\n"
-                        + "• 3 món phải cùng hành tinh\n"
-                        + "• 3 món phải cùng hạng:\n"
-                        + "   Cấp 12 / Thần Linh / Hủy Diệt / Thiên Sứ\n"
-                        + "• Mỗi món phải có ít nhất 1 dòng SKH\n"
-                        + "----------------------------\n"
-                        + "Chi phí: |2|500.000.000 vàng\n"
-                        + "Sau khi nâng cấp sẽ tạo ra 1 trang bị hạng cao hơn\n"
-                        + "với chỉ số tăng mạnh và giữ SKH theo quy tắc.\n"
-                        + "----------------------------\n"
+                return "Chọn 3 hợp lệ trang bị\n"
                         + "Chọn 'Nâng cấp' để tiếp tục";
 
             case KHAM_DA_TRANG_BI:
@@ -5582,6 +5803,18 @@ public class CombineServiceNew {
                         + "(Áo, quần, găng, giày hoặc rađa)\n"
                         + "Chọn loại đá để nâng cấp\n"
                         + "Sau đó chọn 'Nâng cấp'";
+            case DAP_THE_CAU_THU:
+                return "ĐẬP THẺ CẦU THỦ\n"
+                        + "• Cho tối đa 6 thẻ cầu thủ \n"
+                        + "• Thẻ đầu tiên là thẻ chính sẽ được đập\n"
+                        + "• Các thẻ sau là phôi, Over càng cao % càng lớn\n"
+                        + "• Chọn xong rồi bấm 'Nâng cấp'";
+            case MO_CS_THE:
+                return "MỞ CHỈ SỐ CẦU THỦ\n"
+                        + "• Cho vào 1 thẻ cầu thủ \n"
+                        + "• Thẻ phải có vị trí ST/CAM/CB tương ứng SD/HP/KI\n"
+                        + "• Chỉ số được tính: Over * Cấp\n"
+                        + "• Sau đó chọn 'Nâng cấp' để mở chỉ số";
             case NANG_CAP_BONG_TAI:
                 return "Vào hành trang\n"
                         + "Chọn bông tai Porata 1, 2, 3, 4\n"
@@ -5683,4 +5916,451 @@ public class CombineServiceNew {
                 return "";
         }
     }
+
+    private int getParamOption(Item item, int optionId) {
+        if (item == null || item.itemOptions == null) {
+            return 0;
+        }
+        for (ItemOption io : item.itemOptions) {
+            if (io.optionTemplate.id == optionId) {
+                return io.param;
+            }
+        }
+        return 0;
+    }
+
+    private ItemOption getOption(Item item, int optionId) {
+        if (item == null || item.itemOptions == null) {
+            return null;
+        }
+        for (ItemOption io : item.itemOptions) {
+            if (io.optionTemplate.id == optionId) {
+                return io;
+            }
+        }
+        return null;
+    }
+
+    private boolean hasOption(Item item, int optionId) {
+        return getOption(item, optionId) != null;
+    }
+
+    private void dapTheCauThu(Player player) {
+
+        if (player.combineNew.itemsCombine == null || player.combineNew.itemsCombine.isEmpty()) {
+            Service.getInstance().sendThongBao(player, "Chưa cho thẻ cầu thủ vào");
+            return;
+        }
+
+        List<Item> items = player.combineNew.itemsCombine;
+
+        // ==== BẮT BUỘC TẤT CẢ PHẢI LÀ TYPE 76 ====
+        for (Item it : items) {
+            if (it == null || !it.isNotNullItem() || it.template.type != 76) {
+                Service.getInstance().sendThongBao(player,
+                        "Tất cả vật phẩm phải là thẻ cầu thủ (type 76)");
+                return;
+            }
+        }
+
+        if (items.size() > 6) {
+            Service.getInstance().sendThongBao(player, "Chỉ được cho tối đa 6 thẻ cầu thủ");
+            return;
+        }
+
+        // Thẻ chính
+        Item main = items.get(0);
+        int overMain = getParamOption(main, 223);
+        if (overMain <= 0) {
+            Service.getInstance().sendThongBao(player, "Thẻ cầu thủ không hợp lệ (không có Over)");
+            return;
+        }
+
+        ItemOption optLevel = getOption(main, 72);
+        int level = optLevel != null ? optLevel.param : 0;
+
+        if (level >= 5) {
+            Service.getInstance().sendThongBao(player, "Thẻ đã đạt cấp tối đa");
+            return;
+        }
+
+        // ----------------------
+        // TỈ LỆ MAX KHI ĐỦ 5 VẠCH PHÔI
+        // ----------------------
+        int baseRate;
+        switch (level) {
+            case 0: // 0 -> 1
+                baseRate = 100;
+                break;
+            case 1: // 1 -> 2
+                baseRate = 80;
+                break;
+            case 2: // 2 -> 3
+                baseRate = 70;
+                break;
+            case 3: // 3 -> 4
+                baseRate = 60;
+                break;
+            case 4: // 4 -> 5
+                baseRate = 50;
+                break;
+            default:
+                baseRate = 0;
+        }
+
+        // ----------------------
+        // TÍNH VẠCH PHÔI THEO ROLE
+        // ----------------------
+        double totalVach = 0.0; // đơn vị: vạch (0..5 mỗi phôi)
+
+        for (int i = 1; i < items.size(); i++) {
+            Item phoi = items.get(i);
+            int overPhoi = getParamOption(phoi, 223);
+
+            if (overPhoi <= 0) {
+                continue;
+            }
+
+            totalVach += getVachPhoi(level, overMain, overPhoi);
+        }
+
+        // Chuẩn hoá về 0..1 với tối đa 5 vạch
+        double totalVachNorm = Math.min(totalVach, 5.0) / 5.0;
+
+        // TỈ LỆ CUỐI: baseRate * (vạch/5)
+        double finalRateD = baseRate * totalVachNorm;
+        if (finalRateD < 0) {
+            finalRateD = 0;
+        }
+        if (finalRateD > 100) {
+            finalRateD = 100;
+        }
+        int finalRate = (int) Math.round(finalRateD);
+
+        // ----------------------
+        // XÓA PHÔI (trừ số lượng trong bag)
+        // ----------------------
+        for (int i = 1; i < items.size(); i++) {
+            Item phoi = items.get(i);
+            if (phoi != null && phoi.isNotNullItem()) {
+                InventoryService.gI().subQuantityItemsBag(player, phoi, 1);
+            }
+        }
+
+        // ----------------------
+        // TÍNH LẠI BASE OVER
+        // ----------------------
+        int[] sumInc = {0, 1, 2, 3, 5, 7};
+        int baseOver = overMain - sumInc[level];
+        if (baseOver < 0) {
+            baseOver = 0;
+        }
+
+        boolean success = Util.isTrue(finalRate, 100);
+
+        // ---------------------------------------
+        //     ⭐⭐ BẮT BUỘC XÓA CÁC OTP CHỈ SỐ ⭐⭐
+        // ---------------------------------------
+        removeOption(main, 50);
+        removeOption(main, 77);
+        removeOption(main, 103);
+
+        if (success) {
+            int newLevel = level + 1;
+            int plusOver = (level <= 2 ? 1 : 2);
+
+            // Cập nhật level
+            if (optLevel == null) {
+                optLevel = new ItemOption(72, newLevel);
+                main.itemOptions.add(optLevel);
+            } else {
+                optLevel.param = newLevel;
+            }
+
+            // Cập nhật Over
+            ItemOption optOver = getOption(main, 223);
+            if (optOver == null) {
+                optOver = new ItemOption(223, overMain + plusOver);
+                main.itemOptions.add(optOver);
+            } else {
+                optOver.param = overMain + plusOver;
+            }
+
+            sendEffectSuccessCombine(player);
+
+        } else {
+
+            int newLevel = Util.nextInt(0, level);
+            int newOver = baseOver + sumInc[newLevel];
+
+            // giảm cấp
+            if (optLevel == null) {
+                main.itemOptions.add(new ItemOption(72, newLevel));
+            } else {
+                optLevel.param = newLevel;
+            }
+
+            // giảm Over về đúng base theo newLevel
+            ItemOption optOver = getOption(main, 223);
+            if (optOver == null) {
+                main.itemOptions.add(new ItemOption(223, newOver));
+            } else {
+                optOver.param = newOver;
+            }
+
+            sendEffectFailCombine(player);
+        }
+
+        // ============================
+        // GIỮ LẠI DUY NHẤT THẺ CHÍNH Ở Ô NÂNG CẤP
+        // ============================
+        player.combineNew.itemsCombine.clear();
+        player.combineNew.itemsCombine.add(main);
+
+        InventoryService.gI().sendItemBags(player);
+        Service.getInstance().sendMoney(player);
+        reOpenItemCombine(player);
+    }
+
+    private void moChiSoThe(Player player) {
+        if (player.combineNew.itemsCombine == null || player.combineNew.itemsCombine.size() != 1) {
+            Service.getInstance().sendThongBao(player, "Cần đúng 1 thẻ cầu thủ");
+            return;
+        }
+        Item main = player.combineNew.itemsCombine.get(0);
+        if (main == null || !main.isNotNullItem() || main.template.type != 76) {
+            Service.getInstance().sendThongBao(player, "Cần đúng 1 thẻ cầu thủ (type 76)");
+            return;
+        }
+
+        int over = getParamOption(main, 223);
+        int level = getParamOption(main, 72);
+        if (over <= 0) {
+            Service.getInstance().sendThongBao(player, "Thẻ cầu thủ không hợp lệ (không có Over)");
+            return;
+        }
+        if (level <= 0) {
+            Service.getInstance().sendThongBao(player, "Thẻ chưa được nâng cấp, không có chỉ số để mở");
+            return;
+        }
+
+        int posOtp = -1;
+        int statOtp = -1;
+        if (hasOption(main, 220)) { // ST
+            posOtp = 220;
+            statOtp = 50;
+        } else if (hasOption(main, 221)) { // CAM
+            posOtp = 221;
+            statOtp = 77;
+        } else if (hasOption(main, 222)) { // CB
+            posOtp = 222;
+            statOtp = 103;
+        } else {
+            Service.getInstance().sendThongBao(player, "Thẻ chưa có vị trí ST/CAM/CB (220/221/222)");
+            return;
+        }
+
+        int param = over * level;
+        if (param <= 0) {
+            Service.getInstance().sendThongBao(player, "Chỉ số mới không hợp lệ");
+            return;
+        }
+
+        ItemOption optStat = getOption(main, statOtp);
+        if (optStat == null) {
+            main.itemOptions.add(new ItemOption(statOtp, param));
+        } else {
+            optStat.param = param;
+        }
+
+        sendEffectSuccessCombine(player);
+        Service.getInstance().sendThongBao(player, "Đã cập nhật chỉ số cho thẻ cầu thủ!");
+
+        InventoryService.gI().sendItemBags(player);
+        Service.getInstance().sendMoney(player);
+        reOpenItemCombine(player);
+    }
+
+    private String progressBar(int percent) {
+        int filled = Math.min(10, Math.max(0, percent / 10));
+        StringBuilder b = new StringBuilder("[");
+        for (int i = 0; i < 10; i++) {
+            b.append(i < filled ? "■" : "□");
+        }
+        b.append("] ").append(percent).append("%");
+        return b.toString();
+    }
+
+    private void removeOption(Item item, int optionId) {
+        item.itemOptions.removeIf(op -> op.optionTemplate.id == optionId);
+    }
+
+    // ================== BẢNG ROLE TÍNH VẠCH PHÔI THẺ CẦU THỦ ==================
+    // Trả về số "vạch" phôi đóng góp cho 1 lần đập (1 vạch = 1.0, tối đa 5.0)
+    private double getVachPhoi(int level, int overMain, int overPhoi) {
+        int diff = overPhoi - overMain; // >0: phôi hơn over, <0: phôi kém over
+
+        switch (level) {
+            case 0: // nâng 0 -> 1
+                return getVachLevel0(diff);
+            case 1: // nâng 1 -> 2
+                return getVachLevel1(diff);
+            case 2: // nâng 2 -> 3
+                return getVachLevel2(diff);
+            case 3: // nâng 3 -> 4
+                return getVachLevel3(diff);
+            case 4: // nâng 4 -> 5
+                return getVachLevel4(diff);
+            default:
+                return 0.0;
+        }
+    }
+
+    // -------------- BẢNG ROLE 0 -> 1 --------------
+    private double getVachLevel0(int diff) {
+        if (diff <= -9) {
+            return 1.0 / 5.0;      // Phôi <9 over: 1/5 vạch
+        } else if (diff == -8) {
+            return 0.30;      // <8 over: 30% 1 vạch
+        } else if (diff == -7) {
+            return 0.40;      // <7 over: 40%
+        } else if (diff == -6) {
+            return 0.50;      // <6 over: 1/2
+        } else if (diff == -5) {
+            return 0.75;      // <5 over: 3/4
+        } else if (diff == -4) {
+            return 1.0;       // <4 over: 1 vạch
+        } else if (diff == -3) {
+            return 1.3;       // <3 over: 1.3 vạch
+        } else if (diff == -2) {
+            return 1.8;       // <2 over: 1.8 vạch
+        } else if (diff == -1) {
+            return 2.2;       // <1 over: 2.2 vạch
+        } else if (diff == 0) {
+            return 3.0;       // = over: 3 vạch
+        } else if (diff == 1) {
+            return 0.70 * 5;  // >1 over: 70% của 5 vạch
+        } else if (diff == 2) {
+            return 0.85 * 5;  // >2 over: 85% của 5 vạch
+        } else /* diff >= 3 */ {
+            return 5.0;       // >3 over: 100% của 5 vạch (max)
+        }
+    }
+
+    // -------------- BẢNG ROLE 1 -> 2 --------------
+    private double getVachLevel1(int diff) {
+        if (diff <= -8) {
+            return 1.0 / 5.0;      // <8 over
+        } else if (diff == -7) {
+            return 0.33;      // <7 over: 33%
+        } else if (diff == -6) {
+            return 0.25;      // <6 over: 1/4
+        } else if (diff == -5) {
+            return 0.50;      // <5 over: 1/2
+        } else if (diff == -4) {
+            return 0.75;      // <4 over: 3/4
+        } else if (diff == -3) {
+            return 1.0;       // <3 over: 1 vạch
+        } else if (diff == -2) {
+            return 1.3;       // <2 over
+        } else if (diff == -1) {
+            return 1.6;       // <1 over
+        } else if (diff == 0) {
+            return 2.5;       // = over: 2.5 vạch
+        } else if (diff == 1) {
+            return 0.70 * 5;  // >1 over
+        } else if (diff == 2) {
+            return 0.85 * 5;  // >2 over
+        } else /* diff >= 3 */ {
+            return 5.0;       // >3 over (max)
+        }
+    }
+
+    // -------------- BẢNG ROLE 2 -> 3 --------------
+    private double getVachLevel2(int diff) {
+        if (diff <= -7) {
+            return 1.0 / 5.0;      // <7 over
+        } else if (diff == -6) {
+            return 0.25;      // <6 over: 25%
+        } else if (diff == -5) {
+            return 1.0 / 3.0; // <5 over: 1/3 vạch
+        } else if (diff == -4) {
+            return 0.50;      // <4 over: 1/2
+        } else if (diff == -3) {
+            return 0.75;      // <3 over: 3/4
+        } else if (diff == -2) {
+            return 1.0;       // <2 over
+        } else if (diff == -1) {
+            return 1.2;       // <1 over
+        } else if (diff == 0) {
+            return 1.6;       // = over
+        } else if (diff == 1) {
+            return 2.2;       // >1 over
+        } else if (diff == 2) {
+            return 3.0;       // >2 over
+        } else if (diff == 3) {
+            return 4.0;       // >3 over
+        } else /* diff >= 4 */ {
+            return 5.0;       // >4 over (max)
+        }
+    }
+
+    // -------------- BẢNG ROLE 3 -> 4 --------------
+    private double getVachLevel3(int diff) {
+        if (diff <= -6) {
+            return 1.0 / 5.0;      // <6 over
+        } else if (diff == -5) {
+            return 0.25;      // <5 over: 1/4
+        } else if (diff == -4) {
+            return 0.30;      // <4 over: 30%
+        } else if (diff == -3) {
+            return 0.40;      // <3 over: 40%
+        } else if (diff == -2) {
+            return 0.65;      // <2 over: 65%
+        } else if (diff == -1) {
+            return 0.95;      // <1 over: 95%
+        } else if (diff == 0) {
+            return 1.2;       // = over
+        } else if (diff == 1) {
+            return 1.7;       // >1 over
+        } else if (diff == 2) {
+            return 2.2;       // >2 over
+        } else if (diff == 3) {
+            return 3.0;       // >3 over
+        } else if (diff == 4) {
+            return 4.0;       // >4 over
+        } else /* diff >= 5 */ {
+            return 5.0;       // >5 over (max)
+        }
+    }
+
+    // -------------- BẢNG ROLE 4 -> 5 --------------
+    private double getVachLevel4(int diff) {
+        if (diff <= -5) {
+            return 1.0 / 5.0;      // <5 over
+        } else if (diff == -4) {
+            return 0.25;      // <4 over: 25%
+        } else if (diff == -3) {
+            return 0.30;      // <3 over: 30%
+        } else if (diff == -2) {
+            return 0.50;      // <2 over: 50%
+        } else if (diff == -1) {
+            return 0.75;      // <1 over: 75%
+        } else if (diff == 0) {
+            return 1.0;       // = over: 1 vạch
+        } else if (diff == 1) {
+            return 1.25;      // >1 over
+        } else if (diff == 2) {
+            return 1.33;      // >2 over
+        } else if (diff == 3) {
+            return 2.45;      // >3 over
+        } else if (diff == 4) {
+            return 3.65;      // >4 over
+        } else if (diff == 5) {
+            return 4.3;       // >5 over
+        } else /* diff >= 6 */ {
+            return 5.0;       // >6 over (max)
+        }
+    }
+
 }

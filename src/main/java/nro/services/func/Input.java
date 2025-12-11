@@ -45,6 +45,7 @@ public class Input {
     public static final int CHON_SO_MAY_MAN = 518;
     public static final int GIFT_MEMBER = 519;
     public static final int QUY_DOI_XU_VANG = 520;
+    public static final int DOI_TV_SANG_VANG = 521;
     public static final byte NUMERIC = 0;
     public static final byte ANY = 1;
     public static final byte PASSWORD = 2;
@@ -558,6 +559,48 @@ public class Input {
                         Service.getInstance().sendThongBao(player, "|7|Số Coin nhập phải là bội số của 1000");
                     }
                     break;
+               case Input.DOI_TV_SANG_VANG: 
+    try {
+        int soThoi = Integer.parseInt(text[0].trim());
+
+        if (soThoi <= 0) {
+            Service.getInstance().sendThongBao(player, "Số thỏi vàng phải > 0");
+            break;
+        }
+
+        Item tv = InventoryService.gI().findItemBagByTemp(player, 457);
+        if (tv == null || tv.quantity < soThoi) {
+            Service.getInstance().sendThongBao(player, "Bạn không đủ thỏi vàng");
+            break;
+        }
+
+        final long GOLD_PER_TV = 500_000_000L;
+        long goldNow = player.inventory.gold;
+        long goldLimit = player.inventory.getGoldLimit();
+
+        long goldAdd = (long) soThoi * GOLD_PER_TV;
+
+        if (goldNow + goldAdd > goldLimit) {
+            long maxCanReceive = (goldLimit - goldNow) / GOLD_PER_TV;
+            Service.getInstance().sendThongBao(player,
+                    "Giới hạn vàng không đủ.\nBạn chỉ có thể đổi tối đa: " + maxCanReceive + " thỏi");
+            break;
+        }
+
+        // Cộng vàng – trừ thỏi
+        player.inventory.gold += goldAdd;
+        InventoryService.gI().subQuantityItemsBag(player, tv, soThoi);
+        InventoryService.gI().sendItemBags(player);
+        Service.getInstance().sendMoney(player);
+
+        Service.getInstance().sendThongBao(player,
+                "Bạn đã đổi " + soThoi + " thỏi vàng thành " + Util.format(goldAdd) + " vàng");
+
+    } catch (Exception e) {
+        Service.getInstance().sendThongBao(player, "Số nhập không hợp lệ");
+    }
+    break;
+
 
                 case MUA_CODE_USE: {
                     String code = text[0].trim().toUpperCase();
@@ -774,6 +817,35 @@ public class Input {
     public void createFormQDTV(Player pl) {
         createForm(pl, QUY_DOI_COIN_1, "ĐỔI THỎI VÀNG", new SubInput("Nhập số tiền muốn đổi ", NUMERIC));
     }
+       public void createFormDoiThoiVangSangVang(Player pl) {
+
+    Item tv = InventoryService.gI().findItemBagByTemp(pl, (short) 457);
+    long soThoiHienCo = (tv == null ? 0 : tv.quantity);
+
+    long goldNow = pl.inventory.gold;
+    long goldLimit = pl.inventory.getGoldLimit();
+
+    final long GOLD_PER_TV = 500_000_000L;
+
+    long maxCanReceive = (goldLimit - goldNow) / GOLD_PER_TV;
+    if (maxCanReceive < 0) maxCanReceive = 0;
+
+    long soThoiDuocDoi = Math.min(soThoiHienCo, maxCanReceive);
+
+    long vangNhanToiDa = soThoiDuocDoi * GOLD_PER_TV;
+
+    String title =
+            "Thỏi vàng đang có: " + Util.format(soThoiHienCo) + "\n"
+            + "Giới hạn vàng: " + Util.format(goldNow) + " / " + Util.format(goldLimit) + "\n"
+            + "Có thể đổi tối đa: " + Util.format(soThoiDuocDoi)
+            + " (Nhận " + Util.format(vangNhanToiDa) + " vàng)";
+
+    createForm(pl, DOI_TV_SANG_VANG, title,
+            new SubInput("Nhập số thỏi vàng muốn đổi (giá: 500tr/thỏi)", NUMERIC));
+}
+
+
+
 
     public void createFormQDXu(Player pl) {
         createForm(pl, QUY_DOI_XU_VANG, "ĐỔI tiền tệ", new SubInput("Nhập số tiền muốn đổi 10k = 100 tiền tệ", NUMERIC));

@@ -221,7 +221,7 @@ public class BossFactory {
                 createBoss(SUPER_BLACK_ROSE);
                 createBoss(ZAMAS_TOI_THUONG);
                 // createBoss(BONG_BANG);
-                createBoss(SANTA_CLAUS);
+               // createBoss(SANTA_CLAUS);
                 createBoss(WHIS_DETU);
                 createBoss(RONG_DEN);
                 //   createBoss(ZENO);
@@ -235,11 +235,11 @@ public class BossFactory {
                 //    createBoss(FRANKY);
                 //   createBoss(CHOPPER);
                 //   createBoss(BROOK);
-                createBoss(LINHXANH);
-                createBoss(LINHSET);
-                createBoss(LINHLUA);
-                createBoss(LUFFY_THAN_NIKA);
-                createBoss(MIHAWK);
+                //createBoss(LINHXANH);
+                //createBoss(LINHSET);
+                //createBoss(LINHLUA);
+                //createBoss(LUFFY_THAN_NIKA);
+                //createBoss(MIHAWK);
 
                 // Tạo 5 Super Broly
                 for (int i = 0; i < 5; i++) {

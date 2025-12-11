@@ -3365,3 +3365,1838 @@ java.net.BindException: Address already in use: bind
 [2025-12-04 00:46:33 WARN  BossFactory:607] Unknown boss ID: -110
 [2025-12-04 00:46:33 INFO  BossFactory:252] Boss initialization completed successfully!
 [2025-12-04 00:46:33 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 00:50:06 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 00:50:06 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 00:50:06 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 00:50:06 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 00:50:06 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 00:50:06 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 00:50:06 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 00:50:06 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 00:50:06 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 00:50:06 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 00:50:06 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 00:50:07 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 00:50:07 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 00:50:07 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 00:50:07 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 00:50:07 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 00:50:07 DEBUG Log:22] Map update loop started!
+[2025-12-04 00:50:07 DEBUG Log:22] Init map thành công!
+[2025-12-04 00:50:07 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 00:50:07 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 00:50:07 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 00:50:07 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 00:50:07 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 00:50:07 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 00:50:07 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 00:50:07 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 00:50:07 DEBUG Log:14] Tổng thời gian load database: 1728(ms)
+[2025-12-04 00:50:07 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 00:50:07 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 00:50:07 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 00:50:07 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 00:50:07 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 00:50:07 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 00:50:07 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 01:58:34 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 01:58:34 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 01:58:34 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 01:58:34 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 01:58:34 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 01:58:34 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 01:58:34 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 01:58:34 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 01:58:34 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 01:58:34 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 01:58:34 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 01:58:34 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 01:58:34 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 01:58:34 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 01:58:34 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 01:58:34 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 01:58:36 DEBUG Log:22] Map update loop started!
+[2025-12-04 01:58:36 DEBUG Log:22] Init map thành công!
+[2025-12-04 01:58:36 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 01:58:36 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 01:58:36 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 01:58:36 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 01:58:36 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 01:58:36 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 01:58:36 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 01:58:36 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 01:58:36 DEBUG Log:14] Tổng thời gian load database: 2755(ms)
+[2025-12-04 01:58:36 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 01:58:36 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 01:58:36 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 01:58:36 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 01:58:36 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 01:58:36 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 01:58:36 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:11:14 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:11:14 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:11:14 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:11:14 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:11:14 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:11:14 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:11:14 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:11:14 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:11:14 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:11:14 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:11:14 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:11:14 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:11:14 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:11:14 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:11:14 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:11:14 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:11:16 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:11:16 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:11:16 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:11:16 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:11:16 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:11:16 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:11:16 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:11:16 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:11:16 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:11:16 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:11:16 DEBUG Log:14] Tổng thời gian load database: 3319(ms)
+[2025-12-04 02:11:16 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:11:16 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:11:16 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:11:16 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:11:16 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:11:16 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:11:16 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:16:32 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:16:32 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:16:32 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:16:32 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:16:32 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:16:32 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:16:32 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:16:32 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:16:32 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:16:32 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:16:32 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:16:32 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:16:32 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:16:32 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:16:32 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:16:32 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:16:33 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:16:33 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:16:33 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:16:33 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:16:33 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:16:33 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:16:33 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:16:33 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:16:33 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:16:33 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:16:33 DEBUG Log:14] Tổng thời gian load database: 1396(ms)
+[2025-12-04 02:16:33 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:16:33 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:16:33 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:16:33 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:16:33 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:16:33 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:16:33 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 02:24:15 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:24:15 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:24:15 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:24:15 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:24:15 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:24:15 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:24:15 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:24:15 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:24:15 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:24:15 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:24:15 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:24:15 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:24:15 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:24:15 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:24:15 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:24:15 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:24:16 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:24:16 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:24:16 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:24:16 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:24:16 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:24:16 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:24:16 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:24:16 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:24:16 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:24:16 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:24:16 DEBUG Log:14] Tổng thời gian load database: 1537(ms)
+[2025-12-04 02:24:16 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:24:16 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:24:16 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:24:16 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:24:16 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:24:16 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:24:16 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:31:43 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:31:43 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:31:43 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:31:43 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:31:43 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:31:43 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:31:43 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:31:43 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:31:43 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:31:43 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:31:43 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:31:43 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:31:43 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:31:43 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:31:43 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:31:43 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:31:44 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:31:44 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:31:44 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:31:44 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:31:44 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:31:44 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:31:44 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:31:44 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:31:44 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:31:44 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:31:44 DEBUG Log:14] Tổng thời gian load database: 1338(ms)
+[2025-12-04 02:31:44 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:31:44 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:31:44 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:31:44 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:31:44 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:31:44 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:31:44 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:34:04 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:34:04 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:34:04 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:34:04 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:34:04 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:34:04 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:34:04 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:34:04 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:34:04 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:34:04 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:34:04 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:34:04 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:34:04 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:34:04 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:34:04 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:34:04 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:34:05 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:34:05 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:34:05 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:34:05 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:34:05 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:34:05 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:34:05 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:34:05 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:34:05 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:34:05 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:34:05 DEBUG Log:14] Tổng thời gian load database: 1462(ms)
+[2025-12-04 02:34:05 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:34:05 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:34:05 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:34:05 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:34:05 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:34:05 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:34:05 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:34:05 ERROR Log:42] nro.server.ServerManager:Lỗi mở port
+java.net.BindException: Address already in use: bind
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:565)
+	at java.base/sun.nio.ch.Net.bind(Net.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:636)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:391)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:278)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:171)
+	at nro.server.ServerManager.activeServerSocket(ServerManager.java:192)
+	at nro.server.ServerManager.run(ServerManager.java:158)
+	at nro.server.ServerManager.main(ServerManager.java:125)
+[2025-12-04 02:34:43 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:34:43 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:34:43 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:34:43 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:34:43 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:34:43 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:34:43 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:34:43 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:34:43 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:34:43 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:34:43 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:34:43 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:34:43 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:34:43 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:34:43 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:34:43 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:34:44 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:34:44 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:34:44 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:34:44 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:34:44 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:34:44 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:34:44 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:34:44 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:34:44 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:34:44 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:34:44 DEBUG Log:14] Tổng thời gian load database: 1785(ms)
+[2025-12-04 02:34:44 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:34:44 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:34:44 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:34:44 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:34:44 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:34:44 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:34:44 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:46:16 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:46:16 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:46:16 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:46:16 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:46:16 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:46:16 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:46:16 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:46:16 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:46:16 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:46:16 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:46:16 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:46:17 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:46:17 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:46:17 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:46:17 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:46:17 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:46:17 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:46:17 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:46:17 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:46:17 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:46:17 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:46:17 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:46:17 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:46:17 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:46:17 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:46:17 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:46:17 DEBUG Log:14] Tổng thời gian load database: 1460(ms)
+[2025-12-04 02:46:17 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:46:17 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:46:17 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:46:17 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:46:17 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:46:17 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:46:17 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 02:47:22 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 02:47:22 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 02:47:22 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 02:47:22 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 02:47:22 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 02:47:22 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 02:47:22 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 02:47:22 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 02:47:22 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 02:47:22 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 02:47:22 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 02:47:22 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 02:47:22 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 02:47:22 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 02:47:22 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 02:47:22 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 02:47:23 DEBUG Log:22] Map update loop started!
+[2025-12-04 02:47:23 DEBUG Log:22] Init map thành công!
+[2025-12-04 02:47:23 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 02:47:23 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 02:47:23 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 02:47:23 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 02:47:23 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 02:47:23 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 02:47:23 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 02:47:23 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 02:47:23 DEBUG Log:14] Tổng thời gian load database: 1692(ms)
+[2025-12-04 02:47:23 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 02:47:23 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 02:47:23 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 02:47:23 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 02:47:23 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 02:47:23 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 02:47:23 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 03:10:40 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 03:10:40 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 03:10:40 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 03:10:40 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 03:10:40 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 03:10:40 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 03:10:40 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 03:10:40 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 03:10:40 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 03:10:40 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 03:10:40 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 03:10:40 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 03:10:40 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 03:10:40 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 03:10:40 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 03:10:40 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 03:10:41 DEBUG Log:22] Map update loop started!
+[2025-12-04 03:10:41 DEBUG Log:22] Init map thành công!
+[2025-12-04 03:10:41 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 03:10:41 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 03:10:41 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 03:10:41 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 03:10:41 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 03:10:41 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 03:10:41 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 03:10:41 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 03:10:41 DEBUG Log:14] Tổng thời gian load database: 1929(ms)
+[2025-12-04 03:10:41 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 03:10:41 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 03:10:41 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 03:10:41 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 03:10:41 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 03:10:41 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 03:10:41 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 03:19:21 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 03:19:21 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 03:19:21 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 03:19:21 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 03:19:21 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 03:19:21 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 03:19:21 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 03:19:21 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 03:19:21 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 03:19:21 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 03:19:21 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 03:19:22 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 03:19:22 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 03:19:22 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 03:19:22 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 03:19:22 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 03:19:22 DEBUG Log:22] Map update loop started!
+[2025-12-04 03:19:22 DEBUG Log:22] Init map thành công!
+[2025-12-04 03:19:22 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 03:19:22 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 03:19:22 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 03:19:22 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 03:19:22 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 03:19:22 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 03:19:22 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 03:19:22 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 03:19:22 DEBUG Log:14] Tổng thời gian load database: 1461(ms)
+[2025-12-04 03:19:22 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 03:19:22 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 03:19:22 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 03:19:22 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 03:19:22 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 03:19:22 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 03:19:22 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-04 10:01:22 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:01:22 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:01:22 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:01:22 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:01:22 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:01:22 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:01:22 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:01:22 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:01:22 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:01:22 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:01:22 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:01:22 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:01:22 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:01:23 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:01:23 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:01:23 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:01:25 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:01:25 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:01:25 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:01:25 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:01:25 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:01:25 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:01:25 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:01:25 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:01:25 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:01:25 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:01:25 DEBUG Log:14] Tổng thời gian load database: 3433(ms)
+[2025-12-04 10:01:25 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:01:25 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:01:25 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:01:25 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:01:25 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:01:25 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:01:25 DEBUG Log:14] Start server......... Current thread: 265
+[2025-12-04 10:02:45 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:02:45 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:02:45 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:02:45 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:02:45 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:02:45 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:02:45 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:02:45 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:02:45 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:02:45 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:02:45 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:02:45 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:02:45 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:02:45 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:02:45 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:02:45 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:02:46 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:02:46 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:02:46 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:02:46 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:02:46 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:02:46 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:02:46 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:02:46 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:02:46 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:02:46 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:02:46 DEBUG Log:14] Tổng thời gian load database: 1941(ms)
+[2025-12-04 10:02:46 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:02:46 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:02:46 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:02:46 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:02:46 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:02:46 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:02:46 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:08:52 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:08:52 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:08:52 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:08:52 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:08:52 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:08:52 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:08:52 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:08:52 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:08:52 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:08:52 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:08:52 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:08:52 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:08:52 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:08:52 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:08:52 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:08:52 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:08:53 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:08:53 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:08:53 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:08:53 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:08:53 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:08:53 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:08:53 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:08:53 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:08:53 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:08:53 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:08:53 DEBUG Log:14] Tổng thời gian load database: 2096(ms)
+[2025-12-04 10:08:53 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:08:53 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:08:53 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:08:53 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:08:53 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:08:53 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:08:53 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:18:33 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:18:33 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:18:33 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:18:33 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:18:33 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:18:33 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:18:33 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:18:33 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:18:33 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:18:33 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:18:33 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:18:33 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:18:33 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:18:33 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:18:33 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:18:33 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:18:34 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:18:34 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:18:34 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:18:34 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:18:34 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:18:34 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:18:34 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:18:34 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:18:34 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:18:34 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:18:34 DEBUG Log:14] Tổng thời gian load database: 1795(ms)
+[2025-12-04 10:18:34 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:18:34 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:18:34 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:18:34 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:18:34 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:18:34 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:18:34 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:22:33 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:22:33 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:22:33 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:22:33 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:22:33 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:22:33 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:22:33 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:22:33 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:22:33 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:22:33 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:22:33 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:22:34 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:22:34 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:22:34 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:22:34 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:22:34 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:22:34 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:22:34 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:22:34 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:22:34 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:22:34 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:22:34 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:22:34 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:22:34 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:22:34 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:22:34 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:22:34 DEBUG Log:14] Tổng thời gian load database: 1837(ms)
+[2025-12-04 10:22:34 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:22:34 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:22:34 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:22:34 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:22:34 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:22:34 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:22:34 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:32:31 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:32:31 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:32:31 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:32:31 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:32:31 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:32:31 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:32:31 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:32:31 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:32:31 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:32:31 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:32:31 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:32:31 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:32:31 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:32:31 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:32:31 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:32:31 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:32:32 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:32:32 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:32:32 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:32:32 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:32:32 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:32:32 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:32:32 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:32:32 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:32:32 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:32:32 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:32:32 DEBUG Log:14] Tổng thời gian load database: 1901(ms)
+[2025-12-04 10:32:32 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:32:32 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:32:32 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:32:32 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:32:32 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:32:32 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:32:32 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:35:07 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:35:07 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:35:07 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:35:07 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:35:07 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:35:07 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:35:07 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:35:07 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:35:07 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:35:07 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:35:07 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:35:07 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:35:07 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:35:07 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:35:07 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:35:07 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:35:08 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:35:08 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:35:08 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:35:08 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:35:08 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:35:08 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:35:08 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:35:08 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:35:08 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:35:08 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:35:08 DEBUG Log:14] Tổng thời gian load database: 1628(ms)
+[2025-12-04 10:35:08 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:35:08 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:35:08 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:35:08 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:35:08 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:35:08 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:35:08 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 10:36:33 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:36:33 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:36:33 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:36:33 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:36:33 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:36:33 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:36:33 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:36:33 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:36:33 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:36:33 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:36:33 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:36:34 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:36:34 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:36:34 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:36:34 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:36:34 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:36:35 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:36:35 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:36:35 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:36:35 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:36:35 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:36:35 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:36:35 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:36:35 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:36:35 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:36:35 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:36:35 DEBUG Log:14] Tổng thời gian load database: 2460(ms)
+[2025-12-04 10:36:35 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:36:35 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:36:35 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:36:35 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:36:35 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:36:35 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:36:35 DEBUG Log:14] Start server......... Current thread: 265
+[2025-12-04 10:54:28 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 10:54:28 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 10:54:28 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 10:54:28 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 10:54:28 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 10:54:28 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 10:54:28 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 10:54:28 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 10:54:28 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 10:54:28 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 10:54:28 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 10:54:28 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 10:54:28 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 10:54:28 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 10:54:28 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 10:54:28 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 10:54:29 DEBUG Log:22] Map update loop started!
+[2025-12-04 10:54:29 DEBUG Log:22] Init map thành công!
+[2025-12-04 10:54:29 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 10:54:29 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 10:54:29 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 10:54:29 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 10:54:29 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 10:54:29 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 10:54:29 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 10:54:29 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 10:54:29 DEBUG Log:14] Tổng thời gian load database: 1870(ms)
+[2025-12-04 10:54:29 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 10:54:29 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 10:54:29 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 10:54:29 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 10:54:29 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 10:54:29 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 10:54:29 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 11:07:12 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 11:07:12 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 11:07:12 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 11:07:12 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 11:07:12 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 11:07:12 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 11:07:12 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 11:07:12 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 11:07:12 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 11:07:12 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 11:07:12 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 11:07:12 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 11:07:12 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 11:07:12 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 11:07:12 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 11:07:12 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 11:07:13 DEBUG Log:22] Map update loop started!
+[2025-12-04 11:07:13 DEBUG Log:22] Init map thành công!
+[2025-12-04 11:07:13 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 11:07:13 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 11:07:13 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 11:07:13 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 11:07:13 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 11:07:13 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 11:07:13 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 11:07:13 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 11:07:13 DEBUG Log:14] Tổng thời gian load database: 1804(ms)
+[2025-12-04 11:07:13 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 11:07:13 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 11:07:13 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 11:07:13 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 11:07:13 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 11:07:13 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 11:07:13 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 11:15:36 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 11:15:36 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 11:15:36 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 11:15:36 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 11:15:36 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 11:15:36 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 11:15:36 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 11:15:36 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 11:15:36 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 11:15:36 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 11:15:36 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 11:15:36 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 11:15:36 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 11:15:36 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 11:15:36 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 11:15:36 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 11:15:37 DEBUG Log:22] Map update loop started!
+[2025-12-04 11:15:37 DEBUG Log:22] Init map thành công!
+[2025-12-04 11:15:37 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 11:15:37 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 11:15:37 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 11:15:37 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 11:15:37 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 11:15:37 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 11:15:37 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 11:15:37 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 11:15:37 DEBUG Log:14] Tổng thời gian load database: 1787(ms)
+[2025-12-04 11:15:37 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 11:15:37 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 11:15:37 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 11:15:37 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 11:15:37 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 11:15:37 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 11:15:37 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 12:12:16 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:12:16 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:12:16 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:12:16 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:12:16 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:12:16 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:12:16 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:12:16 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:12:16 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:12:16 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:12:16 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:12:16 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:12:16 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:12:16 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:12:16 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:12:16 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:12:19 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:12:19 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:12:19 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:12:19 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:12:19 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:12:19 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:12:19 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:12:19 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:12:19 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:12:19 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:12:19 DEBUG Log:14] Tổng thời gian load database: 4387(ms)
+[2025-12-04 12:12:19 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:12:19 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:12:19 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:12:19 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:12:19 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:12:19 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:12:19 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 12:20:55 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:20:55 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:20:55 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:20:55 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:20:55 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:20:55 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:20:55 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:20:55 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:20:55 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:20:55 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:20:55 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:20:55 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:20:55 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:20:55 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:20:55 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:20:55 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:20:56 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:20:56 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:20:56 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:20:56 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:20:56 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:20:56 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:20:56 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:20:56 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:20:56 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:20:56 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:20:56 DEBUG Log:14] Tổng thời gian load database: 1837(ms)
+[2025-12-04 12:20:56 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:20:56 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:20:56 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:20:56 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:20:56 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:20:56 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:20:56 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 12:26:06 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:26:06 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:26:06 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:26:06 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:26:06 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:26:06 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:26:06 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:26:06 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:26:06 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:26:06 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:26:06 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:26:07 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:26:07 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:26:07 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:26:07 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:26:07 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:26:07 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:26:07 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:26:07 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:26:07 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:26:07 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:26:07 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:26:07 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:26:07 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:26:07 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:26:07 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:26:07 DEBUG Log:14] Tổng thời gian load database: 1830(ms)
+[2025-12-04 12:26:07 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:26:07 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:26:07 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:26:07 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:26:07 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:26:07 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:26:07 DEBUG Log:14] Start server......... Current thread: 265
+[2025-12-04 12:26:47 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:26:47 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:26:47 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:26:47 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:26:47 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:26:47 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:26:47 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:26:47 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:26:47 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:26:47 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:26:47 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:26:48 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:26:48 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:26:48 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:26:48 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:26:48 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:26:48 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:26:48 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:26:48 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:26:48 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:26:48 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:26:48 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:26:48 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:26:48 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:26:48 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:26:48 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:26:48 DEBUG Log:14] Tổng thời gian load database: 1613(ms)
+[2025-12-04 12:26:48 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:26:48 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:26:48 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:26:48 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:26:48 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:26:48 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:26:48 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 12:32:56 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:32:56 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:32:56 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:32:56 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:32:56 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:32:56 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:32:56 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:32:56 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:32:56 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:32:56 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:32:56 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:32:56 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:32:56 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:32:56 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:32:56 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:32:56 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:32:57 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:32:57 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:32:57 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:32:57 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:32:57 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:32:57 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:32:57 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:32:57 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:32:57 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:32:57 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:32:57 DEBUG Log:14] Tổng thời gian load database: 1778(ms)
+[2025-12-04 12:32:57 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:32:57 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:32:57 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:32:57 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:32:57 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:32:57 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:32:57 DEBUG Log:14] Start server......... Current thread: 265
+[2025-12-04 12:35:59 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:35:59 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:35:59 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:35:59 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:35:59 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:35:59 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:35:59 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:35:59 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:35:59 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:35:59 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:35:59 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:36:00 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:36:00 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:36:00 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:36:00 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:36:00 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:36:00 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:36:00 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:36:00 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:36:00 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:36:00 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:36:00 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:36:00 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:36:00 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:36:00 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:36:00 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:36:00 DEBUG Log:14] Tổng thời gian load database: 1715(ms)
+[2025-12-04 12:36:00 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:36:00 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:36:00 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:36:00 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:36:00 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:36:00 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:36:00 DEBUG Log:14] Start server......... Current thread: 265
+[2025-12-04 12:38:20 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 12:38:20 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 12:38:20 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 12:38:20 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 12:38:20 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 12:38:20 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 12:38:20 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 12:38:20 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 12:38:20 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 12:38:20 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 12:38:20 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 12:38:20 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 12:38:20 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 12:38:20 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 12:38:20 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 12:38:20 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 12:38:21 DEBUG Log:22] Map update loop started!
+[2025-12-04 12:38:21 DEBUG Log:22] Init map thành công!
+[2025-12-04 12:38:21 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 12:38:21 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 12:38:21 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 12:38:21 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 12:38:21 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 12:38:21 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 12:38:21 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 12:38:21 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 12:38:21 DEBUG Log:14] Tổng thời gian load database: 1711(ms)
+[2025-12-04 12:38:21 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 12:38:21 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 12:38:21 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 12:38:21 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 12:38:21 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 12:38:21 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 12:38:21 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-04 15:46:10 DEBUG Log:22] Load map template thành công (166)
+[2025-12-04 15:46:10 DEBUG Log:22] Load skill thành công (3)
+[2025-12-04 15:46:10 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-04 15:46:10 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-04 15:46:10 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-04 15:46:10 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-04 15:46:10 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-04 15:46:10 DEBUG Log:22] Load task thành công (35)
+[2025-12-04 15:46:10 DEBUG Log:22] Load side task thành công (59)
+[2025-12-04 15:46:10 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-04 15:46:10 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-04 15:46:10 DEBUG Log:22] Load shop thành công (26)
+[2025-12-04 15:46:10 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-04 15:46:10 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-04 15:46:10 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-04 15:46:10 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-04 15:46:11 DEBUG Log:22] Map update loop started!
+[2025-12-04 15:46:11 DEBUG Log:22] Init map thành công!
+[2025-12-04 15:46:11 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-04 15:46:11 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-04 15:46:11 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-04 15:46:11 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-04 15:46:11 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-04 15:46:11 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-04 15:46:11 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-04 15:46:11 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-04 15:46:11 DEBUG Log:14] Tổng thời gian load database: 1890(ms)
+[2025-12-04 15:46:11 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-04 15:46:11 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-04 15:46:11 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-04 15:46:11 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-04 15:46:11 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-04 15:46:11 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-04 15:46:11 DEBUG Log:14] Start server......... Current thread: 266
+[2025-12-05 22:11:18 DEBUG Log:22] Load map template thành công (166)
+[2025-12-05 22:11:18 DEBUG Log:22] Load skill thành công (3)
+[2025-12-05 22:11:18 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-05 22:11:18 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-05 22:11:18 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-05 22:11:18 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-05 22:11:18 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-05 22:11:18 DEBUG Log:22] Load task thành công (35)
+[2025-12-05 22:11:18 DEBUG Log:22] Load side task thành công (59)
+[2025-12-05 22:11:18 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-05 22:11:18 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-05 22:11:19 DEBUG Log:22] Load shop thành công (26)
+[2025-12-05 22:11:19 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-05 22:11:19 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-05 22:11:19 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-05 22:11:19 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-05 22:11:19 DEBUG Log:22] Map update loop started!
+[2025-12-05 22:11:19 DEBUG Log:22] Init map thành công!
+[2025-12-05 22:11:19 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-05 22:11:20 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-05 22:11:20 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-05 22:11:20 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-05 22:11:20 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-05 22:11:20 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-05 22:11:20 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-05 22:11:20 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-05 22:11:20 DEBUG Log:14] Tổng thời gian load database: 2205(ms)
+[2025-12-05 22:11:20 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-05 22:11:20 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-05 22:11:20 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-05 22:11:20 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-05 22:11:20 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-05 22:11:20 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-05 22:11:20 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-10 18:10:18 DEBUG Log:22] Load map template thành công (166)
+[2025-12-10 18:10:18 DEBUG Log:22] Load skill thành công (3)
+[2025-12-10 18:10:18 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-10 18:10:18 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-10 18:10:18 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-10 18:10:18 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-10 18:10:18 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-10 18:10:18 DEBUG Log:22] Load task thành công (35)
+[2025-12-10 18:10:18 DEBUG Log:22] Load side task thành công (59)
+[2025-12-10 18:10:18 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-10 18:10:18 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-10 18:10:18 DEBUG Log:22] Load shop thành công (26)
+[2025-12-10 18:10:18 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-10 18:10:18 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-10 18:10:18 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-10 18:10:18 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-10 18:10:19 DEBUG Log:22] Map update loop started!
+[2025-12-10 18:10:19 DEBUG Log:22] Init map thành công!
+[2025-12-10 18:10:19 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-10 18:10:19 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-10 18:10:19 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-10 18:10:19 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-10 18:10:19 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-10 18:10:19 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-10 18:10:19 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-10 18:10:19 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-10 18:10:19 DEBUG Log:14] Tổng thời gian load database: 2093(ms)
+[2025-12-10 18:10:19 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-10 18:10:19 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-10 18:10:19 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-10 18:10:19 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-10 18:10:19 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-10 18:10:19 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-10 18:10:19 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-10 18:30:13 DEBUG Log:22] Load map template thành công (166)
+[2025-12-10 18:30:13 DEBUG Log:22] Load skill thành công (3)
+[2025-12-10 18:30:13 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-10 18:30:13 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-10 18:30:13 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-10 18:30:13 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-10 18:30:13 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-10 18:30:13 DEBUG Log:22] Load task thành công (35)
+[2025-12-10 18:30:13 DEBUG Log:22] Load side task thành công (59)
+[2025-12-10 18:30:13 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-10 18:30:13 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-10 18:30:14 DEBUG Log:22] Load shop thành công (26)
+[2025-12-10 18:30:14 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-10 18:30:14 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-10 18:30:14 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-10 18:30:14 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-10 18:30:16 DEBUG Log:22] Map update loop started!
+[2025-12-10 18:30:16 DEBUG Log:22] Init map thành công!
+[2025-12-10 18:30:16 DEBUG Log:22] Load clan thành công (28), clan next id: 32
+[2025-12-10 18:30:16 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-10 18:30:16 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-10 18:30:16 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-10 18:30:16 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-10 18:30:16 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-10 18:30:16 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-10 18:30:16 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-10 18:30:16 DEBUG Log:14] Tổng thời gian load database: 3910(ms)
+[2025-12-10 18:30:16 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-10 18:30:16 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-10 18:30:16 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-10 18:30:16 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-10 18:30:16 WARN  BossFactory:607] Unknown boss ID: -110
+[2025-12-10 18:30:16 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-10 18:30:16 DEBUG Log:14] Start server......... Current thread: 267
+[2025-12-10 22:24:01 DEBUG Log:22] Load map template thành công (166)
+[2025-12-10 22:24:01 DEBUG Log:22] Load skill thành công (3)
+[2025-12-10 22:24:01 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-10 22:24:01 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-10 22:24:01 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-10 22:24:01 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-10 22:24:01 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-10 22:24:01 DEBUG Log:22] Load task thành công (35)
+[2025-12-10 22:24:01 DEBUG Log:22] Load side task thành công (59)
+[2025-12-10 22:24:01 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-10 22:24:01 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-10 22:24:01 DEBUG Log:22] Load shop thành công (26)
+[2025-12-10 22:24:01 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-10 22:24:01 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-10 22:24:01 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-10 22:24:01 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-10 22:24:03 DEBUG Log:22] Map update loop started!
+[2025-12-10 22:24:03 DEBUG Log:22] Init map thành công!
+[2025-12-10 22:24:03 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-10 22:24:04 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-10 22:24:04 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-10 22:24:04 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-10 22:24:04 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-10 22:24:04 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-10 22:24:04 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-10 22:24:04 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-10 22:24:04 DEBUG Log:14] Tổng thời gian load database: 3445(ms)
+[2025-12-10 22:24:04 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-10 22:24:04 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-10 22:24:04 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-10 22:24:04 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-10 22:24:04 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-10 22:24:04 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-10 22:47:31 DEBUG Log:22] Load map template thành công (166)
+[2025-12-10 22:47:31 DEBUG Log:22] Load skill thành công (3)
+[2025-12-10 22:47:31 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-10 22:47:31 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-10 22:47:31 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-10 22:47:31 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-10 22:47:31 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-10 22:47:31 DEBUG Log:22] Load task thành công (35)
+[2025-12-10 22:47:31 DEBUG Log:22] Load side task thành công (59)
+[2025-12-10 22:47:31 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-10 22:47:31 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-10 22:47:31 DEBUG Log:22] Load shop thành công (26)
+[2025-12-10 22:47:31 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-10 22:47:31 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-10 22:47:31 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-10 22:47:31 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-10 22:47:32 DEBUG Log:22] Map update loop started!
+[2025-12-10 22:47:32 DEBUG Log:22] Init map thành công!
+[2025-12-10 22:47:32 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-10 22:47:32 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-10 22:47:32 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-10 22:47:32 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-10 22:47:32 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-10 22:47:32 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-10 22:47:32 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-10 22:47:32 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-10 22:47:32 DEBUG Log:14] Tổng thời gian load database: 2106(ms)
+[2025-12-10 22:47:32 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-10 22:47:32 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-10 22:47:32 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-10 22:47:32 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-10 22:47:32 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-10 22:47:32 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 02:20:10 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 02:20:10 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 02:20:10 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 02:20:10 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 02:20:10 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 02:20:10 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 02:20:10 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 02:20:10 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 02:20:10 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 02:20:10 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 02:20:10 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 02:20:10 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 02:20:10 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 02:20:10 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 02:20:10 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 02:20:10 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 02:20:11 DEBUG Log:22] Map update loop started!
+[2025-12-11 02:20:11 DEBUG Log:22] Init map thành công!
+[2025-12-11 02:20:11 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 02:20:11 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 02:20:11 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 02:20:11 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 02:20:11 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 02:20:11 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 02:20:11 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 02:20:11 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 02:20:11 DEBUG Log:14] Tổng thời gian load database: 1971(ms)
+[2025-12-11 02:20:11 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 02:20:11 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 02:20:11 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 02:20:11 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-11 02:20:11 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 02:20:11 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 02:43:41 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 02:43:41 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 02:43:41 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 02:43:41 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 02:43:41 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 02:43:41 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 02:43:41 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 02:43:41 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 02:43:41 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 02:43:41 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 02:43:41 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 02:43:41 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 02:43:41 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 02:43:41 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 02:43:41 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 02:43:41 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 02:43:43 DEBUG Log:22] Map update loop started!
+[2025-12-11 02:43:43 DEBUG Log:22] Init map thành công!
+[2025-12-11 02:43:43 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 02:43:43 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 02:43:43 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 02:43:43 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 02:43:43 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 02:43:43 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 02:43:43 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 02:43:43 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 02:43:43 DEBUG Log:14] Tổng thời gian load database: 3362(ms)
+[2025-12-11 02:43:43 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 02:43:43 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 02:43:43 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 02:43:43 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-11 02:43:43 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 02:43:44 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 03:03:42 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:03:42 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:03:42 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:03:42 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:03:42 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:03:42 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:03:42 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:03:42 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:03:42 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:03:42 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:03:42 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:03:42 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:03:42 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:03:43 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:03:43 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:03:43 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:03:43 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:03:43 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:03:43 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:03:43 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:03:43 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:03:43 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:03:43 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:03:43 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:03:43 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:03:43 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:03:43 DEBUG Log:14] Tổng thời gian load database: 1942(ms)
+[2025-12-11 03:03:43 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:03:43 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:03:43 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:03:43 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-11 03:03:43 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:03:43 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 03:10:26 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:10:26 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:10:26 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:10:26 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:10:26 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:10:26 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:10:26 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:10:26 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:10:26 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:10:26 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:10:26 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:10:27 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:10:27 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:10:27 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:10:27 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:10:27 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:10:27 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:10:27 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:10:27 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:10:27 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:10:27 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:10:27 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:10:27 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:10:27 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:10:27 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:10:27 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:10:27 DEBUG Log:14] Tổng thời gian load database: 1623(ms)
+[2025-12-11 03:10:27 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:10:27 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:10:27 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:10:27 WARN  BossFactory:607] Unknown boss ID: -63
+[2025-12-11 03:10:27 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:10:27 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 03:18:11 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:18:11 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:18:11 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:18:11 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:18:11 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:18:11 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:18:11 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:18:11 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:18:11 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:18:11 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:18:11 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:18:12 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:18:12 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:18:12 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:18:12 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:18:12 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:18:12 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:18:12 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:18:12 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:18:12 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:18:12 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:18:12 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:18:12 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:18:12 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:18:12 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:18:12 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:18:12 DEBUG Log:14] Tổng thời gian load database: 1681(ms)
+[2025-12-11 03:18:12 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:18:12 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:18:12 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:18:12 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:18:12 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 03:32:02 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:32:02 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:32:02 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:32:02 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:32:02 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:32:02 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:32:02 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:32:02 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:32:02 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:32:02 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:32:02 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:32:02 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:32:02 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:32:02 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:32:02 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:32:02 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:32:03 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:32:03 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:32:03 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:32:03 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:32:03 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:32:03 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:32:03 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:32:03 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:32:03 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:32:03 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:32:03 DEBUG Log:14] Tổng thời gian load database: 1935(ms)
+[2025-12-11 03:32:03 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:32:03 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:32:03 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:32:03 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:32:03 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 03:33:20 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:33:20 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:33:20 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:33:20 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:33:20 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:33:20 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:33:20 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:33:20 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:33:20 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:33:20 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:33:20 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:33:20 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:33:20 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:33:20 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:33:20 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:33:20 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:33:21 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:33:21 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:33:21 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:33:21 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:33:21 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:33:21 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:33:21 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:33:21 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:33:21 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:33:21 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:33:21 DEBUG Log:14] Tổng thời gian load database: 1736(ms)
+[2025-12-11 03:33:21 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:33:21 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:33:21 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:33:21 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:33:21 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 03:34:51 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:34:52 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:34:52 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:34:52 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:34:52 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:34:52 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:34:52 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:34:52 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:34:52 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:34:52 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:34:52 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:34:52 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:34:52 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:34:52 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:34:52 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:34:52 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:34:52 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:34:53 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:34:53 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:34:53 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:34:53 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:34:53 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:34:53 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:34:53 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:34:53 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:34:53 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:34:53 DEBUG Log:14] Tổng thời gian load database: 1910(ms)
+[2025-12-11 03:34:53 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:34:53 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:34:53 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:34:53 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:34:53 DEBUG Log:14] Start server......... Current thread: 261
+[2025-12-11 03:36:22 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:36:22 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:36:22 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:36:22 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:36:22 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:36:22 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:36:22 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:36:22 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:36:22 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:36:22 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:36:22 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:36:22 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:36:22 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:36:22 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:36:22 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:36:22 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:36:23 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:36:23 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:36:23 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:36:23 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:36:23 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:36:23 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:36:23 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:36:23 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:36:23 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:36:23 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:36:23 DEBUG Log:14] Tổng thời gian load database: 1669(ms)
+[2025-12-11 03:36:23 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:36:23 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:36:23 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:36:23 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:36:23 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 03:40:25 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 03:40:25 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 03:40:25 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 03:40:25 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 03:40:25 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 03:40:25 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 03:40:25 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 03:40:25 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 03:40:25 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 03:40:25 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 03:40:25 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 03:40:25 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 03:40:25 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 03:40:25 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 03:40:25 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 03:40:25 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 03:40:26 DEBUG Log:22] Map update loop started!
+[2025-12-11 03:40:26 DEBUG Log:22] Init map thành công!
+[2025-12-11 03:40:26 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 03:40:26 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 03:40:26 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 03:40:26 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 03:40:26 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 03:40:26 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 03:40:26 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 03:40:26 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 03:40:26 DEBUG Log:14] Tổng thời gian load database: 1639(ms)
+[2025-12-11 03:40:26 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 03:40:26 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 03:40:26 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 03:40:26 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 03:40:26 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 04:03:21 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:03:21 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:03:21 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:03:21 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:03:21 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:03:21 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:03:21 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:03:21 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:03:21 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:03:21 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:03:21 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:03:21 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:03:21 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:03:21 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:03:21 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:03:21 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:03:22 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:03:22 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:03:22 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:03:22 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:03:22 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:03:22 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:03:22 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:03:22 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:03:22 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:03:22 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:03:22 DEBUG Log:14] Tổng thời gian load database: 1789(ms)
+[2025-12-11 04:03:22 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:03:22 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:03:22 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:03:22 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:03:22 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 04:05:47 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:05:47 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:05:47 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:05:47 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:05:47 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:05:47 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:05:47 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:05:47 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:05:47 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:05:47 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:05:47 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:05:48 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:05:48 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:05:48 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:05:48 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:05:48 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:05:48 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:05:48 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:05:48 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:05:48 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:05:48 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:05:48 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:05:48 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:05:48 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:05:48 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:05:48 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:05:48 DEBUG Log:14] Tổng thời gian load database: 1821(ms)
+[2025-12-11 04:05:48 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:05:48 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:05:48 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:05:48 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:05:49 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 04:06:42 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:06:42 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:06:42 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:06:42 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:06:42 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:06:42 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:06:42 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:06:42 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:06:42 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:06:42 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:06:42 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:06:43 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:06:43 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:06:43 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:06:43 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:06:43 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:06:43 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:06:43 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:06:43 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:06:43 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:06:43 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:06:43 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:06:43 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:06:43 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:06:43 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:06:43 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:06:43 DEBUG Log:14] Tổng thời gian load database: 1853(ms)
+[2025-12-11 04:06:43 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:06:43 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:06:43 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:06:43 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:06:44 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 04:08:50 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:08:50 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:08:50 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:08:50 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:08:50 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:08:50 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:08:50 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:08:50 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:08:50 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:08:50 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:08:50 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:08:51 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:08:51 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:08:51 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:08:51 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:08:51 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:08:51 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:08:51 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:08:51 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:08:51 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:08:51 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:08:51 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:08:51 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:08:51 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:08:51 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:08:51 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:08:51 DEBUG Log:14] Tổng thời gian load database: 1754(ms)
+[2025-12-11 04:08:51 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:08:51 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:08:51 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:08:51 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:08:51 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 04:12:18 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:12:18 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:12:18 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:12:18 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:12:18 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:12:18 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:12:18 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:12:18 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:12:18 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:12:18 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:12:18 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:12:18 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:12:18 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:12:18 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:12:18 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:12:18 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:12:18 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:12:18 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:12:18 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:12:18 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:12:18 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:12:18 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:12:18 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:12:18 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:12:18 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:12:18 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:12:18 DEBUG Log:14] Tổng thời gian load database: 1501(ms)
+[2025-12-11 04:12:18 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:12:19 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:12:19 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:12:19 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:12:19 DEBUG Log:14] Start server......... Current thread: 263
+[2025-12-11 04:13:41 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:13:41 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:13:41 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:13:41 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:13:41 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:13:41 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:13:41 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:13:41 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:13:41 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:13:41 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:13:41 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:13:41 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:13:41 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:13:41 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:13:41 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:13:41 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:13:41 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:13:41 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:13:41 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:13:41 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:13:41 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:13:41 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:13:41 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:13:41 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:13:41 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:13:41 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:13:41 DEBUG Log:14] Tổng thời gian load database: 1363(ms)
+[2025-12-11 04:13:41 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:13:42 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:13:42 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:13:42 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:13:42 DEBUG Log:14] Start server......... Current thread: 262
+[2025-12-11 04:16:32 DEBUG Log:22] Load map template thành công (166)
+[2025-12-11 04:16:32 DEBUG Log:22] Load skill thành công (3)
+[2025-12-11 04:16:32 DEBUG Log:22] Load head avatar thành công (428)
+[2025-12-11 04:16:32 DEBUG Log:22] Load flag bag thành công (143)
+[2025-12-11 04:16:32 DEBUG Log:22] Successfully loaded arr head 2 frames (3)
+
+[2025-12-11 04:16:32 DEBUG Log:22] Load cải trang thành công (413)
+[2025-12-11 04:16:32 DEBUG Log:22] Load intrinsic thành công (27)
+[2025-12-11 04:16:32 DEBUG Log:22] Load task thành công (35)
+[2025-12-11 04:16:32 DEBUG Log:22] Load side task thành công (59)
+[2025-12-11 04:16:32 DEBUG Log:22] Load map item template thành công (2102)
+[2025-12-11 04:16:32 DEBUG Log:22] Load map item option template thành công (255)
+[2025-12-11 04:16:32 DEBUG Log:22] Load shop thành công (26)
+[2025-12-11 04:16:32 DEBUG Log:22] Load reward lucky round thành công! 100.0
+[2025-12-11 04:16:32 DEBUG Log:22] Load reward mob thành công (82)
+[2025-12-11 04:16:32 DEBUG Log:22] Load mob template thành công (107)
+[2025-12-11 04:16:32 DEBUG Log:22] Load npc template thành công (91)
+[2025-12-11 04:16:33 DEBUG Log:22] Map update loop started!
+[2025-12-11 04:16:33 DEBUG Log:22] Init map thành công!
+[2025-12-11 04:16:33 DEBUG Log:22] Load clan thành công (27), clan next id: 31
+[2025-12-11 04:16:33 DEBUG Log:22] Load bảng tin thành công (4)
+[2025-12-11 04:16:33 DEBUG Log:22] Load phuc_loi thành công (5)
+[2025-12-11 04:16:33 DEBUG Log:22] Load PHUCLOI_TEMPLATES thành công (32)
+[2025-12-11 04:16:33 DEBUG Log:22] Load Mốc Tầm Bảo thành công (11)
+[2025-12-11 04:16:33 DEBUG Log:22] Load Kham Ngoc thành công (7)
+[2025-12-11 04:16:33 DEBUG Log:22] Load Ruong Suu Tam thành công (17)
+[2025-12-11 04:16:33 DEBUG Log:22] Load Phong Thi Nghiem thanh cong (4)
+[2025-12-11 04:16:33 DEBUG Log:14] Tổng thời gian load database: 1669(ms)
+[2025-12-11 04:16:33 DEBUG Log:22] Scheduled tasks started successfully!
+[2025-12-11 04:16:33 INFO  BossFactory:197] Starting boss initialization...
+[2025-12-11 04:16:33 WARN  BossFactory:607] Unknown boss ID: -38
+[2025-12-11 04:16:33 INFO  BossFactory:252] Boss initialization completed successfully!
+[2025-12-11 04:16:33 DEBUG Log:14] Start server......... Current thread: 262

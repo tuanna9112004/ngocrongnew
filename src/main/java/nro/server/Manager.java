@@ -112,13 +112,13 @@ public class Manager {
     public static byte MAX_PER_IP = 50;
     public static int MAX_PLAYER = 1000;
     public static byte RATE_EXP_SERVER = 2;
-    public static int TILE_ROI_A = 1;
-    public static int TILE_ROI_B = 1;
+    public static int TILE_ROI_A = 2;
+    public static int TILE_ROI_B = 2;
     public static int TILE_NCAP = 0;
     public static int EVENT_SEVER = 6;
     public static byte SUKIEN = 6;
     public static String DOMAIN = "https://ngocronglegend.com/";
-    public static String SERVER_NAME = "donal";
+    public static String SERVER_NAME = "legend";
     public static int EVENT_COUNT_THAN_HUY_DIET = 0;
     public static int EVENT_COUNT_QUY_LAO_KAME = 0;
     public static int EVENT_COUNT_THAN_MEO = 0;
