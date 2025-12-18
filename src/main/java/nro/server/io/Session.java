@@ -407,17 +407,17 @@ public class Session {
             Service.getInstance().Send_Caitrang(player);
             PhucLoi.gI().Send_PhucLoi(player);
             BangTin.gI().Send_BangTin(player);
-            TamBao.gI().Send_TamBao(player);
-            TamBao.gI().Send_MocTamBao(player);
-            TamBao.gI().Send_QuayThuong(player);
+            // TamBao.gI().Send_TamBao(player);
+            // TamBao.gI().Send_MocTamBao(player);
+            // TamBao.gI().Send_QuayThuong(player);
             KhamNgoc.gI().Send_KhamNgocTemplate(player);
             KhamNgoc.gI().Send_KhamNgoc_Player(player);
-            RuongSuuTam.gI().Send_RuongSuuTamTemplate(player);
-            RuongSuuTam.gI().SendAllRuong(player);
+            // RuongSuuTam.gI().Send_RuongSuuTamTemplate(player); rương sưu tầm
+            // RuongSuuTam.gI().SendAllRuong(player);
             PhongThiNghiem.gI().Send_PhongThiNghiem_Template(player);
             PhongThiNghiem.gI().Send_PhongThiNghiem_Player(player);
-            GameDuDoan.gI().Send_TaiXiu(player);
-            GameDuDoan.gI().thongbao("");
+            // GameDuDoan.gI().Send_TaiXiu(player);
+            // GameDuDoan.gI().thongbao("");
             
             // -64 my flag bag
             Service.getInstance().sendFlagBag(player);

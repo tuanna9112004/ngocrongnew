@@ -56,6 +56,7 @@ public class FideDaiCa1 extends FutureBoss {
         fd2.location.y = this.location.y;
         super.leaveMap();
         BossManager.gI().removeBoss(this);
+        System.out.println(" da goi fide 2");
         this.setJustRestToFuture();
     }
 

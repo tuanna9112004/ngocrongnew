@@ -182,7 +182,9 @@ public class NpcFactory {
                     npc = new Npc(mapId, status, cx, cy, tempId, avartar) {
                         @Override
                         public void openBaseMenu(Player player) {
-                            this.createOtherMenu(player, ConstNpc.BASE_MENU, "Chu mi nga", "Tặng quả\nHồng đào\nChín");
+                                                        this.createOtherMenu(player, ConstNpc.BASE_MENU, "Chu mi nga");
+
+                           // this.createOtherMenu(player, ConstNpc.BASE_MENU, "Chu mi nga", "Tặng quả\nHồng đào\nChín");
                         }
 
                         @Override
@@ -229,8 +231,9 @@ public class NpcFactory {
                             }
                             if (this.mapId == MapName.NGU_HANH_SON) {
                                 this.createOtherMenu(player, ConstNpc.BASE_MENU,
-                                        "A mi phò phò, thí chủ hãy thu thập bùa 'giải khai phong ấn', mỗi chữ 10 cái.",
-                                        "Đổi đào chín", "Giải phong ấn", "Từ chối");
+                                     "A mi phò phò");
+                                        // "A mi phò phò, thí chủ hãy thu thập bùa 'giải khai phong ấn', mỗi chữ 10 cái.",
+                                        // "Đổi đào chín", "Giải phong ấn", "Từ chối");
                             }
                         }
 
@@ -1447,7 +1450,7 @@ public class NpcFactory {
 //                             if (canOpenNpc(player)) {
 //                                 String mtv;
 //                                 if (player.getSession().actived) {
-//                                     mtv = "bạn đã được mở thành viên , chào mừng bặn đến với ngọc rồng donal)";
+//                                     mtv = "bạn đã được mở thành viên , chào mừng bặn đến với ngọc rồng )";
 //                                 } else {
 //                                     mtv = "chỉ cần nạp 10k mở tv";
 //                                 }
@@ -1502,14 +1505,14 @@ public class NpcFactory {
 //                                             if (player.getSession().actived == true) {
 //                                                 this.createOtherMenu(player, 53747,
 //                                                         "|7|MỞ THÀNH VIÊN"
-//                                                         + "\n|5|Bạn đã là thành viên của ngọc rồng donal"
+//                                                         + "\n|5|Bạn đã là thành viên của ngọc rồng "
 //                                                         + "\nĐã mở khóa chức năng Giao dịch và Chat thế giới"
 //                                                         + "\n|4|Hãy tiếp tục nâng cao sức mạnh của mình lên nào",
 //                                                         "Ố kê");
 //                                             } else {
 //                                                 this.createOtherMenu(player, 1456,
 //                                                         "|7|MỞ THÀNH VIÊN"
-//                                                         + "\n|5|Khi bạn trờ thành thành viên chính thức của Ngọc rồng donal sẽ được mở khóa chức năng Giao dịch và Chat thế giới"
+//                                                         + "\n|5|Khi bạn trờ thành thành viên chính thức của Ngọc rồng  sẽ được mở khóa chức năng Giao dịch và Chat thế giới"
 //                                                         + "\n|3|Giá Kích hoạt tài khoản: 10.000 Coin"
 //                                                         + "\n|1|Coin hiện còn : " + " " + Util.format(player.getSession().vnd) + " Coin"
 //                                                         + "\n|7|Bạn có chắc muốn Kích hoạt tài khoản không?",
@@ -1934,9 +1937,9 @@ public class NpcFactory {
                             if (!canOpenNpc(player)) {
                                 return;
                             }
-
+                            if (!TaskService.gI().checkDoneTaskTalkNpc(player, this)) {
                             String mtv = player.getSession().actived
-                                    ? "Bạn đã là thành viên, chào mừng đến Ngọc Rồng Donal!"
+                                    ? "Bạn đã là thành viên, chào mừng đến Thế giới Ngọc Rồng !"
                                     : "Chỉ cần nạp 10.000 Coin để mở Thành viên";
 
                             this.createOtherMenu(player, ConstNpc.BASE_MENU,
@@ -1950,6 +1953,7 @@ public class NpcFactory {
                                    // ,"Nhận đệ tử"
                                 );
                         }
+                    }
 
                         @Override
                         public void confirmMenu(Player player, int select) {
@@ -1985,8 +1989,8 @@ public class NpcFactory {
                                     case 2: // Đổi thỏi vàng
                                         this.createOtherMenu(player, ConstNpc.QUY_DOI_TV,
                                                 "CHỌN MỐC COIN ĐỂ ĐỔI THỎI VÀNG\n"
-                                                + "Coin hiện có: " + Util.format(player.getSession().vnd)
-                                                + "\nGiới hạn mỗi lần: 1.000.000 Coin",
+                                                + "Coin hiện có: " + Util.format(player.getSession().vnd),
+                                               // + "\nGiới hạn mỗi lần: 1.000.000 Coin",
                                                 "10.000 \n 32 TV",
                                                 "20.000\n 64 TV",
                                                 "50.000\n 160 TV",
@@ -2772,7 +2776,6 @@ public class NpcFactory {
                                                         + "Chọn tính năng muốn sử dụng",
                                                         "Tinh ấn\ntrang bị",
                                                         "Pháp sư hoá\ntrang bị",
-                                                        "Tẩy pháp sư",
                                                         "Mở chỉ số\nVỹ Thú",
                                                         "Mở Khóa GD"
                                                 );
@@ -2788,13 +2791,13 @@ public class NpcFactory {
                                             case 1:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.PHAP_SU_HOA);
                                                 break;
+                                            // case 2:
+                                            //     CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.TAY_PHAP_SU);
+                                            //     break;
                                             case 2:
-                                                CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.TAY_PHAP_SU);
-                                                break;
-                                            case 3:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_CS_VY_THU);
                                                 break;
-                                            case 4:
+                                            case 3:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.MO_KHOA_GD);
                                                 break;
                                         }
@@ -2903,7 +2906,7 @@ public class NpcFactory {
                                                         "Bùa của ta rất lợi hại, nhìn ngươi yếu đuối thế này, chắc muốn mua bùa để "
                                                         + "mạnh mẽ à, mua không ta bán cho, xài rồi lại thích cho mà xem.",
                                                         "Bùa\n1 giờ", "Bùa\n8 giờ", "Bùa\n1 tháng",
-                                                        "Bùa\n  Đệ tử Mabư\n 1 giờ", "Đóng");
+                                                        "Bùa\n  New\n 1 giờ", "Đóng");
                                                 break;
                                             case 1:
                                                 CombineServiceNew.gI().openTabCombine(player, CombineServiceNew.NANG_CAP_VAT_PHAM);
@@ -3670,7 +3673,7 @@ public class NpcFactory {
                                                                 "Chỉ mở vào thứ 2, 4, 6, CN hàng tuần!");
                                                         return;
                                                     }
-                                                    if (player.clanMember.getNumDateFromJoinTimeToToday() < 2) {
+                                                    if (player.clanMember.getNumDateFromJoinTimeToToday() < 2&&!player.isAdmin()) {
                                                         Service.getInstance().sendThongBao(player,
                                                                 "Phải tham gia bang hội ít nhất 2 ngày mới có thể tham gia!");
                                                         return;
@@ -4055,15 +4058,15 @@ public class NpcFactory {
                                 if (player.clan == null) {
                                     this.createOtherMenu(player, ConstNpc.MENU_KHONG_CHO_VAO_DT,
                                             "Chỉ tiếp các bang hội, miễn tiếp khách vãng lai", "Đóng");
-                                } else if (player.clan.getMembers().size() < 5) {
-                                    // } else if (player.clan.getMembers().size() < 1) {
+                                // } else if (!player.isAdmin() && player.clan.getMembers().size() < 5) {
+                                    } else if (player.clan.getMembers().size() < 1) {
                                     this.createOtherMenu(player, ConstNpc.MENU_KHONG_CHO_VAO_DT,
                                             "Bang hội phải có ít nhất 5 thành viên mới có thể mở", "Đóng");
                                 } else {
                                     ClanMember clanMember = player.clan.getClanMember((int) player.id);
                                     int days = (int) (((System.currentTimeMillis() / 1000) - clanMember.joinTime) / 60
                                             / 60 / 24);
-                                    if (days < 2) {
+                                    if (!player.isAdmin() && days < 2) {
                                         NpcService.gI().createTutorial(player, avartar,
                                                 "Chỉ những thành viên gia nhập bang hội tối thiểu 2 ngày mới có thể tham gia");
                                         return;
@@ -4089,7 +4092,7 @@ public class NpcFactory {
                                             }
                                         }
                                         // if (plSameClans.size() >= 0) {
-                                        if (plSameClans.size() >= 2) {
+                                        if (player.isAdmin() || plSameClans.size() >= 2) {
                                             if (!player.isAdmin() && player.clanMember
                                                     .getNumDateFromJoinTimeToToday() < DoanhTrai.DATE_WAIT_FROM_JOIN_CLAN) {
                                                 createOtherMenu(player, ConstNpc.MENU_KHONG_CHO_VAO_DT,
@@ -4562,8 +4565,8 @@ public class NpcFactory {
                                     + "TIẾN ĐỘ NẠP:\n"
                                     + "Mốc sự kiện: " + Util.numberToMoney(mucTieu) + " VNĐ\n"
                                     + "Tiến độ: " + phanTram + "%\n"
-                                    + "[" + bar.toString() + "]\n\n"
-                                    + "+ \"nạp tại: https://ngocronglegend.com/ \n";
+                                    + "[" + bar.toString() + "]\n\n";
+
                             int left = BerryGiftService.getAllowance(player.name);
                             if (left > 0) {
                                 text += "Bạn đang có " + left + " lượt nhận quà.\n";

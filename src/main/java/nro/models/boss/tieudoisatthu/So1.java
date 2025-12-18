@@ -52,9 +52,7 @@ public class So1 extends FutureBoss {
 
     @Override
     public void leaveMap() {
-        if (BossManager.gI().getBossById(BossFactory.SO2) == null) {
-            BossManager.gI().getBossById(BossFactory.TIEU_DOI_TRUONG).changeToAttack();
-        }
+        BossManager.gI().getBossById(BossFactory.TIEU_DOI_TRUONG).changeToAttack();
         super.leaveMap();
         BossManager.gI().removeBoss(this);
     }

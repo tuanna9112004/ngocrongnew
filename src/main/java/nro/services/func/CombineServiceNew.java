@@ -419,7 +419,7 @@ public class CombineServiceNew {
                     return;
                 }
 
-                                String statName;
+                String statName;
                 String statUnit; // %HP, %KI, %SD
 
                 switch (posOtp) {
@@ -449,8 +449,6 @@ public class CombineServiceNew {
                         + "|0|Over: " + over + "  -  Cấp: " + level + "\n"
                         + "|2|" + statName + " +" + param + statUnit + "\n"
                         + reason;
-
-
 
                 // deterministic nên set 100%
                 player.combineNew.ratioCombine = 100;
@@ -1874,34 +1872,170 @@ public class CombineServiceNew {
                 }
                 break;
 
-            case PHAP_SU_HOA:
-                if (InventoryService.gI().getCountEmptyBag(player) > 0) {
-                    if (player.combineNew.itemsCombine.size() == 2) {
-                        Item item = player.combineNew.itemsCombine.get(0);
-                        Item dangusac = player.combineNew.itemsCombine.get(1);
-                        if (isTrangBiPhapsu(item)) {
-                            if (item != null && item.isNotNullItem() && dangusac != null && dangusac.isNotNullItem() && dangusac.template.id == 1235 && dangusac.quantity >= 1) {
-                                String npcSay = item.template.name + "\n|2|";
-                                for (ItemOption io : item.itemOptions) {
-                                    npcSay += io.getOptionString() + "\n";
-                                }
-                                npcSay += "|1|Con có muốn biến trang bị " + item.template.name + " thành\n"
-                                        + "trang bị Pháp sư hóa không?\n"
-                                        + "|7|Cần 1 " + dangusac.template.name;
-                                this.baHatMit.createOtherMenu(player, ConstNpc.MENU_START_COMBINE, npcSay, "Làm phép", "Từ chối");
-                            } else {
-                                this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Bạn chưa bỏ đủ vật phẩm !!!", "Đóng");
-                            }
-                        } else {
-                            this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Vật phẩm này không thể Pháp sư hóa", "Đóng");
-                        }
-                    } else {
-                        this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Cần bỏ đủ vật phẩm yêu cầu", "Đóng");
-                    }
-                } else {
-                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU, "Hành trang cần ít nhất 1 chỗ trống", "Đóng");
+            case PHAP_SU_HOA: {
+
+                if (InventoryService.gI().getCountEmptyBag(player) <= 0) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Hành trang cần ít nhất 1 chỗ trống", "Đóng");
+                    break;
                 }
+
+                if (player.combineNew.itemsCombine.size() < 2
+                        || player.combineNew.itemsCombine.size() > 3) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Cần trang bị, Đá Pháp Sư và (tùy chọn) Đá Bảo Vệ", "Đóng");
+                    break;
+                }
+
+                Item trangBi = null;
+                Item daPhapSu = null;
+                Item daBaoVe = null;
+
+                for (Item it : player.combineNew.itemsCombine) {
+                    if (it == null || !it.isNotNullItem()) {
+                        continue;
+                    }
+                    if (it.template.id == 1235) {
+                        daPhapSu = it;
+                    } else if (it.template.id == 987) {
+                        daBaoVe = it;
+                    } else {
+                        trangBi = it;
+                    }
+                }
+
+                if (trangBi == null || daPhapSu == null || !isTrangBiPhapsu(trangBi)) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Nguyên liệu không hợp lệ", "Đóng");
+                    break;
+                }
+
+                // ===== cấp hiện tại =====
+                int capHienTai = 0;
+                for (ItemOption io : trangBi.itemOptions) {
+                    if (io.optionTemplate.id == 233) {
+                        capHienTai = io.param;
+                        break;
+                    }
+                }
+
+                if (capHienTai >= 7) {
+                    this.baHatMit.createOtherMenu(player, ConstNpc.IGNORE_MENU,
+                            "Pháp sư hóa đã đạt cấp cao nhất", "Đóng");
+                    break;
+                }
+
+                int capTiepTheo = capHienTai + 1;
+                int daCan = 3 * capTiepTheo;
+
+                int successRate = 60 - capHienTai * 10;
+                if (successRate < 10) {
+                    successRate = 10;
+                }
+
+                boolean isRiskLevel
+                        = capHienTai == 2 || capHienTai == 4 || capHienTai == 6;
+
+                boolean hasBaoVe = daBaoVe != null && daBaoVe.quantity >= 10;
+
+                // ===== xác định option chính + hiện tại =====
+                int type = trangBi.template.type;
+                int mainOptionId = -1;
+                int currentMain = 0;
+
+                for (ItemOption io : trangBi.itemOptions) {
+                    int id = io.optionTemplate.id;
+                    if (type == 2 && (id == 196 || id == 0)) {
+                        mainOptionId = id;
+                        currentMain = io.param;
+                        break;
+                    }
+                    if (type == 1 && (id == 6 || id == 22)) {
+                        mainOptionId = id;
+                        currentMain = io.param;
+                        break;
+                    }
+                    if (type == 3 && (id == 7 || id == 23)) {
+                        mainOptionId = id;
+                        currentMain = io.param;
+                        break;
+                    }
+                    if (type == 0 && id == 47) {
+                        mainOptionId = 47;
+                        currentMain = io.param;
+                        break;
+                    }
+                    if (type == 4 && id == 14) {
+                        mainOptionId = 14;
+                        currentMain = io.param;
+                        break;
+                    }
+                }
+
+                // ===== % tăng chính =====
+                int percentMain = 12 + Math.max(0, capHienTai - 1) * 2;
+                int addMain = (currentMain * percentMain) / 100;
+
+                // ===== bonus phụ theo type =====
+                int bonusId = -1;
+                int bonusPer = 0;
+                if (type == 0) {
+                    bonusId = 94;
+                    bonusPer = 2;
+                } else if (type == 1) {
+                    bonusId = 77;
+                    bonusPer = 5;
+                } else if (type == 2) {
+                    bonusId = 50;
+                    bonusPer = 3;
+                } else if (type == 3) {
+                    bonusId = 103;
+                    bonusPer = 5;
+                } else if (type == 4) {
+                    bonusId = 5;
+                    bonusPer = 3;
+                }
+
+                // ===== HIỂN THỊ =====
+                StringBuilder sb = new StringBuilder();
+                sb.append(trangBi.template.name).append("\n|2|");
+                for (ItemOption io : trangBi.itemOptions) {
+                    sb.append(io.getOptionString()).append("\n");
+                }
+
+                sb.append("|1|Pháp Sư Hóa: Cấp ")
+                        .append(capHienTai).append(" → ").append(capTiepTheo).append("\n");
+
+                sb.append("|1|Thành công:\n");
+                sb.append("- ").append(trangBi.template.name)
+                        .append(" +").append(addMain)
+                        .append(" (").append(percentMain).append("%)\n");
+
+                sb.append("- Bonus +").append(bonusPer)
+                        .append("% (OTP ").append(bonusId).append(")\n");
+
+                sb.append("|7|Tỉ lệ thành công: ")
+                        .append(successRate).append("%\n");
+
+                sb.append("|7|Cần ").append(daCan)
+                        .append(" Đá Pháp Sư Hóa\n");
+
+                if (isRiskLevel && !hasBaoVe) {
+                    sb.append("|7|⚠ Ở cấp này có thể bị xịt giảm chỉ số.\n");
+                    sb.append("|7|Có thể thêm 10 Đá Bảo Vệ để tránh xịt.\n");
+                }
+
+                this.baHatMit.createOtherMenu(
+                        player,
+                        ConstNpc.MENU_START_COMBINE,
+                        sb.toString(),
+                        "Làm phép",
+                        "Từ chối"
+                );
+
                 break;
+            }
+
             case TAY_PHAP_SU:
                 if (InventoryService.gI().getCountEmptyBag(player) > 0) {
                     if (player.combineNew.itemsCombine.size() == 2) {
@@ -4937,89 +5071,247 @@ public class CombineServiceNew {
     }
 
     private void phapsuhoa(Player player) {
-        if (InventoryService.gI().getCountEmptyBag(player) > 0) {
-            if (!player.combineNew.itemsCombine.isEmpty()) {
-                Item item = player.combineNew.itemsCombine.get(0);
-                Item dangusac = player.combineNew.itemsCombine.get(1);
-                int star = 0;
-                short[] chiso = {229, 230, 231, 232};
-                byte randomDo = (byte) new Random().nextInt(chiso.length);
-                int lvchiso = 0;
-                int cap = 1;
-                ItemOption optionStar = null;
-                int check = chiso[randomDo];
-                int run = 0;
-                int lvcheck = 0;
 
-                for (ItemOption io : item.itemOptions) {
-                    if (io.optionTemplate.id == 229 || io.optionTemplate.id == 230 || io.optionTemplate.id == 231 || io.optionTemplate.id == 232) {
-                        star = io.param;
-                        optionStar = io;
-                        break;
-                    }
-                }
+        // ===== CHECK Ô TRỐNG =====
+        if (InventoryService.gI().getCountEmptyBag(player) <= 0) {
+            Service.getInstance().sendThongBao(player,
+                    "Hành trang cần ít nhất 1 chỗ trống");
+            return;
+        }
 
-                for (ItemOption io2 : item.itemOptions) {
-                    if (io2.optionTemplate.id == 233) {
-                        lvcheck = io2.param;
-                        break;
-                    }
-                }
+        // ===== CHECK SỐ ITEM =====
+        if (player.combineNew.itemsCombine.size() < 2
+                || player.combineNew.itemsCombine.size() > 3) {
+            Service.getInstance().sendThongBao(player,
+                    "Cần trang bị, Đá Pháp Sư và (tùy chọn) Đá Bảo Vệ");
+            return;
+        }
 
-                if (item != null && item.isNotNullItem() && dangusac != null && dangusac.isNotNullItem() && (dangusac.template.id == 1235) && dangusac.quantity >= 1) {
-                    if (lvcheck < 6) {
-                        if (optionStar == null) {
-                            item.itemOptions.add(new ItemOption(233, cap));
-                            if (check == 232) {
-                                item.itemOptions.add(new ItemOption(check, lvchiso + 1));
-                            } else {
-                                item.itemOptions.add(new ItemOption(check, lvchiso + 2));
-                            }
-                            sendEffectSuccessCombine(player);
-                            InventoryService.gI().subQuantityItemsBag(player, dangusac, 1);
-                            InventoryService.gI().sendItemBags(player);
-                            reOpenItemCombine(player);
-                        } else {
+        Item trangBi = null;
+        Item daPhapSu = null;
+        Item daBaoVe = null;
 
-                            for (ItemOption ioo : item.itemOptions) {
-                                if (ioo.optionTemplate.id == 233) {
-                                    ioo.param++;
-                                }
-                                if ((ioo.optionTemplate.id == 229 || ioo.optionTemplate.id == 230 || ioo.optionTemplate.id == 231 || ioo.optionTemplate.id == 232) && (ioo.optionTemplate.id == check)) {
-                                    if (check == 232) {
-                                        ioo.param += 1;
-                                    } else {
-                                        ioo.param += 2;
-                                    }
-                                    sendEffectSuccessCombine(player);
-                                    InventoryService.gI().subQuantityItemsBag(player, dangusac, 1);
-                                    InventoryService.gI().sendItemBags(player);
-                                    reOpenItemCombine(player);
-                                    run = 1;
-                                    break;
-                                } else {
-                                    run = 2;
-                                }
-                            }
+        // ===== PHÂN LOẠI ITEM =====
+        for (Item it : player.combineNew.itemsCombine) {
+            if (it == null || !it.isNotNullItem()) {
+                continue;
+            }
 
-                            if (run == 2) {
-                                if (check == 232) {
-                                    item.itemOptions.add(new ItemOption(check, lvchiso + 1));
-                                } else {
-                                    item.itemOptions.add(new ItemOption(check, lvchiso + 2));
-                                }
-                                sendEffectSuccessCombine(player);
-                                InventoryService.gI().subQuantityItemsBag(player, dangusac, 1);
-                                InventoryService.gI().sendItemBags(player);
-                                reOpenItemCombine(player);
-                            }
-                        }
-                    } else {
-                        Service.getInstance().sendThongBao(player, "Pháp sư hóa đã đạt cấp cao nhất !!!");
-                    }
-                }
+            if (it.template.id == 1235) {
+                daPhapSu = it;
+            } else if (it.template.id == 987) {
+                daBaoVe = it;
+            } else {
+                trangBi = it;
             }
         }
+
+        // ===== VALIDATE =====
+        if (trangBi == null || daPhapSu == null || !isTrangBiPhapsu(trangBi)) {
+            Service.getInstance().sendThongBao(player,
+                    "Nguyên liệu không hợp lệ");
+            return;
+        }
+
+        // ===== LẤY CẤP HIỆN TẠI (233) =====
+        ItemOption capOpt = null;
+        int capHienTai = 0;
+        for (ItemOption io : trangBi.itemOptions) {
+            if (io.optionTemplate.id == 233) {
+                capOpt = io;
+                capHienTai = io.param;
+                break;
+            }
+        }
+
+        // ===== MAX CẤP 7 =====
+        if (capHienTai >= 7) {
+            Service.getInstance().sendThongBao(player,
+                    "Pháp sư hóa đã đạt cấp cao nhất");
+            return;
+        }
+
+        int capTiepTheo = capHienTai + 1;
+
+        // ===== TÍNH ĐÁ CẦN =====
+        int daCan = 3 * capTiepTheo;
+        if (daPhapSu.quantity < daCan) {
+            Service.getInstance().sendThongBao(player,
+                    "Cần " + daCan + " Đá Pháp Sư Hóa");
+            return;
+        }
+
+        boolean hasBaoVe = daBaoVe != null && daBaoVe.quantity >= 10;
+
+        // ===== TỈ LỆ THÀNH CÔNG =====
+        int successRate = 60 - capHienTai * 10;
+        if (successRate < 10) {
+            successRate = 10;
+        }
+
+        // ===== CÁC MỐC CÓ THỂ XỊT =====
+        boolean isRiskLevel
+                = capHienTai == 2 || capHienTai == 4 || capHienTai == 6;
+
+        // ===== TRỪ NGUYÊN LIỆU =====
+        InventoryService.gI().subQuantityItemsBag(player, daPhapSu, daCan);
+        if (hasBaoVe) {
+            InventoryService.gI().subQuantityItemsBag(player, daBaoVe, 10);
+        }
+
+        boolean success = Util.isTrue(successRate, 100);
+
+        // ===== XÁC ĐỊNH OTP CHÍNH =====
+        int type = trangBi.template.type;
+        ItemOption mainOpt = null;
+        int mainOptionId = -1;
+
+        for (ItemOption io : trangBi.itemOptions) {
+            int id = io.optionTemplate.id;
+
+            if (type == 2 && (id == 196 || id == 0)) {
+                mainOpt = io;
+                mainOptionId = id;
+                break;
+            }
+            if (type == 1 && (id == 6 || id == 22)) {
+                mainOpt = io;
+                mainOptionId = id;
+                break;
+            }
+            if (type == 3 && (id == 7 || id == 23)) {
+                mainOpt = io;
+                mainOptionId = id;
+                break;
+            }
+            if (type == 0 && id == 47) {
+                mainOpt = io;
+                mainOptionId = 47;
+                break;
+            }
+            if (type == 4 && id == 14) {
+                mainOpt = io;
+                mainOptionId = 14;
+                break;
+            }
+        }
+
+        if (mainOpt == null) {
+            Service.getInstance().sendThongBao(player,
+                    "Trang bị không hỗ trợ Pháp Sư Hóa");
+            return;
+        }
+
+        int currentMain = mainOpt.param;
+
+        // ===== OTP PHỤ THEO TYPE =====
+        int bonusId = -1;
+        int bonusPer = 0;
+
+        if (type == 0) {
+            bonusId = 94;
+            bonusPer = 2;
+        } else if (type == 1) {
+            bonusId = 77;
+            bonusPer = 5;
+        } else if (type == 2) {
+            bonusId = 50;
+            bonusPer = 3;
+        } else if (type == 3) {
+            bonusId = 103;
+            bonusPer = 5;
+        } else if (type == 4) {
+            bonusId = 5;
+            bonusPer = 3;
+        }
+
+        ItemOption bonusOpt = null;
+        for (ItemOption io : trangBi.itemOptions) {
+            if (io.optionTemplate.id == bonusId) {
+                bonusOpt = io;
+                break;
+            }
+        }
+
+        // ===== % CHÍNH =====
+        int percentMain = 12 + Math.max(0, capHienTai - 1) * 2;
+
+        // =========================
+        // ===== XỬ LÝ KẾT QUẢ =====
+        // =========================
+        if (success) {
+
+            // ===== TĂNG CẤP =====
+            if (capOpt != null) {
+                capOpt.param++;
+            } else {
+                trangBi.itemOptions.add(new ItemOption(233, 1));
+            }
+
+            // ===== CỘNG OTP CHÍNH =====
+            int addMain = (currentMain * percentMain) / 100;
+            if (addMain < 1) {
+                addMain = 1;
+            }
+            mainOpt.param += addMain;
+
+            // đưa OTP chính lên đầu
+            trangBi.itemOptions.remove(mainOpt);
+            trangBi.itemOptions.add(0, mainOpt);
+
+            // ===== CỘNG OTP PHỤ =====
+            if (bonusPer > 0) {
+                if (bonusOpt != null) {
+                    bonusOpt.param += bonusPer;
+                } else {
+                    trangBi.itemOptions.add(new ItemOption(bonusId, bonusPer));
+                }
+            }
+
+            sendEffectSuccessCombine(player);
+
+        } else {
+
+            // ===== FAIL =====
+            if (isRiskLevel && !hasBaoVe && capHienTai > 0) {
+
+                // ===== TỤT CẤP =====
+                if (capOpt != null && capOpt.param > 0) {
+                    capOpt.param--;
+                }
+
+                // ===== TRỪ OTP PHỤ =====
+                if (bonusOpt != null) {
+                    bonusOpt.param -= bonusPer;
+                    if (bonusOpt.param < 0) {
+                        bonusOpt.param = 0;
+                    }
+                    if (bonusOpt.param == 0) {
+                        trangBi.itemOptions.remove(bonusOpt);
+                    }
+                }
+
+                // ===== TRỪ OTP CHÍNH =====
+                int percentTru = percentMain + 5;
+                int subMain = (mainOpt.param * percentTru) / 100;
+                if (subMain < 1) {
+                    subMain = 1;
+                }
+                mainOpt.param -= subMain;
+                if (mainOpt.param < 0) {
+                    mainOpt.param = 0;
+                }
+
+                // đưa OTP chính lên đầu
+                trangBi.itemOptions.remove(mainOpt);
+                trangBi.itemOptions.add(0, mainOpt);
+            }
+
+            sendEffectFailCombine(player);
+        }
+
+        InventoryService.gI().sendItemBags(player);
+        reOpenItemCombine(player);
     }
 
     private void tayphapsu(Player player) {
@@ -5504,16 +5796,23 @@ public class CombineServiceNew {
     }
 
     private boolean isTrangBiPhapsu(Item item) {
-        if (item != null && item.isNotNullItem()) {
-            if ((item.template.type == 5 || item.template.type == 11 || item.template.type == 72
-                    || ItemData.list_dapdo.contains((int) item.template.id)) && !item.isTrangBiHSD()) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
+        if (item == null || !item.isNotNullItem()) {
             return false;
         }
+
+        // Không cho phép trang bị HSD
+        if (item.isTrangBiHSD()) {
+            return false;
+        }
+
+        int type = item.template.type;
+
+        // Chỉ cho phép: Áo, Quần, Găng, Giày, Rada
+        return type == 0 // Áo
+                || type == 1 // Quần
+                || type == 2 // Găng
+                || type == 3 // Giày
+                || type == 4; // Rada
     }
 
     private int getParamDaPhaLe(Item daPhaLe) {
@@ -5789,7 +6088,7 @@ public class CombineServiceNew {
                         + "-Nguyệt ấn (5 món +25% chỉ số)";
             case NHAP_NGOC_RONG:
                 return "Vào hành trang\n"
-                        + "Chọn 7, 10 hoặc 20 viên ngọc cùng sao\n"
+                        + "Chọn 7 viên ngọc cùng sao\n"
                         + "Sau đó chọn 'Làm phép'";
 
             case NANG_CAP_NRO:
@@ -6331,6 +6630,48 @@ public class CombineServiceNew {
             return 4.0;       // >4 over
         } else /* diff >= 5 */ {
             return 5.0;       // >5 over (max)
+        }
+    }
+
+    private void handleConvertToK(Item item) {
+
+        // ===== ATK → K ATK (196) =====
+        int atk = 0;
+        for (ItemOption io : item.itemOptions) {
+            if (io.optionTemplate.id == 0) {
+                atk = io.param;
+                break;
+            }
+        }
+        if (atk > 65000) {
+            item.itemOptions.removeIf(io -> io.optionTemplate.id == 0 || io.optionTemplate.id == 196);
+            item.itemOptions.add(new ItemOption(196, atk / 1000));
+        }
+
+        // ===== HP → K HP (22) =====
+        int hp = 0;
+        for (ItemOption io : item.itemOptions) {
+            if (io.optionTemplate.id == 6) {
+                hp = io.param;
+                break;
+            }
+        }
+        if (hp > 65000) {
+            item.itemOptions.removeIf(io -> io.optionTemplate.id == 6);
+            item.itemOptions.add(new ItemOption(22, hp / 1000));
+        }
+
+        // ===== KI → K KI (23) =====
+        int ki = 0;
+        for (ItemOption io : item.itemOptions) {
+            if (io.optionTemplate.id == 7) {
+                ki = io.param;
+                break;
+            }
+        }
+        if (ki > 65000) {
+            item.itemOptions.removeIf(io -> io.optionTemplate.id == 7);
+            item.itemOptions.add(new ItemOption(23, ki / 1000));
         }
     }
 

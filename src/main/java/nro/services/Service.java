@@ -352,7 +352,7 @@ public void printThreadStatus() {
             String memory = decimalFormat.format(memoryUsage);
 
             if (text.equals("admin")) {
-                String str = "|7|DONAL " + "\n"
+                String str = "|7|nro " + "\n"
                         + "|4|Sessions: " + (Client.gI().getSessions().size() + soluongBot) + "\n"
                         + "|5|Tổng Thread: " + Thread.activeCount() + "\n"
                         + "|6|PLAYER ONLINE:  " + (Client.gI().getPlayers().size() + soluongBot) + "\n"

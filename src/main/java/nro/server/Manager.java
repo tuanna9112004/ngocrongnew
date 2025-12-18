@@ -112,8 +112,8 @@ public class Manager {
     public static byte MAX_PER_IP = 50;
     public static int MAX_PLAYER = 1000;
     public static byte RATE_EXP_SERVER = 2;
-    public static int TILE_ROI_A = 2;
-    public static int TILE_ROI_B = 2;
+    public static int TILE_ROI_A = 1;
+    public static int TILE_ROI_B = 1;
     public static int TILE_NCAP = 0;
     public static int EVENT_SEVER = 6;
     public static byte SUKIEN = 6;
@@ -492,7 +492,7 @@ public class Manager {
                         JSONArray dtm = (JSONArray) jv.parse(String.valueOf(dataArray.get(j)));
                         mapTemplate.mobTemp[j] = Byte.parseByte(String.valueOf(dtm.get(0)));
                         mapTemplate.mobLevel[j] = Byte.parseByte(String.valueOf(dtm.get(1)));
-                        mapTemplate.mobHp[j] = Long.parseLong(String.valueOf(dtm.get(2)));
+                        mapTemplate.mobHp[j] = Long.parseLong(String.valueOf(dtm.get(2)))*2;  // hp quái vật gấp đôi
                         mapTemplate.mobX[j] = Short.parseShort(String.valueOf(dtm.get(3)));
                         mapTemplate.mobY[j] = Short.parseShort(String.valueOf(dtm.get(4)));
                         dtm.clear();

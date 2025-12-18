@@ -200,7 +200,7 @@ public class NPoint {
                 }
             }
 
-            applyPercentBuff();
+           // applyPercentBuff();
         } catch (Exception e) {
             e.printStackTrace();
         }

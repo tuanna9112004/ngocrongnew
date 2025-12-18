@@ -22,7 +22,7 @@ import nro.services.Service;
 public class RechargeHttp {
 
     private static final int PORT = 8080; 
-    private static final String WEBHOOK_KEY = "admindonal"; // Key webhook
+    private static final String WEBHOOK_KEY = ""; // Key webhook
 
     // ✅ Hệ số sự kiện (2.0 = X2, 3.0 = X3, 4.0 = X4, 1.0 = bình thường)
     private static final double HE_SO_SU_KIEN = 2.0;  

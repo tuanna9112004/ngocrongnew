@@ -63,9 +63,8 @@ public void rewards(Player pl) {
     int[] tempIds1 = new int[]{1540}; // item rơi
 
     int tempId = -1;
-    if (Util.isTrue(70, 100)) { // 70% rơi item
         tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
-    }
+    
 
     if (tempId != -1) {
         // tạo item rơi

@@ -217,13 +217,13 @@ public class BossFactory {
                 createBoss(KINGKONG);
                 createBoss(ANDROID_13);
                 createBoss(XEN_BO_HUNG_1);
-                createBoss(XEN_MAX);
-                createBoss(SUPER_BLACK_ROSE);
+                //createBoss(XEN_MAX);
+                //createBoss(SUPER_BLACK_ROSE);
                 createBoss(ZAMAS_TOI_THUONG);
                 // createBoss(BONG_BANG);
                // createBoss(SANTA_CLAUS);
                 createBoss(WHIS_DETU);
-                createBoss(RONG_DEN);
+               // createBoss(RONG_DEN);
                 //   createBoss(ZENO);
                 //    createBoss(GOKU_SUPER);
                 createBoss(ITACHI);

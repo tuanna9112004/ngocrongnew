@@ -26,7 +26,6 @@ public class GiftService {
     private static GiftService i;
 
     private GiftService() {
-
     }
 
     public static GiftService gI() {
@@ -42,18 +41,26 @@ public class GiftService {
             Service.getInstance().sendThongBaoOK(player, "Mã quà tặng có chiều dài từ 5 đến 30 ký tự.");
             return;
         }
+
         Pattern p = Pattern.compile("^[a-zA-Z0-9]+$");
         Matcher m1 = p.matcher(code);
         if (!m1.find()) {
             Service.getInstance().sendThongBaoOK(player, "Mã quà tặng chỉ gồm chữ và số.");
             return;
         }
+
         code = code.toLowerCase();
+
         try {
-            PreparedStatement stmt = DBService.gI().getConnectionForGame().prepareStatement("SELECT * FROM `gift_codes` WHERE `code` like ? AND (expires_at IS NULL OR expires_at > now()) LIMIT 1;",
-                    ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            PreparedStatement stmt = DBService.gI().getConnectionForGame()
+                    .prepareStatement(
+                            "SELECT * FROM `gift_codes` WHERE `code` LIKE ? AND (expires_at IS NULL OR expires_at > NOW()) LIMIT 1;",
+                            ResultSet.TYPE_SCROLL_SENSITIVE,
+                            ResultSet.CONCUR_UPDATABLE
+                    );
             stmt.setString(1, code);
             ResultSet res = stmt.executeQuery();
+
             try {
                 if (!res.first()) {
                     Service.getInstance().sendThongBaoOK(player, "Mã quà tặng không tồn tại hoặc đã hết hạn.");
@@ -64,6 +71,32 @@ public class GiftService {
                 byte status = res.getByte("status");
                 byte type = res.getByte("type");
                 boolean active = res.getBoolean("active");
+
+                // ================= POWER NEED CHECK =================
+                String powerNeedStr = res.getString("power_need");
+                long powerNeed = 0;
+
+                if (powerNeedStr != null && !powerNeedStr.trim().isEmpty()) {
+                    try {
+                        powerNeed = Long.parseLong(powerNeedStr.trim());
+                    } catch (NumberFormatException e) {
+                        powerNeed = 0; // fallback an toàn
+                    }
+                }
+
+                if (powerNeed > 0) {
+                    long playerPower = player.nPoint.power;
+                    if (playerPower < powerNeed) {
+                        Service.getInstance().sendThongBaoOK(
+                                player,
+                                "Yêu cầu sức mạnh tối thiểu "
+                                        + Util.numberToMoney(powerNeed)
+                                        + " mới có thể sử dụng mã quà tặng này."
+                        );
+                        return;
+                    }
+                }
+                // ====================================================
 
                 if (status == 1) {
                     Service.getInstance().sendThongBaoOK(player, "Mã quà tặng đã được sử dụng");
@@ -87,8 +120,10 @@ public class GiftService {
                     Service.getInstance().sendThongBaoOK(player, "Bạn không đủ chỗ trống trong hành trang.");
                     return;
                 }
+
                 StringBuilder sb = new StringBuilder();
                 sb.append("Chúc mừng, bạn đã được tặng").append("\b");
+
                 for (int i = 0; i < size; i++) {
                     JSONObject itemObj = (JSONObject) arrItem.get(i);
                     int itemID = itemObj.getInt("id");
@@ -102,9 +137,12 @@ public class GiftService {
                         int param = obj.getInt("param");
                         item.itemOptions.add(new ItemOption(optionID, param));
                     }
+
                     item.createTime = System.currentTimeMillis();
                     InventoryService.gI().addItemBag(player, item, 0);
-                    sb.append(String.format("- x%s %s", Util.numberToMoney(quantity), item.template.name)).append("\b");
+                    sb.append(String.format("- x%s %s",
+                            Util.numberToMoney(quantity),
+                            item.template.name)).append("\b");
                 }
 
                 if (gold > 0) {
@@ -121,11 +159,14 @@ public class GiftService {
                     player.inventory.ruby += ruby;
                     sb.append(String.format("- %s hồng ngọc", Util.numberToMoney(ruby))).append("\b");
                 }
+
                 Service.getInstance().sendMoney(player);
                 InventoryService.gI().sendItemBags(player);
+
                 String text = sb.toString();
                 String[] arr = text.split("\\\b");
                 StringBuilder sb2 = new StringBuilder();
+
                 for (int i = 0; i < arr.length; i++) {
                     sb2.append(arr[i]);
                     if (i % 10 == 0 && i != 0 && i != arr.length - 1) {
@@ -134,18 +175,23 @@ public class GiftService {
                         sb2.append("\b");
                     }
                 }
+
                 NpcService.gI().createTutorial(player, -1, sb2.toString());
+
                 addUsedGiftCode((int) player.id, id, code);
+
                 if (type == 0) {
                     Timestamp timestamp = new Timestamp(System.currentTimeMillis());
                     res.updateByte("status", (byte) 1);
                     res.updateTimestamp("updated_at", timestamp);
                     res.updateRow();
                 }
+
             } finally {
                 res.close();
                 stmt.close();
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -153,14 +199,18 @@ public class GiftService {
 
     private boolean isUsedGiftCode(int playerID, int giftCodeId) {
         try {
-            PreparedStatement stmt = DBService.gI().getConnectionForGame().prepareStatement("SELECT * FROM `gift_code_histories` WHERE `gift_code_id` = ? AND `player_id` = ? LIMIT 1;", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            PreparedStatement stmt = DBService.gI().getConnectionForGame()
+                    .prepareStatement(
+                            "SELECT * FROM `gift_code_histories` WHERE `gift_code_id` = ? AND `player_id` = ? LIMIT 1;",
+                            ResultSet.TYPE_SCROLL_SENSITIVE,
+                            ResultSet.CONCUR_READ_ONLY
+                    );
             stmt.setInt(1, giftCodeId);
             stmt.setInt(2, playerID);
+
             ResultSet res = stmt.executeQuery();
             try {
-                if (res.first()) {
-                    return true;
-                }
+                return res.first();
             } finally {
                 res.close();
                 stmt.close();
@@ -174,7 +224,10 @@ public class GiftService {
     private void addUsedGiftCode(int playerID, int giftCodeId, String code) {
         try {
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            PreparedStatement stmt = DBService.gI().getConnectionForGame().prepareStatement("INSERT INTO `gift_code_histories`(`player_id`, `gift_code_id`, `code`, `created_at`) VALUES (?, ?, ?, ?)");
+            PreparedStatement stmt = DBService.gI().getConnectionForGame()
+                    .prepareStatement(
+                            "INSERT INTO `gift_code_histories`(`player_id`, `gift_code_id`, `code`, `created_at`) VALUES (?, ?, ?, ?)"
+                    );
             stmt.setInt(1, playerID);
             stmt.setInt(2, giftCodeId);
             stmt.setString(3, code);
@@ -185,5 +238,4 @@ public class GiftService {
             e.printStackTrace();
         }
     }
-
 }

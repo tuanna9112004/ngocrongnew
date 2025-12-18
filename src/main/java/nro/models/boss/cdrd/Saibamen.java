@@ -38,28 +38,28 @@ public class Saibamen extends CBoss {
 
 @Override
      public void rewards(Player pl) {
-     int[] tempIds1 = new int[]{1577};
-   
-
-        int tempId = -1;
-        if (Util.isTrue(20, 100)) {
-            tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
-        }
-        if (tempId != -1) {
-            ItemMap itemMap = new ItemMap(this.zone, tempId, 4,
-                    pl.location.x, this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24), pl.id);
-            if (tempId == 1571) {
-//                itemMap.options.add(new ItemOption(77, Util.nextInt(33, 37)));
-//                itemMap.options.add(new ItemOption(103, Util.nextInt(33, 37)));
-//                itemMap.options.add(new ItemOption(50, Util.nextInt(33, 37)));
-            itemMap.options.add(new ItemOption(30, Util.nextInt(30, 1)));
-
-            }
-            RewardService.gI().initBaseOptionClothes(itemMap.itemTemplate.id, itemMap.itemTemplate.type, itemMap.options);
-            Service.getInstance().dropItemMap(this.zone, itemMap);
-        }
-        TaskService.gI().checkDoneTaskKillBoss(pl, this);
-        generalRewards(pl);
+//     int[] tempIds1 = new int[]{1577};
+//   
+//
+//        int tempId = -1;
+//        if (Util.isTrue(20, 100)) {
+//            tempId = tempIds1[Util.nextInt(0, tempIds1.length - 1)];
+//        }
+//        if (tempId != -1) {
+//            ItemMap itemMap = new ItemMap(this.zone, tempId, 4,
+//                    pl.location.x, this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24), pl.id);
+//            if (tempId == 1571) {
+////                itemMap.options.add(new ItemOption(77, Util.nextInt(33, 37)));
+////                itemMap.options.add(new ItemOption(103, Util.nextInt(33, 37)));
+////                itemMap.options.add(new ItemOption(50, Util.nextInt(33, 37)));
+//            itemMap.options.add(new ItemOption(30, Util.nextInt(30, 1)));
+//
+//            }
+//            RewardService.gI().initBaseOptionClothes(itemMap.itemTemplate.id, itemMap.itemTemplate.type, itemMap.options);
+//            Service.getInstance().dropItemMap(this.zone, itemMap);
+//        }
+//        TaskService.gI().checkDoneTaskKillBoss(pl, this);
+//        generalRewards(pl);
     }
 
 

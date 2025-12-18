@@ -236,8 +236,19 @@ public class Blackgoku extends Boss {
         // =============================
         //  KIỂM TRA NHIỆM VỤ MỞ RƠI THẦN LINH
         // =============================
-        int NV_MO_TL = 18; // sửa theo nhiệm vụ mở TL của server bạn
+        int NV_MO_TL = 30; // sửa theo nhiệm vụ mở TL của server bạn
         boolean duDieuKienRoiTL = pl.playerTask.taskMain.id >= NV_MO_TL;
+        if (duDieuKienRoiTL) {
+            ItemMap itemMap2 = new ItemMap(
+                    this.zone,
+                    992,
+                    1,
+                    pl.location.x,
+                    this.zone.map.yPhysicInTop(pl.location.x, pl.location.y - 24),
+                    pl.id
+            );
+            Service.getInstance().dropItemMap(this.zone, itemMap2);
+        }
 
         // =============================
         //  CHỈ RƠI TL KHI ĐỦ NHIỆM VỤ

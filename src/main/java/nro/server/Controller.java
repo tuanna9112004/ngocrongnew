@@ -818,7 +818,7 @@ public class Controller {
     }
 
     public void login2(Session session, Message msg) {
-        Service.getInstance().sendThongBaoOK(session, "Vui lòng đăng ký tài khoản tại https://ngocrongdonal.com");
+        Service.getInstance().sendThongBaoOK(session, "Vui lòng đăng ký tài khoản ");
     }
 
     public void sendInfo(Session session) {
